@@ -5,7 +5,7 @@ model = joblib.load("model/supply_chain_model.pkl")
 
 df = pd.read_csv("data/supply_chain.csv")
 
-# Same preprocessing as training
+
 df['disruption'] = (
     (df['Availability'] < 20) |
     (df['Stock levels'] < 20) |
