@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel">
+  <h2>Predict Disruption Risk</h2>
+  <form method="post" class="form-grid">
+    <label>
+      Event Type
+      <select name="event_type" required>
+        {% for value in options.event_type %}
+        <option value="{{ value }}" {% if form_values.event_type == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      Severity Level
+      <select name="severity_level" required>
+        {% for value in options.severity_level %}
+        <option value="{{ value }}" {% if form_values.severity_level == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      Root Cause
+      <select name="cause" required>
+        {% for value in options.cause %}
+        <option value="{{ value }}" {% if form_values.cause == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      Country
+      <select name="country" required>
+        {% for value in options.country %}
+        <option value="{{ value }}" {% if form_values.country == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      Financial Impact (USD)
+      <input type="number" name="financial_impact" min="1000" max="500000" step="5000" value="{{ form_values.financial_impact }}" required>
+    </label>
+
+    <div class="form-action">
+      <button type="submit">Predict Risk</button>
+    </div>
+  </form>
+</section>
+
+{% if result %}
+<section class="panel">
+  <h3>Prediction Result</h3>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Prediction</h3>
+      <p class="status {{ result.status_class }}">{{ result.prediction_text }}</p>
+      {% if result.prediction == 1 %}
+      <small>Major disruption likely</small>
+      {% else %}
+      <small>Event is manageable</small>
+      {% endif %}
+    </div>
+
+    <div class="card">
+      <h3>Disruption Probability</h3>
+      <p>{{ "%.1f"|format(result.probability * 100) }}%</p>
+      <div class="progress-wrap">
+        <div class="progress-fill" style="width: {{ "%.1f"|format(result.probability * 100) }}%"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Risk Level</h3>
+      <p>{{ result.risk_level }}</p>
+    </div>
+  </div>
+
+  <div class="recommendations">
+    <h4>Recommended Actions</h4>
+    <ul>
+      {% for item in result.recommendations %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

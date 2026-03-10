@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel">
+  <h2>Dashboard Overview</h2>
+  <div class="grid-4">
+    <div class="card"><h3>Total Events</h3><p>{{ total_events }}</p></div>
+    <div class="card"><h3>Disruptions</h3><p>{{ disruptions }} ({{ "%.1f"|format(disruption_rate) }}%)</p></div>
+    <div class="card"><h3>Non-Disruptions</h3><p>{{ non_disruptions }}</p></div>
+    <div class="card"><h3>Average Impact</h3><p>${{ "{:,}".format(avg_impact|int) }}</p></div>
+  </div>
+</section>
+
+<section class="panel grid-2">
+  <div>
+    <h3>Events by Severity</h3>
+    <canvas id="severityChart"></canvas>
+  </div>
+  <div>
+    <h3>Top Event Types</h3>
+    <canvas id="eventChart"></canvas>
+  </div>
+</section>
+
+<section class="panel">
+  <h3>Top 10 Costly Disruptions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Event ID</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Severity</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in top_disruptions %}
+      <tr>
+        <td>{{ row.event_id }}</td>
+        <td>{{ row.event_date }}</td>
+        <td>{{ row.event_type }}</td>
+        <td>{{ row.severity_level }}</td>
+        <td>{{ row.country }}</td>
+        <td>{{ row.city }}</td>
+        <td>${{ "{:,}".format(row.financial_impact|int) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<script>
+const severityLabels = {{ severity_labels | tojson }};
+const severityValues = {{ severity_values | tojson }};
+const eventLabels = {{ event_labels | tojson }};
+const eventValues = {{ event_values | tojson }};
+
+new Chart(document.getElementById('severityChart'), {
+  type: 'pie',
+  data: {
+    labels: severityLabels,
+    datasets: [{
+      data: severityValues,
+      backgroundColor: ['#8dd3c7', '#ffffb3', '#fb8072', '#80b1d3']
+    }]
+  }
+});
+
+new Chart(document.getElementById('eventChart'), {
+  type: 'bar',
+  data: {
+    labels: eventLabels,
+    datasets: [{
+      label: 'Count',
+      data: eventValues,
+      backgroundColor: '#2f6d8f'
+    }]
+  },
+  options: { responsive: true }
+});
+</script>
+{% endblock %}

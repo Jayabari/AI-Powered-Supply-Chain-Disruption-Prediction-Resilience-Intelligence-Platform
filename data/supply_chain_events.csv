@@ -1,0 +1,651 @@
+event_id,event_date,event_type,severity_level,cause,affected_product_id,affected_supplier_id,country,city,financial_impact,disruption
+EVT-0001,2024-01-01,Geopolitical,Medium,Demand Surge,PROD-6342,SUP-297,Japan,City_17,315539,1
+EVT-0002,2024-01-01,Natural Disaster,Low,Supplier Fault,PROD-8351,SUP-709,India,City_4,427247,1
+EVT-0003,2024-01-02,Cyber Attack,Medium,Policy Change,PROD-7638,SUP-676,Mexico,City_48,478758,1
+EVT-0004,2024-01-02,Labor Strike,Low,Equipment Malfunction,PROD-7570,SUP-941,Brazil,City_47,135814,0
+EVT-0005,2024-01-03,Geopolitical,Medium,Human Error,PROD-4249,SUP-952,Germany,City_25,440917,1
+EVT-0006,2024-01-03,Quality Issue,High,Transportation,PROD-8595,SUP-616,China,City_21,384743,1
+EVT-0007,2024-01-04,Geopolitical,High,Transportation,PROD-7294,SUP-613,Thailand,City_37,35939,1
+EVT-0008,2024-01-04,Cyber Attack,Critical,Supplier Fault,PROD-7527,SUP-121,USA,City_38,452361,1
+EVT-0009,2024-01-05,Labor Strike,High,Demand Surge,PROD-6757,SUP-211,Germany,City_49,423540,1
+EVT-0010,2024-01-06,Natural Disaster,High,Demand Surge,PROD-2969,SUP-156,USA,City_1,163939,1
+EVT-0011,2024-01-06,Cyber Attack,High,Inventory Issue,PROD-1891,SUP-165,Brazil,City_25,272347,1
+EVT-0012,2024-01-07,Cyber Attack,Low,System Failure,PROD-5470,SUP-941,Germany,City_36,419760,1
+EVT-0013,2024-01-07,Quality Issue,High,Equipment Malfunction,PROD-8175,SUP-197,Japan,City_17,419115,1
+EVT-0014,2024-01-08,Equipment Failure,High,Demand Surge,PROD-9320,SUP-243,Japan,City_41,301207,1
+EVT-0015,2024-01-08,Labor Strike,Critical,Human Error,PROD-7812,SUP-979,Thailand,City_24,100880,1
+EVT-0016,2024-01-09,Supplier Delay,High,Supplier Fault,PROD-8519,SUP-534,USA,City_2,13748,1
+EVT-0017,2024-01-09,Cyber Attack,High,Policy Change,PROD-5612,SUP-736,China,City_40,246094,1
+EVT-0018,2024-01-10,Equipment Failure,Medium,Inventory Issue,PROD-2198,SUP-778,Brazil,City_15,389413,1
+EVT-0019,2024-01-11,Supplier Delay,Critical,Documentation,PROD-6238,SUP-185,Japan,City_32,469845,1
+EVT-0020,2024-01-11,Labor Strike,Critical,Weather,PROD-7089,SUP-687,Mexico,City_39,352908,1
+EVT-0021,2024-01-12,Port Congestion,Critical,Policy Change,PROD-7257,SUP-443,India,City_6,161956,1
+EVT-0022,2024-01-12,Equipment Failure,Critical,Documentation,PROD-8705,SUP-393,India,City_1,166255,1
+EVT-0023,2024-01-13,Regulatory Change,Critical,Transportation,PROD-4719,SUP-670,Indonesia,City_47,484786,1
+EVT-0024,2024-01-13,Port Congestion,Critical,Weather,PROD-1302,SUP-749,China,City_23,474462,1
+EVT-0025,2024-01-14,Quality Issue,Low,Equipment Malfunction,PROD-1986,SUP-710,India,City_39,380180,0
+EVT-0026,2024-01-15,Geopolitical,High,Human Error,PROD-5440,SUP-803,Indonesia,City_17,160331,1
+EVT-0027,2024-01-15,Natural Disaster,Critical,Weather,PROD-5909,SUP-342,USA,City_34,177031,1
+EVT-0028,2024-01-16,Regulatory Change,High,System Failure,PROD-4072,SUP-930,Japan,City_41,388669,1
+EVT-0029,2024-01-16,Quality Issue,High,Documentation,PROD-4124,SUP-660,Japan,City_29,436673,1
+EVT-0030,2024-01-17,Labor Strike,Low,Equipment Malfunction,PROD-9125,SUP-131,Mexico,City_9,357823,1
+EVT-0031,2024-01-17,Quality Issue,Critical,System Failure,PROD-4291,SUP-490,Germany,City_13,135829,1
+EVT-0032,2024-01-18,Geopolitical,Medium,Transportation,PROD-5033,SUP-376,India,City_6,138216,1
+EVT-0033,2024-01-18,Labor Strike,Low,System Failure,PROD-6105,SUP-631,USA,City_6,405319,1
+EVT-0034,2024-01-19,Regulatory Change,Medium,Inventory Issue,PROD-1703,SUP-253,Vietnam,City_20,75901,0
+EVT-0035,2024-01-20,Geopolitical,High,Inventory Issue,PROD-9133,SUP-482,India,City_3,253386,1
+EVT-0036,2024-01-20,Supplier Delay,High,Supplier Fault,PROD-1574,SUP-167,China,City_17,185607,1
+EVT-0037,2024-01-21,Natural Disaster,Low,Policy Change,PROD-6704,SUP-977,Germany,City_49,419319,1
+EVT-0038,2024-01-21,Regulatory Change,Low,Policy Change,PROD-8848,SUP-983,India,City_12,108046,0
+EVT-0039,2024-01-22,Supplier Delay,Medium,Equipment Malfunction,PROD-6208,SUP-313,USA,City_48,362156,1
+EVT-0040,2024-01-22,Regulatory Change,Critical,Transportation,PROD-7924,SUP-754,India,City_47,88278,1
+EVT-0041,2024-01-23,Labor Strike,Medium,Demand Surge,PROD-4828,SUP-475,China,City_45,284535,1
+EVT-0042,2024-01-24,Supplier Delay,Low,Inventory Issue,PROD-4230,SUP-843,Vietnam,City_1,112476,0
+EVT-0043,2024-01-24,Natural Disaster,Medium,Equipment Malfunction,PROD-1488,SUP-312,Brazil,City_17,432117,1
+EVT-0044,2024-01-25,Geopolitical,Low,Demand Surge,PROD-8114,SUP-178,Thailand,City_3,392865,0
+EVT-0045,2024-01-25,Cyber Attack,Medium,Policy Change,PROD-4173,SUP-825,Vietnam,City_26,107537,1
+EVT-0046,2024-01-26,Quality Issue,Low,Supplier Fault,PROD-2667,SUP-727,Indonesia,City_15,353303,0
+EVT-0047,2024-01-26,Port Congestion,Low,System Failure,PROD-5114,SUP-703,India,City_36,471130,1
+EVT-0048,2024-01-27,Natural Disaster,Low,Inventory Issue,PROD-4553,SUP-881,Japan,City_32,403184,1
+EVT-0049,2024-01-27,Supplier Delay,Critical,Equipment Malfunction,PROD-8761,SUP-480,Mexico,City_32,191429,1
+EVT-0050,2024-01-28,Cyber Attack,Medium,Weather,PROD-2000,SUP-779,Japan,City_4,227980,1
+EVT-0051,2024-01-29,Natural Disaster,Medium,Demand Surge,PROD-2388,SUP-157,Vietnam,City_18,441653,1
+EVT-0052,2024-01-29,Supplier Delay,Medium,System Failure,PROD-6450,SUP-895,Japan,City_49,307647,1
+EVT-0053,2024-01-30,Equipment Failure,Low,Inventory Issue,PROD-4712,SUP-125,USA,City_19,499498,0
+EVT-0054,2024-01-30,Equipment Failure,Medium,Policy Change,PROD-2367,SUP-980,Japan,City_43,496675,1
+EVT-0055,2024-01-31,Natural Disaster,Medium,Transportation,PROD-9189,SUP-546,Germany,City_35,85403,1
+EVT-0056,2024-01-31,Equipment Failure,Low,Demand Surge,PROD-1454,SUP-165,Brazil,City_40,444474,0
+EVT-0057,2024-02-01,Supplier Delay,High,Policy Change,PROD-3772,SUP-859,India,City_14,436940,1
+EVT-0058,2024-02-02,Supplier Delay,Low,Inventory Issue,PROD-4726,SUP-353,Japan,City_33,74286,0
+EVT-0059,2024-02-02,Natural Disaster,Medium,Demand Surge,PROD-8232,SUP-998,China,City_14,346986,1
+EVT-0060,2024-02-03,Cyber Attack,Low,System Failure,PROD-5806,SUP-143,Brazil,City_34,114927,0
+EVT-0061,2024-02-03,Geopolitical,High,Inventory Issue,PROD-3190,SUP-196,Brazil,City_4,287052,1
+EVT-0062,2024-02-04,Regulatory Change,Low,Documentation,PROD-3875,SUP-653,Japan,City_24,495833,0
+EVT-0063,2024-02-04,Cyber Attack,Medium,Equipment Malfunction,PROD-6592,SUP-326,Brazil,City_29,453842,1
+EVT-0064,2024-02-05,Labor Strike,High,System Failure,PROD-2440,SUP-873,Mexico,City_19,309372,1
+EVT-0065,2024-02-05,Supplier Delay,Critical,Demand Surge,PROD-9927,SUP-778,Japan,City_6,33386,1
+EVT-0066,2024-02-06,Labor Strike,Medium,Transportation,PROD-7059,SUP-535,USA,City_33,187826,1
+EVT-0067,2024-02-07,Cyber Attack,High,Policy Change,PROD-8010,SUP-890,Vietnam,City_49,300446,1
+EVT-0068,2024-02-07,Regulatory Change,High,Weather,PROD-8117,SUP-700,Germany,City_40,332959,1
+EVT-0069,2024-02-08,Regulatory Change,Critical,Policy Change,PROD-3989,SUP-478,Thailand,City_19,262156,1
+EVT-0070,2024-02-08,Port Congestion,Low,Demand Surge,PROD-7228,SUP-277,Indonesia,City_1,487964,0
+EVT-0071,2024-02-09,Regulatory Change,Low,Policy Change,PROD-7471,SUP-526,Brazil,City_5,335488,0
+EVT-0072,2024-02-09,Geopolitical,Medium,Equipment Malfunction,PROD-3863,SUP-808,USA,City_27,438834,1
+EVT-0073,2024-02-10,Regulatory Change,Critical,Inventory Issue,PROD-2177,SUP-406,India,City_16,383747,1
+EVT-0074,2024-02-10,Cyber Attack,Low,Weather,PROD-5760,SUP-878,India,City_6,479450,1
+EVT-0075,2024-02-11,Port Congestion,Critical,Human Error,PROD-1011,SUP-603,Indonesia,City_40,333258,1
+EVT-0076,2024-02-12,Cyber Attack,Low,Demand Surge,PROD-6252,SUP-367,Germany,City_13,258724,0
+EVT-0077,2024-02-12,Cyber Attack,High,Supplier Fault,PROD-5399,SUP-685,Brazil,City_48,211202,1
+EVT-0078,2024-02-13,Quality Issue,Low,Human Error,PROD-9234,SUP-107,Mexico,City_35,35525,0
+EVT-0079,2024-02-13,Port Congestion,Critical,Policy Change,PROD-6445,SUP-607,Indonesia,City_19,89818,1
+EVT-0080,2024-02-14,Cyber Attack,High,Demand Surge,PROD-7570,SUP-575,Germany,City_12,124589,1
+EVT-0081,2024-02-14,Quality Issue,High,Documentation,PROD-9212,SUP-396,Brazil,City_16,155406,1
+EVT-0082,2024-02-15,Quality Issue,High,Supplier Fault,PROD-1406,SUP-263,USA,City_43,104715,1
+EVT-0083,2024-02-16,Port Congestion,Critical,Weather,PROD-5431,SUP-584,Vietnam,City_10,203839,1
+EVT-0084,2024-02-16,Labor Strike,Medium,Transportation,PROD-6243,SUP-696,Mexico,City_25,278788,1
+EVT-0085,2024-02-17,Geopolitical,Medium,Documentation,PROD-7542,SUP-171,Thailand,City_20,373298,1
+EVT-0086,2024-02-17,Regulatory Change,Medium,Human Error,PROD-7936,SUP-666,India,City_31,436149,0
+EVT-0087,2024-02-18,Geopolitical,Critical,Inventory Issue,PROD-9906,SUP-658,China,City_4,267438,1
+EVT-0088,2024-02-18,Regulatory Change,High,Equipment Malfunction,PROD-5146,SUP-337,USA,City_44,315613,1
+EVT-0089,2024-02-19,Cyber Attack,Medium,Transportation,PROD-1140,SUP-203,India,City_23,436903,1
+EVT-0090,2024-02-19,Supplier Delay,Critical,Documentation,PROD-5882,SUP-309,Japan,City_2,378753,1
+EVT-0091,2024-02-20,Port Congestion,Medium,Inventory Issue,PROD-7012,SUP-653,China,City_22,455872,1
+EVT-0092,2024-02-21,Geopolitical,Low,Inventory Issue,PROD-1963,SUP-927,India,City_37,420591,0
+EVT-0093,2024-02-21,Geopolitical,Medium,Demand Surge,PROD-8151,SUP-567,Germany,City_8,337350,1
+EVT-0094,2024-02-22,Cyber Attack,Medium,Documentation,PROD-9564,SUP-553,Mexico,City_7,368606,1
+EVT-0095,2024-02-22,Labor Strike,High,Weather,PROD-4610,SUP-367,India,City_14,177679,1
+EVT-0096,2024-02-23,Quality Issue,Critical,Policy Change,PROD-7894,SUP-485,Thailand,City_3,93178,1
+EVT-0097,2024-02-23,Cyber Attack,High,Supplier Fault,PROD-8311,SUP-874,Vietnam,City_16,427209,1
+EVT-0098,2024-02-24,Equipment Failure,High,Supplier Fault,PROD-1105,SUP-947,Germany,City_19,185458,1
+EVT-0099,2024-02-25,Quality Issue,High,Human Error,PROD-6539,SUP-486,USA,City_18,264466,1
+EVT-0100,2024-02-25,Port Congestion,High,Human Error,PROD-7787,SUP-976,USA,City_16,449503,1
+EVT-0101,2024-02-26,Quality Issue,High,Supplier Fault,PROD-3137,SUP-358,USA,City_8,96724,1
+EVT-0102,2024-02-26,Labor Strike,Medium,Weather,PROD-5445,SUP-382,USA,City_33,239204,1
+EVT-0103,2024-02-27,Quality Issue,High,Equipment Malfunction,PROD-4530,SUP-725,Vietnam,City_49,496524,1
+EVT-0104,2024-02-27,Port Congestion,High,System Failure,PROD-2286,SUP-974,India,City_12,106393,1
+EVT-0105,2024-02-28,Labor Strike,Critical,Policy Change,PROD-8052,SUP-139,Brazil,City_11,399458,1
+EVT-0106,2024-02-28,Geopolitical,Low,Equipment Malfunction,PROD-4654,SUP-585,India,City_5,86312,0
+EVT-0107,2024-02-29,Geopolitical,Medium,Demand Surge,PROD-8102,SUP-319,Japan,City_27,347468,1
+EVT-0108,2024-03-01,Regulatory Change,Medium,System Failure,PROD-3359,SUP-228,Mexico,City_12,81196,0
+EVT-0109,2024-03-01,Quality Issue,Medium,System Failure,PROD-9105,SUP-619,China,City_17,80014,0
+EVT-0110,2024-03-02,Geopolitical,High,Documentation,PROD-9636,SUP-712,Brazil,City_6,411426,1
+EVT-0111,2024-03-02,Port Congestion,High,Weather,PROD-7441,SUP-991,Brazil,City_33,151994,1
+EVT-0112,2024-03-03,Natural Disaster,High,Weather,PROD-6047,SUP-787,India,City_5,439505,1
+EVT-0113,2024-03-03,Natural Disaster,Critical,System Failure,PROD-9227,SUP-718,Brazil,City_28,43340,1
+EVT-0114,2024-03-04,Labor Strike,Low,Documentation,PROD-6203,SUP-712,Indonesia,City_14,311994,0
+EVT-0115,2024-03-05,Geopolitical,High,Policy Change,PROD-2798,SUP-359,Indonesia,City_5,460200,1
+EVT-0116,2024-03-05,Geopolitical,Low,System Failure,PROD-6291,SUP-465,Japan,City_33,123711,0
+EVT-0117,2024-03-06,Natural Disaster,Critical,Transportation,PROD-6495,SUP-857,China,City_48,225250,1
+EVT-0118,2024-03-06,Geopolitical,Medium,Human Error,PROD-7284,SUP-886,Thailand,City_41,21094,0
+EVT-0119,2024-03-07,Quality Issue,High,Human Error,PROD-8285,SUP-643,Vietnam,City_19,360103,1
+EVT-0120,2024-03-07,Equipment Failure,Low,Equipment Malfunction,PROD-2300,SUP-748,India,City_22,436634,0
+EVT-0121,2024-03-08,Supplier Delay,Low,Demand Surge,PROD-7869,SUP-623,Vietnam,City_5,277885,0
+EVT-0122,2024-03-08,Regulatory Change,High,Human Error,PROD-4097,SUP-913,Thailand,City_2,121585,1
+EVT-0123,2024-03-09,Labor Strike,Medium,Inventory Issue,PROD-5616,SUP-986,India,City_30,475590,1
+EVT-0124,2024-03-10,Equipment Failure,Medium,Equipment Malfunction,PROD-1009,SUP-115,India,City_47,394708,1
+EVT-0125,2024-03-10,Natural Disaster,Medium,Human Error,PROD-6752,SUP-228,China,City_39,78798,1
+EVT-0126,2024-03-11,Geopolitical,Critical,Demand Surge,PROD-7295,SUP-674,Vietnam,City_4,388170,1
+EVT-0127,2024-03-11,Regulatory Change,Low,Weather,PROD-5815,SUP-208,Indonesia,City_33,211604,0
+EVT-0128,2024-03-12,Geopolitical,Low,Weather,PROD-2072,SUP-986,USA,City_13,120130,0
+EVT-0129,2024-03-12,Port Congestion,Low,Policy Change,PROD-4225,SUP-632,Vietnam,City_20,294308,0
+EVT-0130,2024-03-13,Port Congestion,Critical,System Failure,PROD-2316,SUP-769,Mexico,City_7,176667,1
+EVT-0131,2024-03-14,Regulatory Change,Low,Transportation,PROD-6699,SUP-368,Mexico,City_15,40257,0
+EVT-0132,2024-03-14,Regulatory Change,Critical,Weather,PROD-7807,SUP-261,India,City_23,417427,1
+EVT-0133,2024-03-15,Natural Disaster,Medium,Documentation,PROD-7674,SUP-359,USA,City_14,368133,1
+EVT-0134,2024-03-15,Regulatory Change,High,Human Error,PROD-4683,SUP-201,Germany,City_23,408448,1
+EVT-0135,2024-03-16,Quality Issue,Low,Documentation,PROD-8227,SUP-605,Thailand,City_19,470969,0
+EVT-0136,2024-03-16,Geopolitical,Low,Demand Surge,PROD-4273,SUP-834,Japan,City_29,62691,0
+EVT-0137,2024-03-17,Equipment Failure,Medium,Weather,PROD-8000,SUP-670,USA,City_20,492981,1
+EVT-0138,2024-03-17,Cyber Attack,High,Transportation,PROD-1145,SUP-346,Japan,City_29,89768,1
+EVT-0139,2024-03-18,Regulatory Change,Critical,Demand Surge,PROD-6010,SUP-739,Vietnam,City_24,428829,1
+EVT-0140,2024-03-19,Labor Strike,High,Inventory Issue,PROD-4040,SUP-894,Vietnam,City_18,24026,1
+EVT-0141,2024-03-19,Port Congestion,Medium,Inventory Issue,PROD-1482,SUP-936,Japan,City_10,456751,1
+EVT-0142,2024-03-20,Quality Issue,Medium,Documentation,PROD-4179,SUP-636,Thailand,City_41,235162,0
+EVT-0143,2024-03-20,Cyber Attack,High,System Failure,PROD-2249,SUP-230,USA,City_8,303052,1
+EVT-0144,2024-03-21,Equipment Failure,Critical,Equipment Malfunction,PROD-1630,SUP-452,Germany,City_26,455329,1
+EVT-0145,2024-03-21,Cyber Attack,Critical,System Failure,PROD-9853,SUP-295,India,City_29,29610,1
+EVT-0146,2024-03-22,Regulatory Change,Low,Policy Change,PROD-3852,SUP-892,China,City_10,187718,0
+EVT-0147,2024-03-22,Natural Disaster,Critical,System Failure,PROD-1987,SUP-765,Vietnam,City_17,335329,1
+EVT-0148,2024-03-23,Port Congestion,High,Policy Change,PROD-8622,SUP-481,Mexico,City_2,344711,1
+EVT-0149,2024-03-24,Port Congestion,Medium,Policy Change,PROD-8327,SUP-744,Thailand,City_6,188646,1
+EVT-0150,2024-03-24,Natural Disaster,Low,Transportation,PROD-9841,SUP-326,China,City_5,232123,1
+EVT-0151,2024-03-25,Geopolitical,Low,Weather,PROD-2100,SUP-800,Germany,City_28,308326,1
+EVT-0152,2024-03-25,Supplier Delay,Medium,Transportation,PROD-7652,SUP-575,Brazil,City_41,388280,1
+EVT-0153,2024-03-26,Quality Issue,Critical,Policy Change,PROD-9632,SUP-576,India,City_5,403786,1
+EVT-0154,2024-03-26,Port Congestion,Medium,Demand Surge,PROD-8421,SUP-364,Vietnam,City_18,29288,0
+EVT-0155,2024-03-27,Labor Strike,Critical,Inventory Issue,PROD-6016,SUP-471,India,City_26,350968,1
+EVT-0156,2024-03-28,Port Congestion,Medium,Policy Change,PROD-1769,SUP-585,China,City_20,433093,1
+EVT-0157,2024-03-28,Cyber Attack,High,Transportation,PROD-2343,SUP-533,India,City_41,94425,1
+EVT-0158,2024-03-29,Port Congestion,Critical,Demand Surge,PROD-5358,SUP-745,Brazil,City_49,10917,1
+EVT-0159,2024-03-29,Port Congestion,High,Transportation,PROD-7780,SUP-310,China,City_27,347746,1
+EVT-0160,2024-03-30,Supplier Delay,Low,System Failure,PROD-7602,SUP-671,Vietnam,City_49,498256,0
+EVT-0161,2024-03-30,Supplier Delay,Medium,Human Error,PROD-3349,SUP-476,USA,City_12,336719,1
+EVT-0162,2024-03-31,Equipment Failure,Low,Documentation,PROD-6699,SUP-494,Mexico,City_7,344662,0
+EVT-0163,2024-03-31,Geopolitical,Low,Equipment Malfunction,PROD-2241,SUP-549,China,City_3,263187,0
+EVT-0164,2024-04-01,Labor Strike,Low,Transportation,PROD-2125,SUP-463,Indonesia,City_10,49104,0
+EVT-0165,2024-04-02,Port Congestion,Low,Equipment Malfunction,PROD-7764,SUP-975,Brazil,City_34,159134,0
+EVT-0166,2024-04-02,Port Congestion,Medium,Supplier Fault,PROD-6101,SUP-556,China,City_25,289143,1
+EVT-0167,2024-04-03,Quality Issue,Low,Transportation,PROD-8843,SUP-824,China,City_35,272091,0
+EVT-0168,2024-04-03,Supplier Delay,Medium,Human Error,PROD-1072,SUP-827,Indonesia,City_16,465061,1
+EVT-0169,2024-04-04,Labor Strike,Medium,Equipment Malfunction,PROD-6472,SUP-325,Vietnam,City_2,413157,1
+EVT-0170,2024-04-04,Equipment Failure,High,Policy Change,PROD-6189,SUP-230,China,City_24,71169,1
+EVT-0171,2024-04-05,Geopolitical,Critical,Transportation,PROD-3472,SUP-687,Mexico,City_10,164542,1
+EVT-0172,2024-04-06,Natural Disaster,Critical,Weather,PROD-1707,SUP-575,India,City_38,139744,1
+EVT-0173,2024-04-06,Geopolitical,Medium,Documentation,PROD-2804,SUP-897,Vietnam,City_22,382828,1
+EVT-0174,2024-04-07,Cyber Attack,High,Human Error,PROD-7704,SUP-376,Mexico,City_26,69821,1
+EVT-0175,2024-04-07,Port Congestion,Medium,Equipment Malfunction,PROD-4713,SUP-255,Vietnam,City_43,227741,1
+EVT-0176,2024-04-08,Equipment Failure,Medium,Human Error,PROD-6051,SUP-859,Mexico,City_39,259265,1
+EVT-0177,2024-04-08,Cyber Attack,Medium,Demand Surge,PROD-3475,SUP-317,Brazil,City_27,447651,1
+EVT-0178,2024-04-09,Labor Strike,High,Documentation,PROD-4610,SUP-289,Mexico,City_29,407745,1
+EVT-0179,2024-04-09,Natural Disaster,Critical,Policy Change,PROD-5255,SUP-516,Japan,City_47,224127,1
+EVT-0180,2024-04-10,Supplier Delay,High,Transportation,PROD-8397,SUP-774,Mexico,City_38,284336,1
+EVT-0181,2024-04-11,Equipment Failure,Low,Transportation,PROD-2735,SUP-791,USA,City_20,346246,0
+EVT-0182,2024-04-11,Equipment Failure,High,Transportation,PROD-9258,SUP-645,USA,City_27,213834,1
+EVT-0183,2024-04-12,Port Congestion,High,Documentation,PROD-8979,SUP-140,Thailand,City_41,244538,1
+EVT-0184,2024-04-12,Regulatory Change,High,Weather,PROD-3428,SUP-406,Japan,City_20,387038,1
+EVT-0185,2024-04-13,Equipment Failure,High,Supplier Fault,PROD-8426,SUP-437,Japan,City_44,96795,1
+EVT-0186,2024-04-13,Quality Issue,Critical,Inventory Issue,PROD-9533,SUP-413,India,City_19,175159,1
+EVT-0187,2024-04-14,Natural Disaster,Low,System Failure,PROD-6249,SUP-174,Japan,City_20,338821,1
+EVT-0188,2024-04-15,Natural Disaster,Critical,Equipment Malfunction,PROD-6291,SUP-378,India,City_35,145699,1
+EVT-0189,2024-04-15,Quality Issue,Critical,Weather,PROD-3817,SUP-275,Thailand,City_47,459757,1
+EVT-0190,2024-04-16,Quality Issue,High,Policy Change,PROD-4874,SUP-995,Thailand,City_2,253877,1
+EVT-0191,2024-04-16,Quality Issue,Medium,Equipment Malfunction,PROD-5211,SUP-761,Brazil,City_30,209298,0
+EVT-0192,2024-04-17,Natural Disaster,Medium,Transportation,PROD-1661,SUP-372,USA,City_34,406471,1
+EVT-0193,2024-04-17,Geopolitical,Critical,Human Error,PROD-4374,SUP-936,Mexico,City_22,198505,1
+EVT-0194,2024-04-18,Natural Disaster,Critical,Policy Change,PROD-1207,SUP-719,Mexico,City_3,146285,1
+EVT-0195,2024-04-18,Regulatory Change,High,Equipment Malfunction,PROD-3665,SUP-750,Indonesia,City_6,112412,1
+EVT-0196,2024-04-19,Port Congestion,Critical,Transportation,PROD-3493,SUP-961,Indonesia,City_15,29404,1
+EVT-0197,2024-04-20,Cyber Attack,High,Equipment Malfunction,PROD-7813,SUP-882,Germany,City_27,126545,1
+EVT-0198,2024-04-20,Geopolitical,Medium,Human Error,PROD-1632,SUP-958,Vietnam,City_10,428596,1
+EVT-0199,2024-04-21,Supplier Delay,Medium,Transportation,PROD-4083,SUP-388,Brazil,City_9,232128,1
+EVT-0200,2024-04-21,Cyber Attack,Low,Supplier Fault,PROD-4719,SUP-823,Germany,City_33,160245,0
+EVT-0201,2024-04-22,Port Congestion,Medium,Weather,PROD-8123,SUP-992,Germany,City_32,194099,1
+EVT-0202,2024-04-22,Regulatory Change,Critical,Demand Surge,PROD-2679,SUP-371,China,City_48,296133,1
+EVT-0203,2024-04-23,Regulatory Change,Medium,System Failure,PROD-1236,SUP-165,China,City_6,271657,1
+EVT-0204,2024-04-23,Supplier Delay,High,Documentation,PROD-8446,SUP-582,Germany,City_41,380250,1
+EVT-0205,2024-04-24,Geopolitical,Medium,System Failure,PROD-5443,SUP-347,Japan,City_36,296663,1
+EVT-0206,2024-04-25,Quality Issue,Low,Policy Change,PROD-7770,SUP-255,Vietnam,City_2,266875,0
+EVT-0207,2024-04-25,Geopolitical,Medium,System Failure,PROD-7099,SUP-146,Brazil,City_29,294583,1
+EVT-0208,2024-04-26,Regulatory Change,High,Transportation,PROD-9555,SUP-553,Germany,City_4,390714,1
+EVT-0209,2024-04-26,Natural Disaster,High,Supplier Fault,PROD-3368,SUP-300,Mexico,City_1,480165,1
+EVT-0210,2024-04-27,Port Congestion,Critical,Demand Surge,PROD-1285,SUP-759,Vietnam,City_19,24995,1
+EVT-0211,2024-04-27,Supplier Delay,Medium,Weather,PROD-1148,SUP-223,China,City_26,33559,1
+EVT-0212,2024-04-28,Port Congestion,High,Weather,PROD-5037,SUP-100,Mexico,City_25,361193,1
+EVT-0213,2024-04-29,Labor Strike,Low,Human Error,PROD-7549,SUP-858,China,City_10,408237,1
+EVT-0214,2024-04-29,Labor Strike,Critical,Documentation,PROD-8121,SUP-954,China,City_15,108000,1
+EVT-0215,2024-04-30,Geopolitical,Low,Equipment Malfunction,PROD-5895,SUP-739,Vietnam,City_22,162191,0
+EVT-0216,2024-04-30,Regulatory Change,Medium,Supplier Fault,PROD-6280,SUP-290,China,City_48,454755,0
+EVT-0217,2024-05-01,Regulatory Change,Medium,Equipment Malfunction,PROD-2012,SUP-678,Thailand,City_21,498051,0
+EVT-0218,2024-05-01,Quality Issue,Medium,Demand Surge,PROD-3785,SUP-615,USA,City_22,311494,0
+EVT-0219,2024-05-02,Quality Issue,Critical,System Failure,PROD-4725,SUP-541,Thailand,City_36,449439,1
+EVT-0220,2024-05-02,Quality Issue,High,Weather,PROD-5576,SUP-914,USA,City_34,35517,1
+EVT-0221,2024-05-03,Natural Disaster,Critical,Demand Surge,PROD-6782,SUP-905,Indonesia,City_30,481869,1
+EVT-0222,2024-05-04,Cyber Attack,Low,System Failure,PROD-7257,SUP-242,Indonesia,City_25,425466,1
+EVT-0223,2024-05-04,Equipment Failure,Critical,Weather,PROD-3408,SUP-290,China,City_45,225558,1
+EVT-0224,2024-05-05,Cyber Attack,Low,System Failure,PROD-1340,SUP-632,Brazil,City_28,486111,1
+EVT-0225,2024-05-05,Port Congestion,Critical,Documentation,PROD-3817,SUP-326,Brazil,City_1,361276,1
+EVT-0226,2024-05-06,Cyber Attack,High,Supplier Fault,PROD-3496,SUP-412,USA,City_49,494282,1
+EVT-0227,2024-05-06,Natural Disaster,Low,Policy Change,PROD-6962,SUP-728,Mexico,City_45,470014,1
+EVT-0228,2024-05-07,Port Congestion,Medium,Demand Surge,PROD-6299,SUP-401,Vietnam,City_4,457415,1
+EVT-0229,2024-05-08,Cyber Attack,Medium,Demand Surge,PROD-8574,SUP-753,China,City_7,331690,1
+EVT-0230,2024-05-08,Natural Disaster,Critical,Inventory Issue,PROD-2689,SUP-559,Vietnam,City_49,115686,1
+EVT-0231,2024-05-09,Equipment Failure,Medium,Transportation,PROD-4267,SUP-500,Thailand,City_9,98151,0
+EVT-0232,2024-05-09,Cyber Attack,Low,Documentation,PROD-5406,SUP-650,Brazil,City_36,275471,0
+EVT-0233,2024-05-10,Natural Disaster,Medium,Documentation,PROD-9453,SUP-492,Japan,City_19,130318,1
+EVT-0234,2024-05-10,Quality Issue,High,Equipment Malfunction,PROD-2442,SUP-966,Thailand,City_1,432984,1
+EVT-0235,2024-05-11,Regulatory Change,High,System Failure,PROD-9597,SUP-863,Thailand,City_10,205490,1
+EVT-0236,2024-05-11,Quality Issue,Critical,Transportation,PROD-5437,SUP-944,USA,City_36,497602,1
+EVT-0237,2024-05-12,Regulatory Change,Low,Supplier Fault,PROD-6435,SUP-306,India,City_9,183860,0
+EVT-0238,2024-05-13,Supplier Delay,High,Supplier Fault,PROD-9435,SUP-309,Thailand,City_45,125945,1
+EVT-0239,2024-05-13,Supplier Delay,High,Documentation,PROD-5107,SUP-214,China,City_46,223456,1
+EVT-0240,2024-05-14,Supplier Delay,Low,Supplier Fault,PROD-1560,SUP-836,Germany,City_42,318974,0
+EVT-0241,2024-05-14,Equipment Failure,Medium,Inventory Issue,PROD-9785,SUP-745,Germany,City_32,62446,0
+EVT-0242,2024-05-15,Quality Issue,Medium,Demand Surge,PROD-6548,SUP-350,China,City_32,418376,0
+EVT-0243,2024-05-15,Regulatory Change,Critical,Human Error,PROD-2826,SUP-318,India,City_6,197655,1
+EVT-0244,2024-05-16,Natural Disaster,Medium,Policy Change,PROD-8629,SUP-506,India,City_48,437214,1
+EVT-0245,2024-05-17,Port Congestion,Low,Equipment Malfunction,PROD-9325,SUP-542,USA,City_38,430446,1
+EVT-0246,2024-05-17,Natural Disaster,High,System Failure,PROD-4138,SUP-702,Brazil,City_17,150148,1
+EVT-0247,2024-05-18,Port Congestion,Medium,Policy Change,PROD-8693,SUP-453,Vietnam,City_10,79341,1
+EVT-0248,2024-05-18,Labor Strike,Critical,System Failure,PROD-9264,SUP-987,India,City_27,41085,1
+EVT-0249,2024-05-19,Natural Disaster,Medium,Weather,PROD-8842,SUP-657,Japan,City_35,327715,1
+EVT-0250,2024-05-19,Cyber Attack,Low,Policy Change,PROD-7721,SUP-649,USA,City_21,417931,0
+EVT-0251,2024-05-20,Cyber Attack,Critical,Human Error,PROD-8002,SUP-241,Indonesia,City_25,400452,1
+EVT-0252,2024-05-20,Geopolitical,Medium,Documentation,PROD-5225,SUP-711,Mexico,City_28,15750,0
+EVT-0253,2024-05-21,Quality Issue,Critical,Inventory Issue,PROD-3978,SUP-600,Indonesia,City_47,386075,1
+EVT-0254,2024-05-22,Port Congestion,Low,Demand Surge,PROD-8373,SUP-939,USA,City_15,350912,0
+EVT-0255,2024-05-22,Port Congestion,High,Demand Surge,PROD-6907,SUP-801,Thailand,City_4,45903,1
+EVT-0256,2024-05-23,Quality Issue,Low,Inventory Issue,PROD-7097,SUP-646,Vietnam,City_29,213561,0
+EVT-0257,2024-05-23,Equipment Failure,Low,Transportation,PROD-6656,SUP-758,Mexico,City_9,435309,0
+EVT-0258,2024-05-24,Geopolitical,Low,Weather,PROD-9984,SUP-641,Indonesia,City_27,101036,0
+EVT-0259,2024-05-24,Equipment Failure,Low,System Failure,PROD-5259,SUP-945,Mexico,City_26,97954,0
+EVT-0260,2024-05-25,Equipment Failure,High,Human Error,PROD-9286,SUP-606,Japan,City_19,437530,1
+EVT-0261,2024-05-26,Equipment Failure,High,Supplier Fault,PROD-6901,SUP-695,Japan,City_28,451441,1
+EVT-0262,2024-05-26,Quality Issue,Critical,Policy Change,PROD-5917,SUP-980,Japan,City_17,491201,1
+EVT-0263,2024-05-27,Equipment Failure,Medium,Weather,PROD-9429,SUP-380,USA,City_43,355158,1
+EVT-0264,2024-05-27,Cyber Attack,High,Policy Change,PROD-3530,SUP-523,Vietnam,City_41,438395,1
+EVT-0265,2024-05-28,Supplier Delay,High,Human Error,PROD-2960,SUP-955,USA,City_42,127305,1
+EVT-0266,2024-05-28,Labor Strike,Medium,Equipment Malfunction,PROD-8045,SUP-369,Germany,City_20,428554,1
+EVT-0267,2024-05-29,Port Congestion,High,Equipment Malfunction,PROD-2048,SUP-253,Thailand,City_45,495651,1
+EVT-0268,2024-05-29,Port Congestion,Low,Weather,PROD-6772,SUP-713,Thailand,City_40,210753,1
+EVT-0269,2024-05-30,Labor Strike,Low,Documentation,PROD-3529,SUP-826,Japan,City_39,42101,0
+EVT-0270,2024-05-31,Quality Issue,Medium,Human Error,PROD-3964,SUP-761,Germany,City_49,12775,0
+EVT-0271,2024-05-31,Natural Disaster,Critical,Human Error,PROD-8137,SUP-182,India,City_23,121497,1
+EVT-0272,2024-06-01,Quality Issue,Critical,Inventory Issue,PROD-1963,SUP-721,India,City_47,55619,1
+EVT-0273,2024-06-01,Port Congestion,Medium,Documentation,PROD-1536,SUP-998,Japan,City_32,449054,1
+EVT-0274,2024-06-02,Port Congestion,Medium,System Failure,PROD-8340,SUP-525,Indonesia,City_47,262388,1
+EVT-0275,2024-06-02,Labor Strike,Low,System Failure,PROD-8179,SUP-374,USA,City_33,422755,1
+EVT-0276,2024-06-03,Equipment Failure,Critical,Supplier Fault,PROD-8967,SUP-812,Japan,City_46,243346,1
+EVT-0277,2024-06-03,Quality Issue,High,Demand Surge,PROD-9734,SUP-383,Brazil,City_5,329268,1
+EVT-0278,2024-06-04,Regulatory Change,Low,Equipment Malfunction,PROD-1845,SUP-272,Mexico,City_43,75149,0
+EVT-0279,2024-06-05,Labor Strike,Medium,System Failure,PROD-6777,SUP-426,Thailand,City_48,36616,1
+EVT-0280,2024-06-05,Cyber Attack,Critical,Documentation,PROD-4036,SUP-817,India,City_34,482871,1
+EVT-0281,2024-06-06,Port Congestion,High,Human Error,PROD-6947,SUP-162,China,City_40,231767,1
+EVT-0282,2024-06-06,Labor Strike,High,System Failure,PROD-3494,SUP-172,India,City_11,195639,1
+EVT-0283,2024-06-07,Quality Issue,Low,Human Error,PROD-3719,SUP-862,Thailand,City_3,178171,0
+EVT-0284,2024-06-07,Port Congestion,Critical,System Failure,PROD-2884,SUP-735,Mexico,City_33,216903,1
+EVT-0285,2024-06-08,Natural Disaster,Critical,Equipment Malfunction,PROD-5349,SUP-474,Thailand,City_11,241318,1
+EVT-0286,2024-06-09,Labor Strike,Medium,Policy Change,PROD-6179,SUP-732,China,City_16,333943,1
+EVT-0287,2024-06-09,Geopolitical,Critical,System Failure,PROD-7610,SUP-607,Japan,City_18,362365,1
+EVT-0288,2024-06-10,Port Congestion,Critical,Documentation,PROD-7430,SUP-886,Germany,City_30,387023,1
+EVT-0289,2024-06-10,Quality Issue,Low,System Failure,PROD-8154,SUP-497,China,City_48,297623,0
+EVT-0290,2024-06-11,Supplier Delay,Critical,Demand Surge,PROD-7488,SUP-219,Thailand,City_10,449388,1
+EVT-0291,2024-06-11,Regulatory Change,High,Equipment Malfunction,PROD-5737,SUP-536,Thailand,City_18,371309,1
+EVT-0292,2024-06-12,Equipment Failure,Low,Documentation,PROD-7525,SUP-928,Brazil,City_38,65863,0
+EVT-0293,2024-06-12,Quality Issue,Low,Inventory Issue,PROD-4850,SUP-775,Brazil,City_19,183115,0
+EVT-0294,2024-06-13,Cyber Attack,Medium,Documentation,PROD-1689,SUP-564,Vietnam,City_36,354713,1
+EVT-0295,2024-06-14,Cyber Attack,Critical,Demand Surge,PROD-6175,SUP-385,Brazil,City_13,418624,1
+EVT-0296,2024-06-14,Supplier Delay,Medium,Policy Change,PROD-9648,SUP-364,USA,City_46,263347,0
+EVT-0297,2024-06-15,Equipment Failure,High,Equipment Malfunction,PROD-6078,SUP-419,Germany,City_3,199052,1
+EVT-0298,2024-06-15,Geopolitical,Low,Inventory Issue,PROD-6448,SUP-772,Mexico,City_10,486172,0
+EVT-0299,2024-06-16,Supplier Delay,Low,Demand Surge,PROD-2179,SUP-475,China,City_38,288495,0
+EVT-0300,2024-06-16,Supplier Delay,Low,Demand Surge,PROD-7406,SUP-919,Thailand,City_1,145203,0
+EVT-0301,2024-06-17,Port Congestion,High,Weather,PROD-9591,SUP-188,Vietnam,City_27,257908,1
+EVT-0302,2024-06-18,Cyber Attack,High,Equipment Malfunction,PROD-7907,SUP-753,Vietnam,City_46,316969,1
+EVT-0303,2024-06-18,Port Congestion,Medium,Documentation,PROD-9800,SUP-302,Mexico,City_8,283493,1
+EVT-0304,2024-06-19,Regulatory Change,Medium,Human Error,PROD-2638,SUP-920,Germany,City_46,202003,0
+EVT-0305,2024-06-19,Equipment Failure,Medium,Policy Change,PROD-6671,SUP-838,China,City_42,316398,1
+EVT-0306,2024-06-20,Geopolitical,Critical,Human Error,PROD-7928,SUP-433,India,City_17,310369,1
+EVT-0307,2024-06-20,Geopolitical,Low,Documentation,PROD-2382,SUP-321,Brazil,City_9,284597,0
+EVT-0308,2024-06-21,Quality Issue,Low,Documentation,PROD-2403,SUP-140,Japan,City_6,159886,0
+EVT-0309,2024-06-21,Supplier Delay,Medium,Equipment Malfunction,PROD-4292,SUP-807,Vietnam,City_43,159335,1
+EVT-0310,2024-06-22,Regulatory Change,Low,Documentation,PROD-1419,SUP-167,Brazil,City_25,87694,0
+EVT-0311,2024-06-23,Cyber Attack,Medium,Weather,PROD-5517,SUP-875,Brazil,City_39,25735,1
+EVT-0312,2024-06-23,Geopolitical,Critical,Inventory Issue,PROD-4302,SUP-613,USA,City_49,419046,1
+EVT-0313,2024-06-24,Regulatory Change,Critical,Documentation,PROD-8857,SUP-972,Germany,City_28,320037,1
+EVT-0314,2024-06-24,Natural Disaster,High,Human Error,PROD-8870,SUP-736,Japan,City_33,185745,1
+EVT-0315,2024-06-25,Natural Disaster,Critical,Documentation,PROD-6693,SUP-721,India,City_37,399150,1
+EVT-0316,2024-06-25,Port Congestion,Medium,Weather,PROD-1767,SUP-697,Thailand,City_9,230534,1
+EVT-0317,2024-06-26,Cyber Attack,Critical,System Failure,PROD-3044,SUP-731,USA,City_18,55066,1
+EVT-0318,2024-06-27,Quality Issue,High,System Failure,PROD-2549,SUP-226,Brazil,City_21,241387,1
+EVT-0319,2024-06-27,Geopolitical,Low,Demand Surge,PROD-7140,SUP-354,Brazil,City_2,144445,0
+EVT-0320,2024-06-28,Supplier Delay,Medium,Policy Change,PROD-4716,SUP-794,Indonesia,City_43,413551,1
+EVT-0321,2024-06-28,Supplier Delay,Low,Supplier Fault,PROD-5481,SUP-115,Japan,City_38,426957,0
+EVT-0322,2024-06-29,Geopolitical,High,Inventory Issue,PROD-8898,SUP-576,Japan,City_40,282836,1
+EVT-0323,2024-06-29,Equipment Failure,High,Transportation,PROD-7548,SUP-161,Indonesia,City_36,450511,1
+EVT-0324,2024-06-30,Quality Issue,High,Demand Surge,PROD-3293,SUP-980,Japan,City_43,55541,1
+EVT-0325,2024-06-30,Regulatory Change,Low,Policy Change,PROD-5837,SUP-531,Brazil,City_37,175129,0
+EVT-0326,2024-07-01,Equipment Failure,Low,System Failure,PROD-8758,SUP-769,Vietnam,City_15,76983,0
+EVT-0327,2024-07-02,Equipment Failure,Low,Human Error,PROD-7793,SUP-367,China,City_28,160655,0
+EVT-0328,2024-07-02,Port Congestion,Low,Transportation,PROD-8638,SUP-134,Brazil,City_18,163837,0
+EVT-0329,2024-07-03,Natural Disaster,High,Policy Change,PROD-8993,SUP-878,USA,City_34,200359,1
+EVT-0330,2024-07-03,Equipment Failure,High,Policy Change,PROD-7007,SUP-675,Germany,City_22,427122,1
+EVT-0331,2024-07-04,Equipment Failure,Medium,Demand Surge,PROD-6542,SUP-593,Indonesia,City_11,392891,1
+EVT-0332,2024-07-04,Labor Strike,Medium,Transportation,PROD-7356,SUP-661,India,City_13,357247,1
+EVT-0333,2024-07-05,Port Congestion,Low,Equipment Malfunction,PROD-9433,SUP-568,Thailand,City_4,220747,0
+EVT-0334,2024-07-05,Cyber Attack,Critical,Supplier Fault,PROD-8380,SUP-866,India,City_22,187597,1
+EVT-0335,2024-07-06,Labor Strike,Critical,Equipment Malfunction,PROD-3385,SUP-760,Brazil,City_7,179302,1
+EVT-0336,2024-07-07,Labor Strike,High,Transportation,PROD-5268,SUP-424,USA,City_43,422736,1
+EVT-0337,2024-07-07,Geopolitical,High,Equipment Malfunction,PROD-1671,SUP-403,Brazil,City_24,488454,1
+EVT-0338,2024-07-08,Natural Disaster,High,Weather,PROD-1163,SUP-375,Germany,City_4,455150,1
+EVT-0339,2024-07-08,Equipment Failure,Medium,System Failure,PROD-9656,SUP-968,Vietnam,City_28,297710,1
+EVT-0340,2024-07-09,Natural Disaster,Medium,Weather,PROD-5592,SUP-783,Thailand,City_15,345337,1
+EVT-0341,2024-07-09,Quality Issue,High,Documentation,PROD-5795,SUP-300,Germany,City_1,433350,1
+EVT-0342,2024-07-10,Geopolitical,High,Equipment Malfunction,PROD-5798,SUP-544,Indonesia,City_3,413561,1
+EVT-0343,2024-07-11,Cyber Attack,High,Documentation,PROD-7036,SUP-423,Indonesia,City_14,262084,1
+EVT-0344,2024-07-11,Natural Disaster,Critical,Human Error,PROD-3355,SUP-134,Brazil,City_38,131015,1
+EVT-0345,2024-07-12,Supplier Delay,Medium,Inventory Issue,PROD-6887,SUP-581,USA,City_1,182257,0
+EVT-0346,2024-07-12,Quality Issue,Critical,Human Error,PROD-8961,SUP-827,Germany,City_38,256536,1
+EVT-0347,2024-07-13,Port Congestion,Critical,Transportation,PROD-6827,SUP-579,Mexico,City_38,234021,1
+EVT-0348,2024-07-13,Cyber Attack,High,Policy Change,PROD-9737,SUP-164,USA,City_21,140956,1
+EVT-0349,2024-07-14,Quality Issue,High,System Failure,PROD-5719,SUP-107,Vietnam,City_48,80744,1
+EVT-0350,2024-07-14,Geopolitical,Low,Equipment Malfunction,PROD-1593,SUP-400,Indonesia,City_29,305599,0
+EVT-0351,2024-07-15,Labor Strike,Low,Demand Surge,PROD-5839,SUP-442,Brazil,City_5,431234,0
+EVT-0352,2024-07-16,Labor Strike,Critical,Inventory Issue,PROD-8394,SUP-530,Japan,City_49,326363,1
+EVT-0353,2024-07-16,Geopolitical,Medium,Supplier Fault,PROD-4493,SUP-523,Indonesia,City_10,318135,1
+EVT-0354,2024-07-17,Regulatory Change,High,Supplier Fault,PROD-7164,SUP-431,Thailand,City_28,83616,1
+EVT-0355,2024-07-17,Labor Strike,High,Supplier Fault,PROD-3672,SUP-537,China,City_21,97438,1
+EVT-0356,2024-07-18,Port Congestion,Critical,Equipment Malfunction,PROD-5200,SUP-687,Japan,City_7,126841,1
+EVT-0357,2024-07-18,Port Congestion,Low,Supplier Fault,PROD-1016,SUP-273,Brazil,City_3,150558,0
+EVT-0358,2024-07-19,Supplier Delay,Medium,Weather,PROD-4191,SUP-658,Mexico,City_45,179934,1
+EVT-0359,2024-07-20,Equipment Failure,Low,Inventory Issue,PROD-1392,SUP-626,Japan,City_47,262734,0
+EVT-0360,2024-07-20,Regulatory Change,Low,Weather,PROD-9616,SUP-972,Thailand,City_20,68870,0
+EVT-0361,2024-07-21,Cyber Attack,Low,Policy Change,PROD-7272,SUP-758,USA,City_19,96694,0
+EVT-0362,2024-07-21,Labor Strike,Low,Inventory Issue,PROD-1571,SUP-125,Mexico,City_35,247068,1
+EVT-0363,2024-07-22,Port Congestion,High,Weather,PROD-4631,SUP-919,Indonesia,City_4,316000,1
+EVT-0364,2024-07-22,Geopolitical,High,Inventory Issue,PROD-7172,SUP-704,Mexico,City_5,111407,1
+EVT-0365,2024-07-23,Labor Strike,Low,Policy Change,PROD-8177,SUP-505,Germany,City_1,489271,0
+EVT-0366,2024-07-23,Equipment Failure,Medium,Documentation,PROD-9433,SUP-331,Thailand,City_4,41379,0
+EVT-0367,2024-07-24,Geopolitical,Critical,Equipment Malfunction,PROD-4897,SUP-632,Japan,City_12,336873,1
+EVT-0368,2024-07-25,Quality Issue,Medium,Equipment Malfunction,PROD-9123,SUP-918,Germany,City_27,431594,1
+EVT-0369,2024-07-25,Quality Issue,Medium,Supplier Fault,PROD-3279,SUP-649,Mexico,City_42,246500,0
+EVT-0370,2024-07-26,Labor Strike,Medium,Human Error,PROD-9980,SUP-887,Germany,City_23,64353,1
+EVT-0371,2024-07-26,Equipment Failure,Low,Supplier Fault,PROD-8451,SUP-604,India,City_25,191068,0
+EVT-0372,2024-07-27,Regulatory Change,High,Transportation,PROD-9906,SUP-768,Thailand,City_21,286175,1
+EVT-0373,2024-07-27,Labor Strike,Medium,Weather,PROD-1775,SUP-278,Vietnam,City_24,221144,1
+EVT-0374,2024-07-28,Port Congestion,Low,Inventory Issue,PROD-7869,SUP-231,USA,City_25,75982,0
+EVT-0375,2024-07-29,Natural Disaster,Medium,Human Error,PROD-3247,SUP-922,Mexico,City_45,46683,1
+EVT-0376,2024-07-29,Labor Strike,Medium,Policy Change,PROD-8088,SUP-554,Thailand,City_46,124091,1
+EVT-0377,2024-07-30,Labor Strike,Low,Transportation,PROD-1078,SUP-447,Vietnam,City_32,127797,0
+EVT-0378,2024-07-30,Geopolitical,High,Policy Change,PROD-9080,SUP-639,Vietnam,City_32,420834,1
+EVT-0379,2024-07-31,Natural Disaster,High,Equipment Malfunction,PROD-8099,SUP-871,Brazil,City_5,16587,1
+EVT-0380,2024-07-31,Port Congestion,Critical,Equipment Malfunction,PROD-4926,SUP-505,Germany,City_36,334934,1
+EVT-0381,2024-08-01,Labor Strike,Low,Supplier Fault,PROD-8340,SUP-175,Vietnam,City_46,303624,1
+EVT-0382,2024-08-01,Geopolitical,Critical,Weather,PROD-8083,SUP-678,India,City_42,239602,1
+EVT-0383,2024-08-02,Equipment Failure,Critical,Human Error,PROD-7230,SUP-953,Thailand,City_49,161599,1
+EVT-0384,2024-08-03,Labor Strike,Critical,System Failure,PROD-5940,SUP-591,China,City_42,295713,1
+EVT-0385,2024-08-03,Natural Disaster,High,Transportation,PROD-4271,SUP-293,China,City_39,283295,1
+EVT-0386,2024-08-04,Supplier Delay,Low,Transportation,PROD-4456,SUP-261,Mexico,City_16,474310,0
+EVT-0387,2024-08-04,Natural Disaster,Critical,Supplier Fault,PROD-8788,SUP-446,Indonesia,City_33,200246,1
+EVT-0388,2024-08-05,Quality Issue,Low,Equipment Malfunction,PROD-9599,SUP-460,Germany,City_49,54739,0
+EVT-0389,2024-08-05,Port Congestion,Low,Supplier Fault,PROD-8650,SUP-868,Indonesia,City_21,42954,0
+EVT-0390,2024-08-06,Cyber Attack,High,Inventory Issue,PROD-3711,SUP-683,Vietnam,City_9,253935,1
+EVT-0391,2024-08-07,Labor Strike,Critical,Human Error,PROD-2668,SUP-186,Thailand,City_6,119373,1
+EVT-0392,2024-08-07,Natural Disaster,Critical,Weather,PROD-1147,SUP-361,Mexico,City_45,438519,1
+EVT-0393,2024-08-08,Cyber Attack,Low,Documentation,PROD-7420,SUP-313,Japan,City_35,44700,0
+EVT-0394,2024-08-08,Geopolitical,Medium,Demand Surge,PROD-1365,SUP-764,Vietnam,City_39,496252,1
+EVT-0395,2024-08-09,Supplier Delay,High,Demand Surge,PROD-5531,SUP-821,Germany,City_22,133728,1
+EVT-0396,2024-08-09,Port Congestion,High,Supplier Fault,PROD-6330,SUP-672,China,City_41,470784,1
+EVT-0397,2024-08-10,Natural Disaster,High,Inventory Issue,PROD-6510,SUP-879,Brazil,City_5,338932,1
+EVT-0398,2024-08-10,Cyber Attack,High,Human Error,PROD-9754,SUP-361,Thailand,City_42,81045,1
+EVT-0399,2024-08-11,Supplier Delay,Critical,System Failure,PROD-9964,SUP-829,USA,City_23,441058,1
+EVT-0400,2024-08-12,Quality Issue,Critical,Demand Surge,PROD-7493,SUP-382,Indonesia,City_17,154972,1
+EVT-0401,2024-08-12,Port Congestion,Medium,Human Error,PROD-6439,SUP-747,Mexico,City_12,400136,1
+EVT-0402,2024-08-13,Port Congestion,High,Weather,PROD-7511,SUP-566,Indonesia,City_23,352203,1
+EVT-0403,2024-08-13,Quality Issue,High,Policy Change,PROD-8504,SUP-479,Thailand,City_16,11881,0
+EVT-0404,2024-08-14,Labor Strike,Low,Inventory Issue,PROD-2246,SUP-461,Indonesia,City_3,436253,1
+EVT-0405,2024-08-14,Quality Issue,Critical,Equipment Malfunction,PROD-4839,SUP-548,Thailand,City_30,404846,1
+EVT-0406,2024-08-15,Port Congestion,High,Human Error,PROD-9551,SUP-540,Indonesia,City_22,292933,1
+EVT-0407,2024-08-15,Port Congestion,Medium,Weather,PROD-3376,SUP-192,India,City_9,398227,1
+EVT-0408,2024-08-16,Cyber Attack,Medium,System Failure,PROD-4009,SUP-720,Japan,City_29,98059,1
+EVT-0409,2024-08-17,Supplier Delay,Critical,Documentation,PROD-2827,SUP-852,Vietnam,City_47,224566,1
+EVT-0410,2024-08-17,Quality Issue,Medium,Equipment Malfunction,PROD-7979,SUP-966,Vietnam,City_37,318295,1
+EVT-0411,2024-08-18,Supplier Delay,Medium,Documentation,PROD-9569,SUP-523,Germany,City_23,452136,0
+EVT-0412,2024-08-18,Quality Issue,Critical,System Failure,PROD-5285,SUP-241,USA,City_13,119388,1
+EVT-0413,2024-08-19,Geopolitical,High,Weather,PROD-7910,SUP-390,USA,City_32,208303,1
+EVT-0414,2024-08-19,Port Congestion,High,Demand Surge,PROD-9561,SUP-531,Germany,City_46,483573,1
+EVT-0415,2024-08-20,Cyber Attack,Medium,Documentation,PROD-3196,SUP-848,Brazil,City_47,275406,1
+EVT-0416,2024-08-21,Supplier Delay,Medium,Equipment Malfunction,PROD-4747,SUP-951,Vietnam,City_48,339125,1
+EVT-0417,2024-08-21,Quality Issue,High,Supplier Fault,PROD-9843,SUP-923,Brazil,City_23,393095,1
+EVT-0418,2024-08-22,Regulatory Change,Critical,Transportation,PROD-6978,SUP-788,Thailand,City_45,395243,1
+EVT-0419,2024-08-22,Geopolitical,Medium,Human Error,PROD-6607,SUP-752,Thailand,City_17,91972,0
+EVT-0420,2024-08-23,Natural Disaster,Low,Demand Surge,PROD-1769,SUP-800,China,City_40,347629,1
+EVT-0421,2024-08-23,Labor Strike,Critical,Documentation,PROD-1780,SUP-148,Indonesia,City_21,64722,1
+EVT-0422,2024-08-24,Supplier Delay,Medium,Policy Change,PROD-7303,SUP-401,USA,City_2,361643,1
+EVT-0423,2024-08-24,Cyber Attack,Medium,Human Error,PROD-4983,SUP-980,China,City_37,191890,1
+EVT-0424,2024-08-25,Natural Disaster,Low,Supplier Fault,PROD-9714,SUP-289,Japan,City_6,433148,1
+EVT-0425,2024-08-26,Regulatory Change,Low,System Failure,PROD-1521,SUP-235,Germany,City_44,279045,0
+EVT-0426,2024-08-26,Labor Strike,High,Transportation,PROD-8569,SUP-654,Germany,City_18,127473,1
+EVT-0427,2024-08-27,Regulatory Change,Critical,Weather,PROD-6784,SUP-503,Thailand,City_30,280741,1
+EVT-0428,2024-08-27,Natural Disaster,Critical,Supplier Fault,PROD-5583,SUP-991,Vietnam,City_22,401775,1
+EVT-0429,2024-08-28,Labor Strike,High,Supplier Fault,PROD-6946,SUP-964,Brazil,City_33,336053,1
+EVT-0430,2024-08-28,Regulatory Change,Critical,System Failure,PROD-5941,SUP-701,USA,City_30,344535,1
+EVT-0431,2024-08-29,Cyber Attack,Critical,Inventory Issue,PROD-7267,SUP-906,China,City_17,225286,1
+EVT-0432,2024-08-30,Quality Issue,Critical,System Failure,PROD-8128,SUP-440,Brazil,City_43,411479,1
+EVT-0433,2024-08-30,Port Congestion,Critical,Inventory Issue,PROD-3461,SUP-856,China,City_32,335437,1
+EVT-0434,2024-08-31,Quality Issue,Critical,Inventory Issue,PROD-1685,SUP-803,Indonesia,City_42,253896,1
+EVT-0435,2024-08-31,Natural Disaster,Low,Demand Surge,PROD-3160,SUP-417,Japan,City_14,166877,0
+EVT-0436,2024-09-01,Supplier Delay,Critical,Demand Surge,PROD-8031,SUP-717,Japan,City_10,494895,1
+EVT-0437,2024-09-01,Port Congestion,Low,Equipment Malfunction,PROD-6341,SUP-462,Brazil,City_47,21874,0
+EVT-0438,2024-09-02,Geopolitical,Critical,Documentation,PROD-1038,SUP-921,Brazil,City_36,234137,1
+EVT-0439,2024-09-02,Cyber Attack,High,Documentation,PROD-5875,SUP-481,Brazil,City_34,358546,1
+EVT-0440,2024-09-03,Geopolitical,Medium,Weather,PROD-2256,SUP-332,China,City_9,286223,1
+EVT-0441,2024-09-04,Labor Strike,Low,Documentation,PROD-8697,SUP-876,Indonesia,City_42,453066,0
+EVT-0442,2024-09-04,Port Congestion,Critical,Demand Surge,PROD-3196,SUP-443,India,City_28,344923,1
+EVT-0443,2024-09-05,Geopolitical,High,Equipment Malfunction,PROD-8165,SUP-648,Brazil,City_11,105408,1
+EVT-0444,2024-09-05,Geopolitical,Medium,Equipment Malfunction,PROD-1301,SUP-916,Vietnam,City_14,412234,1
+EVT-0445,2024-09-06,Regulatory Change,Low,Inventory Issue,PROD-8527,SUP-652,USA,City_39,130606,0
+EVT-0446,2024-09-06,Quality Issue,Medium,System Failure,PROD-7381,SUP-628,USA,City_47,452716,1
+EVT-0447,2024-09-07,Regulatory Change,High,Weather,PROD-1646,SUP-955,China,City_19,130062,1
+EVT-0448,2024-09-08,Port Congestion,Low,Inventory Issue,PROD-9789,SUP-888,Brazil,City_15,22100,0
+EVT-0449,2024-09-08,Port Congestion,Medium,System Failure,PROD-9853,SUP-918,Thailand,City_28,329165,1
+EVT-0450,2024-09-09,Natural Disaster,Critical,Documentation,PROD-5330,SUP-670,Germany,City_24,160872,1
+EVT-0451,2024-09-09,Regulatory Change,Low,Inventory Issue,PROD-8003,SUP-282,India,City_8,400270,0
+EVT-0452,2024-09-10,Equipment Failure,Medium,Human Error,PROD-4537,SUP-140,Vietnam,City_43,204472,0
+EVT-0453,2024-09-10,Quality Issue,High,Documentation,PROD-5558,SUP-650,Indonesia,City_9,364590,1
+EVT-0454,2024-09-11,Port Congestion,High,System Failure,PROD-7579,SUP-496,Thailand,City_47,301581,1
+EVT-0455,2024-09-11,Natural Disaster,Low,Weather,PROD-9474,SUP-803,Japan,City_33,244196,1
+EVT-0456,2024-09-12,Regulatory Change,Medium,System Failure,PROD-5082,SUP-878,Thailand,City_33,217609,0
+EVT-0457,2024-09-13,Quality Issue,Low,Inventory Issue,PROD-5183,SUP-593,China,City_19,449891,0
+EVT-0458,2024-09-13,Regulatory Change,Low,Inventory Issue,PROD-9652,SUP-758,India,City_3,161014,0
+EVT-0459,2024-09-14,Geopolitical,Medium,Supplier Fault,PROD-4754,SUP-432,Mexico,City_10,293006,1
+EVT-0460,2024-09-14,Natural Disaster,Medium,Weather,PROD-2724,SUP-226,Mexico,City_40,283813,1
+EVT-0461,2024-09-15,Quality Issue,Critical,Policy Change,PROD-2376,SUP-657,Brazil,City_47,393363,1
+EVT-0462,2024-09-15,Labor Strike,Medium,Documentation,PROD-9706,SUP-656,Brazil,City_42,194844,1
+EVT-0463,2024-09-16,Labor Strike,High,Equipment Malfunction,PROD-9894,SUP-100,China,City_1,288060,1
+EVT-0464,2024-09-16,Quality Issue,Low,Weather,PROD-2653,SUP-267,Indonesia,City_29,283022,0
+EVT-0465,2024-09-17,Regulatory Change,Low,Equipment Malfunction,PROD-3066,SUP-719,Brazil,City_34,275129,0
+EVT-0466,2024-09-18,Natural Disaster,High,Weather,PROD-1022,SUP-118,Germany,City_13,214720,1
+EVT-0467,2024-09-18,Labor Strike,Medium,Weather,PROD-3460,SUP-431,India,City_1,51235,1
+EVT-0468,2024-09-19,Natural Disaster,High,System Failure,PROD-6926,SUP-683,China,City_34,291075,1
+EVT-0469,2024-09-19,Labor Strike,High,Weather,PROD-7251,SUP-555,USA,City_29,102876,1
+EVT-0470,2024-09-20,Geopolitical,Critical,Supplier Fault,PROD-8295,SUP-208,Japan,City_48,10336,1
+EVT-0471,2024-09-20,Regulatory Change,High,Policy Change,PROD-4300,SUP-367,China,City_47,315077,1
+EVT-0472,2024-09-21,Geopolitical,Low,Inventory Issue,PROD-7279,SUP-544,China,City_13,488115,0
+EVT-0473,2024-09-22,Labor Strike,High,Transportation,PROD-9553,SUP-339,Mexico,City_48,317680,1
+EVT-0474,2024-09-22,Geopolitical,Low,Equipment Malfunction,PROD-8353,SUP-400,Vietnam,City_49,79504,0
+EVT-0475,2024-09-23,Labor Strike,Low,Inventory Issue,PROD-4727,SUP-701,Indonesia,City_29,109214,0
+EVT-0476,2024-09-23,Quality Issue,Low,Transportation,PROD-7272,SUP-202,Vietnam,City_39,192220,0
+EVT-0477,2024-09-24,Geopolitical,Medium,Policy Change,PROD-6995,SUP-349,Germany,City_24,123936,0
+EVT-0478,2024-09-24,Supplier Delay,Critical,Policy Change,PROD-1514,SUP-552,USA,City_26,26279,1
+EVT-0479,2024-09-25,Regulatory Change,Low,Equipment Malfunction,PROD-1448,SUP-619,Mexico,City_17,209737,0
+EVT-0480,2024-09-25,Port Congestion,Low,Equipment Malfunction,PROD-7019,SUP-252,USA,City_7,113751,0
+EVT-0481,2024-09-26,Equipment Failure,Medium,Policy Change,PROD-6343,SUP-958,Germany,City_13,376577,1
+EVT-0482,2024-09-27,Geopolitical,Low,Transportation,PROD-9033,SUP-273,Vietnam,City_5,81386,0
+EVT-0483,2024-09-27,Cyber Attack,High,Weather,PROD-3520,SUP-442,China,City_26,96124,1
+EVT-0484,2024-09-28,Regulatory Change,High,Documentation,PROD-4081,SUP-769,Brazil,City_49,377894,1
+EVT-0485,2024-09-28,Supplier Delay,Critical,Human Error,PROD-2428,SUP-530,Brazil,City_3,349629,1
+EVT-0486,2024-09-29,Supplier Delay,Low,Inventory Issue,PROD-4967,SUP-826,Thailand,City_7,346199,0
+EVT-0487,2024-09-29,Labor Strike,Medium,System Failure,PROD-7445,SUP-788,Japan,City_49,101911,1
+EVT-0488,2024-09-30,Labor Strike,High,Inventory Issue,PROD-3159,SUP-786,Indonesia,City_39,370762,1
+EVT-0489,2024-10-01,Equipment Failure,Medium,System Failure,PROD-6132,SUP-951,Germany,City_1,480489,1
+EVT-0490,2024-10-01,Quality Issue,Medium,Transportation,PROD-3547,SUP-949,Japan,City_49,207742,0
+EVT-0491,2024-10-02,Cyber Attack,High,System Failure,PROD-3979,SUP-757,Indonesia,City_17,479690,1
+EVT-0492,2024-10-02,Port Congestion,Medium,Equipment Malfunction,PROD-3649,SUP-423,Japan,City_43,457244,1
+EVT-0493,2024-10-03,Equipment Failure,High,Documentation,PROD-9505,SUP-772,Vietnam,City_25,231094,1
+EVT-0494,2024-10-03,Natural Disaster,Medium,Documentation,PROD-4083,SUP-738,Indonesia,City_3,386036,1
+EVT-0495,2024-10-04,Port Congestion,High,Equipment Malfunction,PROD-2037,SUP-519,Vietnam,City_15,494848,1
+EVT-0496,2024-10-04,Geopolitical,Low,Supplier Fault,PROD-4489,SUP-693,China,City_29,247723,0
+EVT-0497,2024-10-05,Regulatory Change,Critical,Transportation,PROD-8604,SUP-584,Mexico,City_43,343272,1
+EVT-0498,2024-10-06,Natural Disaster,High,Supplier Fault,PROD-8544,SUP-758,Vietnam,City_32,421324,1
+EVT-0499,2024-10-06,Natural Disaster,High,Supplier Fault,PROD-3634,SUP-850,Brazil,City_26,324639,1
+EVT-0500,2024-10-07,Equipment Failure,Critical,Inventory Issue,PROD-4983,SUP-511,Japan,City_16,92806,1
+EVT-0501,2024-10-07,Quality Issue,High,Policy Change,PROD-2778,SUP-183,Thailand,City_25,365329,1
+EVT-0502,2024-10-08,Equipment Failure,High,Inventory Issue,PROD-8902,SUP-212,India,City_28,217605,1
+EVT-0503,2024-10-08,Geopolitical,Medium,Policy Change,PROD-6110,SUP-836,Indonesia,City_9,240097,1
+EVT-0504,2024-10-09,Quality Issue,Critical,Human Error,PROD-6189,SUP-431,Germany,City_1,460046,1
+EVT-0505,2024-10-10,Geopolitical,Low,System Failure,PROD-8378,SUP-477,Thailand,City_29,477856,0
+EVT-0506,2024-10-10,Quality Issue,High,Policy Change,PROD-2124,SUP-854,Brazil,City_22,455725,1
+EVT-0507,2024-10-11,Supplier Delay,Critical,Equipment Malfunction,PROD-1697,SUP-754,Vietnam,City_16,207478,1
+EVT-0508,2024-10-11,Natural Disaster,Medium,Inventory Issue,PROD-3179,SUP-140,Mexico,City_41,497436,1
+EVT-0509,2024-10-12,Cyber Attack,Low,Transportation,PROD-6251,SUP-869,China,City_44,180591,0
+EVT-0510,2024-10-12,Regulatory Change,Critical,System Failure,PROD-2929,SUP-896,India,City_41,321793,1
+EVT-0511,2024-10-13,Geopolitical,Low,Human Error,PROD-2013,SUP-204,USA,City_7,175596,0
+EVT-0512,2024-10-13,Port Congestion,Low,Policy Change,PROD-1226,SUP-301,Thailand,City_14,499709,0
+EVT-0513,2024-10-14,Quality Issue,Low,Human Error,PROD-8321,SUP-549,Mexico,City_29,174957,0
+EVT-0514,2024-10-15,Regulatory Change,High,Transportation,PROD-2828,SUP-918,USA,City_19,447585,1
+EVT-0515,2024-10-15,Port Congestion,High,Supplier Fault,PROD-8909,SUP-942,India,City_19,242204,1
+EVT-0516,2024-10-16,Regulatory Change,Medium,Documentation,PROD-6588,SUP-365,Germany,City_2,367546,0
+EVT-0517,2024-10-16,Cyber Attack,Medium,Transportation,PROD-3023,SUP-309,Germany,City_41,302820,1
+EVT-0518,2024-10-17,Port Congestion,Critical,Demand Surge,PROD-5966,SUP-662,Japan,City_45,336237,1
+EVT-0519,2024-10-17,Equipment Failure,Medium,Transportation,PROD-6891,SUP-217,India,City_15,450980,1
+EVT-0520,2024-10-18,Labor Strike,Low,Human Error,PROD-2080,SUP-812,India,City_3,191871,0
+EVT-0521,2024-10-19,Equipment Failure,Low,Equipment Malfunction,PROD-6036,SUP-476,USA,City_11,351558,0
+EVT-0522,2024-10-19,Labor Strike,High,Inventory Issue,PROD-3563,SUP-650,Mexico,City_46,365239,1
+EVT-0523,2024-10-20,Equipment Failure,Low,Equipment Malfunction,PROD-4292,SUP-639,Indonesia,City_30,253154,0
+EVT-0524,2024-10-20,Labor Strike,Critical,Human Error,PROD-4586,SUP-870,USA,City_40,82307,1
+EVT-0525,2024-10-21,Labor Strike,Low,Inventory Issue,PROD-5431,SUP-183,China,City_18,485278,1
+EVT-0526,2024-10-21,Natural Disaster,Low,Demand Surge,PROD-7841,SUP-553,Germany,City_48,367576,1
+EVT-0527,2024-10-22,Quality Issue,Critical,Documentation,PROD-7643,SUP-766,Germany,City_2,304067,1
+EVT-0528,2024-10-22,Quality Issue,Medium,System Failure,PROD-4959,SUP-728,Japan,City_32,389593,1
+EVT-0529,2024-10-23,Natural Disaster,Medium,Human Error,PROD-1161,SUP-613,China,City_8,245998,1
+EVT-0530,2024-10-24,Regulatory Change,Critical,Policy Change,PROD-1593,SUP-704,Germany,City_22,481604,1
+EVT-0531,2024-10-24,Supplier Delay,High,Human Error,PROD-4390,SUP-777,USA,City_6,319718,1
+EVT-0532,2024-10-25,Regulatory Change,Low,Human Error,PROD-6997,SUP-486,China,City_12,446607,0
+EVT-0533,2024-10-25,Port Congestion,Critical,Inventory Issue,PROD-7354,SUP-449,USA,City_47,131757,1
+EVT-0534,2024-10-26,Port Congestion,Low,Weather,PROD-1663,SUP-395,Indonesia,City_40,63664,0
+EVT-0535,2024-10-26,Labor Strike,High,Transportation,PROD-1541,SUP-357,Indonesia,City_36,339528,1
+EVT-0536,2024-10-27,Equipment Failure,Low,Weather,PROD-6433,SUP-180,Germany,City_15,303171,0
+EVT-0537,2024-10-27,Equipment Failure,Critical,Demand Surge,PROD-6093,SUP-367,Germany,City_28,176536,1
+EVT-0538,2024-10-28,Quality Issue,Low,Policy Change,PROD-1867,SUP-518,Mexico,City_49,306629,0
+EVT-0539,2024-10-29,Geopolitical,Medium,Documentation,PROD-9623,SUP-334,Indonesia,City_45,269438,1
+EVT-0540,2024-10-29,Regulatory Change,High,Supplier Fault,PROD-6469,SUP-932,Thailand,City_18,160528,1
+EVT-0541,2024-10-30,Cyber Attack,High,Demand Surge,PROD-7256,SUP-410,Thailand,City_2,478011,1
+EVT-0542,2024-10-30,Equipment Failure,High,Supplier Fault,PROD-2169,SUP-912,Japan,City_13,307698,1
+EVT-0543,2024-10-31,Cyber Attack,Critical,Supplier Fault,PROD-1830,SUP-456,Indonesia,City_45,319066,1
+EVT-0544,2024-10-31,Labor Strike,High,Documentation,PROD-2651,SUP-312,USA,City_15,285553,1
+EVT-0545,2024-11-01,Cyber Attack,Medium,Equipment Malfunction,PROD-2136,SUP-673,USA,City_20,210399,1
+EVT-0546,2024-11-02,Natural Disaster,Critical,Weather,PROD-3810,SUP-148,Brazil,City_29,232472,1
+EVT-0547,2024-11-02,Cyber Attack,Medium,Human Error,PROD-9667,SUP-226,China,City_42,308783,1
+EVT-0548,2024-11-03,Supplier Delay,Low,System Failure,PROD-2019,SUP-322,Vietnam,City_29,241182,0
+EVT-0549,2024-11-03,Labor Strike,Low,Supplier Fault,PROD-6237,SUP-378,Thailand,City_3,466843,1
+EVT-0550,2024-11-04,Regulatory Change,Low,Policy Change,PROD-2283,SUP-507,Germany,City_19,486640,0
+EVT-0551,2024-11-04,Natural Disaster,Low,Demand Surge,PROD-1659,SUP-604,Japan,City_3,291836,1
+EVT-0552,2024-11-05,Equipment Failure,Medium,Equipment Malfunction,PROD-3010,SUP-393,Vietnam,City_14,99037,0
+EVT-0553,2024-11-05,Port Congestion,Critical,Supplier Fault,PROD-9590,SUP-895,India,City_40,219912,1
+EVT-0554,2024-11-06,Regulatory Change,Critical,Equipment Malfunction,PROD-2733,SUP-376,Japan,City_4,195272,1
+EVT-0555,2024-11-07,Port Congestion,High,Equipment Malfunction,PROD-3125,SUP-537,India,City_11,234135,1
+EVT-0556,2024-11-07,Labor Strike,Medium,Supplier Fault,PROD-3171,SUP-206,Indonesia,City_31,198487,1
+EVT-0557,2024-11-08,Natural Disaster,Low,Inventory Issue,PROD-9266,SUP-757,India,City_43,28074,0
+EVT-0558,2024-11-08,Quality Issue,Medium,Transportation,PROD-4471,SUP-519,India,City_32,156621,0
+EVT-0559,2024-11-09,Equipment Failure,High,Policy Change,PROD-6624,SUP-710,Mexico,City_27,302107,1
+EVT-0560,2024-11-09,Supplier Delay,High,Human Error,PROD-9691,SUP-528,Mexico,City_30,494672,1
+EVT-0561,2024-11-10,Quality Issue,Medium,Human Error,PROD-9329,SUP-474,Mexico,City_43,237434,0
+EVT-0562,2024-11-11,Labor Strike,Medium,Policy Change,PROD-3097,SUP-172,Indonesia,City_2,242679,1
+EVT-0563,2024-11-11,Regulatory Change,Medium,Inventory Issue,PROD-6068,SUP-733,Vietnam,City_49,62265,0
+EVT-0564,2024-11-12,Supplier Delay,Critical,Human Error,PROD-7397,SUP-129,Japan,City_9,26061,1
+EVT-0565,2024-11-12,Cyber Attack,Low,Equipment Malfunction,PROD-3757,SUP-287,Japan,City_28,461442,1
+EVT-0566,2024-11-13,Supplier Delay,Medium,Documentation,PROD-4920,SUP-463,Germany,City_31,169882,0
+EVT-0567,2024-11-13,Labor Strike,Medium,Demand Surge,PROD-9186,SUP-965,Mexico,City_34,463222,1
+EVT-0568,2024-11-14,Geopolitical,Medium,Weather,PROD-2900,SUP-899,Indonesia,City_15,123502,1
+EVT-0569,2024-11-14,Cyber Attack,High,Human Error,PROD-3610,SUP-550,Germany,City_48,294944,1
+EVT-0570,2024-11-15,Port Congestion,High,Policy Change,PROD-7900,SUP-294,China,City_25,388336,1
+EVT-0571,2024-11-16,Equipment Failure,Critical,Documentation,PROD-2449,SUP-255,Germany,City_36,266505,1
+EVT-0572,2024-11-16,Port Congestion,Low,Supplier Fault,PROD-9738,SUP-271,Vietnam,City_8,117228,0
+EVT-0573,2024-11-17,Supplier Delay,Critical,Transportation,PROD-6017,SUP-946,Thailand,City_9,216548,1
+EVT-0574,2024-11-17,Port Congestion,Low,Policy Change,PROD-8999,SUP-140,India,City_37,472676,0
+EVT-0575,2024-11-18,Labor Strike,High,Equipment Malfunction,PROD-7052,SUP-162,Mexico,City_48,460983,1
+EVT-0576,2024-11-18,Regulatory Change,High,Transportation,PROD-3096,SUP-122,Thailand,City_45,300198,1
+EVT-0577,2024-11-19,Equipment Failure,High,Demand Surge,PROD-9895,SUP-459,Germany,City_39,478535,1
+EVT-0578,2024-11-20,Port Congestion,Critical,Demand Surge,PROD-7404,SUP-174,Indonesia,City_32,186469,1
+EVT-0579,2024-11-20,Port Congestion,Medium,Inventory Issue,PROD-4331,SUP-659,India,City_17,23233,1
+EVT-0580,2024-11-21,Supplier Delay,Medium,System Failure,PROD-8462,SUP-771,Japan,City_35,252277,1
+EVT-0581,2024-11-21,Regulatory Change,High,Inventory Issue,PROD-6105,SUP-924,USA,City_37,493236,1
+EVT-0582,2024-11-22,Quality Issue,Medium,Documentation,PROD-3978,SUP-217,India,City_19,166140,0
+EVT-0583,2024-11-22,Port Congestion,Medium,Transportation,PROD-3839,SUP-711,Vietnam,City_44,337871,1
+EVT-0584,2024-11-23,Labor Strike,Critical,System Failure,PROD-4384,SUP-479,Vietnam,City_29,362754,1
+EVT-0585,2024-11-23,Geopolitical,Low,Supplier Fault,PROD-1685,SUP-778,Germany,City_7,342597,0
+EVT-0586,2024-11-24,Equipment Failure,High,Equipment Malfunction,PROD-8531,SUP-389,China,City_28,114135,1
+EVT-0587,2024-11-25,Port Congestion,High,Transportation,PROD-5283,SUP-539,Vietnam,City_9,429048,1
+EVT-0588,2024-11-25,Labor Strike,Critical,Inventory Issue,PROD-8736,SUP-767,Vietnam,City_28,380608,1
+EVT-0589,2024-11-26,Labor Strike,Critical,Weather,PROD-8710,SUP-106,Indonesia,City_6,227314,1
+EVT-0590,2024-11-26,Equipment Failure,Medium,System Failure,PROD-2619,SUP-295,Germany,City_29,23682,0
+EVT-0591,2024-11-27,Quality Issue,High,System Failure,PROD-7868,SUP-520,India,City_17,495514,1
+EVT-0592,2024-11-27,Labor Strike,Low,Equipment Malfunction,PROD-2431,SUP-667,China,City_16,164455,1
+EVT-0593,2024-11-28,Geopolitical,Critical,Human Error,PROD-5713,SUP-932,Thailand,City_23,330304,1
+EVT-0594,2024-11-28,Labor Strike,Low,Demand Surge,PROD-5998,SUP-292,USA,City_31,234404,0
+EVT-0595,2024-11-29,Labor Strike,Low,Demand Surge,PROD-1162,SUP-658,Mexico,City_3,295810,0
+EVT-0596,2024-11-30,Labor Strike,High,Weather,PROD-2974,SUP-247,Japan,City_21,330961,1
+EVT-0597,2024-11-30,Quality Issue,High,Documentation,PROD-4291,SUP-886,Vietnam,City_26,101198,1
+EVT-0598,2024-12-01,Port Congestion,Critical,Documentation,PROD-9461,SUP-768,Germany,City_36,437858,1
+EVT-0599,2024-12-01,Labor Strike,High,Supplier Fault,PROD-1631,SUP-301,Mexico,City_42,51830,1
+EVT-0600,2024-12-02,Regulatory Change,High,Transportation,PROD-1905,SUP-543,Japan,City_37,20234,1
+EVT-0601,2024-12-02,Port Congestion,High,Policy Change,PROD-3014,SUP-518,Japan,City_22,67616,1
+EVT-0602,2024-12-03,Quality Issue,Low,Human Error,PROD-8896,SUP-526,Thailand,City_42,281365,0
+EVT-0603,2024-12-04,Natural Disaster,Critical,Inventory Issue,PROD-1204,SUP-578,Thailand,City_12,152482,1
+EVT-0604,2024-12-04,Port Congestion,Medium,Policy Change,PROD-1581,SUP-574,Thailand,City_42,221127,1
+EVT-0605,2024-12-05,Port Congestion,Low,Policy Change,PROD-6675,SUP-225,Brazil,City_13,202485,0
+EVT-0606,2024-12-05,Cyber Attack,High,System Failure,PROD-6347,SUP-494,Brazil,City_11,11051,1
+EVT-0607,2024-12-06,Supplier Delay,Low,Weather,PROD-3643,SUP-916,Japan,City_16,382673,0
+EVT-0608,2024-12-06,Cyber Attack,High,Demand Surge,PROD-9017,SUP-980,Thailand,City_8,478517,1
+EVT-0609,2024-12-07,Geopolitical,High,Supplier Fault,PROD-3297,SUP-905,Indonesia,City_40,86918,1
+EVT-0610,2024-12-07,Supplier Delay,Low,Documentation,PROD-1874,SUP-675,Vietnam,City_40,88116,0
+EVT-0611,2024-12-08,Equipment Failure,Critical,Weather,PROD-6560,SUP-424,Mexico,City_45,394370,1
+EVT-0612,2024-12-09,Equipment Failure,High,System Failure,PROD-1689,SUP-491,Mexico,City_2,459779,1
+EVT-0613,2024-12-09,Quality Issue,Critical,Inventory Issue,PROD-5000,SUP-787,Brazil,City_30,238931,1
+EVT-0614,2024-12-10,Supplier Delay,Medium,Supplier Fault,PROD-1671,SUP-727,Japan,City_30,316901,1
+EVT-0615,2024-12-10,Port Congestion,High,System Failure,PROD-8927,SUP-539,Germany,City_12,393152,1
+EVT-0616,2024-12-11,Equipment Failure,Critical,Demand Surge,PROD-2171,SUP-303,India,City_10,218547,1
+EVT-0617,2024-12-11,Labor Strike,Critical,Demand Surge,PROD-6591,SUP-585,India,City_44,454473,1
+EVT-0618,2024-12-12,Regulatory Change,Medium,Demand Surge,PROD-7342,SUP-932,Brazil,City_11,236572,0
+EVT-0619,2024-12-13,Port Congestion,Critical,Weather,PROD-2449,SUP-130,Germany,City_15,141379,1
+EVT-0620,2024-12-13,Geopolitical,Critical,Weather,PROD-3539,SUP-487,Brazil,City_16,66889,1
+EVT-0621,2024-12-14,Labor Strike,Medium,Documentation,PROD-4959,SUP-724,India,City_17,472111,1
+EVT-0622,2024-12-14,Labor Strike,High,Documentation,PROD-7285,SUP-976,Germany,City_26,236256,1
+EVT-0623,2024-12-15,Supplier Delay,Critical,Inventory Issue,PROD-6432,SUP-533,Thailand,City_2,308088,1
+EVT-0624,2024-12-15,Quality Issue,Critical,Supplier Fault,PROD-5260,SUP-936,Japan,City_12,371699,1
+EVT-0625,2024-12-16,Geopolitical,Critical,Equipment Malfunction,PROD-3361,SUP-475,Mexico,City_26,48134,1
+EVT-0626,2024-12-16,Equipment Failure,Low,Equipment Malfunction,PROD-7164,SUP-443,Indonesia,City_23,430539,0
+EVT-0627,2024-12-17,Supplier Delay,Medium,System Failure,PROD-4670,SUP-542,China,City_18,212834,1
+EVT-0628,2024-12-18,Equipment Failure,Low,Demand Surge,PROD-2753,SUP-678,Japan,City_32,490441,0
+EVT-0629,2024-12-18,Supplier Delay,Medium,Supplier Fault,PROD-9100,SUP-174,Thailand,City_49,237579,1
+EVT-0630,2024-12-19,Supplier Delay,High,Policy Change,PROD-2938,SUP-656,India,City_38,35954,1
+EVT-0631,2024-12-19,Supplier Delay,High,Weather,PROD-9562,SUP-871,Thailand,City_47,196093,1
+EVT-0632,2024-12-20,Quality Issue,Critical,Transportation,PROD-6976,SUP-765,Brazil,City_3,362103,1
+EVT-0633,2024-12-20,Supplier Delay,Medium,Human Error,PROD-7588,SUP-254,Germany,City_38,236999,0
+EVT-0634,2024-12-21,Natural Disaster,High,Inventory Issue,PROD-9616,SUP-529,Mexico,City_3,220938,1
+EVT-0635,2024-12-22,Regulatory Change,Medium,Demand Surge,PROD-7304,SUP-462,Vietnam,City_30,211499,0
+EVT-0636,2024-12-22,Equipment Failure,High,Demand Surge,PROD-8345,SUP-547,Brazil,City_1,277136,1
+EVT-0637,2024-12-23,Port Congestion,Low,Demand Surge,PROD-8875,SUP-333,Japan,City_30,11961,0
+EVT-0638,2024-12-23,Cyber Attack,High,Weather,PROD-7633,SUP-662,Brazil,City_45,22497,1
+EVT-0639,2024-12-24,Geopolitical,Low,Weather,PROD-1597,SUP-917,Japan,City_32,435767,1
+EVT-0640,2024-12-24,Quality Issue,High,Human Error,PROD-4062,SUP-361,Vietnam,City_28,479600,1
+EVT-0641,2024-12-25,Port Congestion,Critical,Policy Change,PROD-3336,SUP-926,USA,City_21,266446,1
+EVT-0642,2024-12-25,Labor Strike,Low,Supplier Fault,PROD-1572,SUP-224,Mexico,City_46,458971,1
+EVT-0643,2024-12-26,Natural Disaster,High,Demand Surge,PROD-8521,SUP-344,Indonesia,City_13,285399,1
+EVT-0644,2024-12-27,Cyber Attack,Critical,Equipment Malfunction,PROD-7171,SUP-641,Indonesia,City_27,145639,1
+EVT-0645,2024-12-27,Port Congestion,Low,Documentation,PROD-8097,SUP-584,China,City_36,320991,0
+EVT-0646,2024-12-28,Port Congestion,Critical,Equipment Malfunction,PROD-3090,SUP-221,Thailand,City_7,245889,1
+EVT-0647,2024-12-28,Natural Disaster,Medium,System Failure,PROD-7566,SUP-224,USA,City_22,189075,1
+EVT-0648,2024-12-29,Cyber Attack,Medium,Equipment Malfunction,PROD-5624,SUP-648,Indonesia,City_10,30389,1
+EVT-0649,2024-12-29,Labor Strike,Low,System Failure,PROD-2633,SUP-269,Brazil,City_39,185595,1
+EVT-0650,2024-12-30,Supplier Delay,High,Transportation,PROD-2517,SUP-223,Thailand,City_15,395946,1

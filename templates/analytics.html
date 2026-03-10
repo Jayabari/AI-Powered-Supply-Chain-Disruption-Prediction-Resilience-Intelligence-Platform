@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel grid-2">
+  <div>
+    <h2>Monthly Event Trends</h2>
+    <canvas id="trendChart"></canvas>
+  </div>
+  <div>
+    <h2>Country Disruption Rate</h2>
+    <canvas id="countryChart"></canvas>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Financial Impact by Cause</h2>
+  <canvas id="causeChart"></canvas>
+</section>
+
+<script>
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: {
+    labels: {{ monthly_labels | tojson }},
+    datasets: [
+      {
+        label: 'Total Events',
+        data: {{ monthly_total | tojson }},
+        borderColor: '#2f6d8f',
+        backgroundColor: 'rgba(47,109,143,0.15)',
+        tension: 0.2,
+        fill: true
+      },
+      {
+        label: 'Disruptions',
+        data: {{ monthly_disruptions | tojson }},
+        borderColor: '#d64933',
+        backgroundColor: 'rgba(214,73,51,0.15)',
+        tension: 0.2,
+        fill: true
+      }
+    ]
+  }
+});
+
+new Chart(document.getElementById('countryChart'), {
+  type: 'bar',
+  data: {
+    labels: {{ country_labels | tojson }},
+    datasets: [{
+      label: 'Disruption Rate (%)',
+      data: {{ country_values | tojson }},
+      backgroundColor: '#d64933'
+    }]
+  }
+});
+
+new Chart(document.getElementById('causeChart'), {
+  type: 'bar',
+  data: {
+    labels: {{ cause_labels | tojson }},
+    datasets: [{
+      label: 'Financial Impact (USD)',
+      data: {{ cause_values | tojson }},
+      backgroundColor: '#edae49'
+    }]
+  },
+  options: {
+    scales: {
+      x: {
+        ticks: {
+          maxRotation: 45,
+          minRotation: 45
+        }
+      }
+    }
+  }
+});
+</script>
+{% endblock %}

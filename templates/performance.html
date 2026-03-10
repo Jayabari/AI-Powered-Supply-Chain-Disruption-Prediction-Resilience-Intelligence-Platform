@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel">
+  <h2>Model Performance</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Best Model</h3><p>{{ metrics.best_model }}</p></div>
+    <div class="card"><h3>Dataset Size</h3><p>{{ metrics.dataset_size }}</p></div>
+    <div class="card"><h3>Features</h3><p>{{ metrics.num_features }}</p></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h3>Metrics by Model</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Accuracy</th>
+        <th>Precision</th>
+        <th>Recall</th>
+        <th>F1</th>
+        <th>ROC-AUC</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in model_rows %}
+      <tr>
+        <td>{{ row.model }}</td>
+        <td>{{ "%.2f"|format(row.accuracy) }}%</td>
+        <td>{{ "%.2f"|format(row.precision) }}%</td>
+        <td>{{ "%.2f"|format(row.recall) }}%</td>
+        <td>{{ "%.2f"|format(row.f1_score) }}%</td>
+        <td>{{ "%.2f"|format(row.roc_auc) }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="panel grid-2">
+  <div>
+    <h3>F1 Comparison</h3>
+    <canvas id="f1Chart"></canvas>
+  </div>
+  <div>
+    <h3>Confusion Matrix (Best Model)</h3>
+    <table>
+      <tr><th></th><th>Predicted: Manageable</th><th>Predicted: Disruption</th></tr>
+      <tr><th>Actual: Manageable</th><td>{{ confusion[0][0] }}</td><td>{{ confusion[0][1] }}</td></tr>
+      <tr><th>Actual: Disruption</th><td>{{ confusion[1][0] }}</td><td>{{ confusion[1][1] }}</td></tr>
+    </table>
+  </div>
+</section>
+
+<script>
+new Chart(document.getElementById('f1Chart'), {
+  type: 'bar',
+  data: {
+    labels: {{ chart_labels | tojson }},
+    datasets: [{
+      label: 'F1 Score (%)',
+      data: {{ chart_f1 | tojson }},
+      backgroundColor: '#3f8f7f'
+    }]
+  }
+});
+</script>
+{% endblock %}
