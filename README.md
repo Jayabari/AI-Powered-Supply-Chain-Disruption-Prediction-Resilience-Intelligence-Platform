@@ -87,6 +87,9 @@ python app.py
 
 The app runs at `http://127.0.0.1:5000`
 
+## Live Demo
+Deployed app: https://web-production-b8862.up.railway.app/
+
 ## Using the Platform
 
 ### Dashboard View
