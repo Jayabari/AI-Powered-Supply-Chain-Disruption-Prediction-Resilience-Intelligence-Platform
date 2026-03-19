@@ -39,10 +39,10 @@
 </section>
 
 <section class="panel grid-2">
-  <div>
+  <div style="min-height: 320px;">
     <h3>F1 Comparison</h3>
-    <div class="chart-container">
-      <canvas id="f1Chart"></canvas>
+    <div class="chart-container" style="height: 280px; position: relative;">
+      <canvas id="f1Chart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
     </div>
   </div>
   <div>
@@ -56,12 +56,12 @@
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function() {
   const chartLabels = {{ chart_labels | tojson }};
   const chartF1 = {{ chart_f1 | tojson }};
 
-  const f1Ctx = document.getElementById('f1Chart');
-  if (f1Ctx && chartLabels.length > 0) {
+  if (document.getElementById('f1Chart') && chartLabels.length > 0) {
+    const f1Ctx = document.getElementById('f1Chart').getContext('2d');
     new Chart(f1Ctx, {
       type: 'bar',
       data: {
@@ -75,13 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: {
-          y: { beginAtZero: true, max: 100 }
-        },
-        plugins: { legend: { position: 'bottom' } }
+        scales: { y: { beginAtZero: true, max: 100 } }
       }
     });
   }
-});
+}, 100);
 </script>
 {% endblock %}

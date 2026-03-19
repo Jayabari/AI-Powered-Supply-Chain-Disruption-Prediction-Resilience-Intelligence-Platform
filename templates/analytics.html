@@ -2,29 +2,29 @@
 
 {% block content %}
 <section class="panel grid-2">
-  <div>
+  <div style="min-height: 320px;">
     <h2>Monthly Event Trends</h2>
-    <div class="chart-container">
-      <canvas id="trendChart"></canvas>
+    <div class="chart-container" style="height: 280px; position: relative;">
+      <canvas id="trendChart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
     </div>
   </div>
-  <div>
+  <div style="min-height: 320px;">
     <h2>Country Disruption Rate</h2>
-    <div class="chart-container">
-      <canvas id="countryChart"></canvas>
+    <div class="chart-container" style="height: 280px; position: relative;">
+      <canvas id="countryChart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
     </div>
   </div>
 </section>
 
 <section class="panel">
   <h2>Financial Impact by Cause</h2>
-  <div class="chart-container" style="height: 350px;">
-    <canvas id="causeChart"></canvas>
+  <div class="chart-container" style="height: 350px; position: relative;">
+    <canvas id="causeChart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
   </div>
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function() {
   const monthlyLabels = {{ monthly_labels | tojson }};
   const monthlyTotal = {{ monthly_total | tojson }};
   const monthlyDisruptions = {{ monthly_disruptions | tojson }};
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const causeLabels = {{ cause_labels | tojson }};
   const causeValues = {{ cause_values | tojson }};
 
-  const trendCtx = document.getElementById('trendChart');
-  if (trendCtx && monthlyLabels.length > 0) {
+  if (document.getElementById('trendChart') && monthlyLabels.length > 0) {
+    const trendCtx = document.getElementById('trendChart').getContext('2d');
     new Chart(trendCtx, {
       type: 'line',
       data: {
@@ -58,16 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         ]
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
-      }
+      options: { responsive: true, maintainAspectRatio: false }
     });
   }
 
-  const countryCtx = document.getElementById('countryChart');
-  if (countryCtx && countryLabels.length > 0) {
+  if (document.getElementById('countryChart') && countryLabels.length > 0) {
+    const countryCtx = document.getElementById('countryChart').getContext('2d');
     new Chart(countryCtx, {
       type: 'bar',
       data: {
@@ -78,16 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
           backgroundColor: '#d64933'
         }]
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
-      }
+      options: { responsive: true, maintainAspectRatio: false }
     });
   }
 
-  const causeCtx = document.getElementById('causeChart');
-  if (causeCtx && causeLabels.length > 0) {
+  if (document.getElementById('causeChart') && causeLabels.length > 0) {
+    const causeCtx = document.getElementById('causeChart').getContext('2d');
     new Chart(causeCtx, {
       type: 'bar',
       data: {
@@ -101,18 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: {
-          x: {
-            ticks: {
-              maxRotation: 45,
-              minRotation: 45
-            }
-          }
-        },
-        plugins: { legend: { position: 'bottom' } }
+        scales: { x: { ticks: { maxRotation: 45, minRotation: 45 } } }
       }
     });
   }
-});
+}, 100);
 </script>
 {% endblock %}

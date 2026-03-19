@@ -12,16 +12,16 @@
 </section>
 
 <section class="panel grid-2">
-  <div>
+  <div style="min-height: 320px;">
     <h3>Events by Severity</h3>
-    <div class="chart-container">
-      <canvas id="severityChart"></canvas>
+    <div class="chart-container" style="height: 280px; position: relative;">
+      <canvas id="severityChart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
     </div>
   </div>
-  <div>
+  <div style="min-height: 320px;">
     <h3>Top Event Types</h3>
-    <div class="chart-container">
-      <canvas id="eventChart"></canvas>
+    <div class="chart-container" style="height: 280px; position: relative;">
+      <canvas id="eventChart" style="display: block; width: 100% !important; height: 100% !important;"></canvas>
     </div>
   </div>
 </section>
@@ -56,16 +56,17 @@
   </table>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function() {
   const severityLabels = {{ severity_labels | tojson }};
   const severityValues = {{ severity_values | tojson }};
   const eventLabels = {{ event_labels | tojson }};
   const eventValues = {{ event_values | tojson }};
 
-  const severityCtx = document.getElementById('severityChart');
-  if (severityCtx && severityLabels.length > 0) {
-    new Chart(severityCtx, {
+  if (document.getElementById('severityChart') && severityLabels.length > 0) {
+    const svCtx = document.getElementById('severityChart').getContext('2d');
+    new Chart(svCtx, {
       type: 'pie',
       data: {
         labels: severityLabels,
@@ -76,17 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom' }
-        }
+        maintainAspectRatio: false
       }
     });
   }
 
-  const eventCtx = document.getElementById('eventChart');
-  if (eventCtx && eventLabels.length > 0) {
-    new Chart(eventCtx, {
+  if (document.getElementById('eventChart') && eventLabels.length > 0) {
+    const evCtx = document.getElementById('eventChart').getContext('2d');
+    new Chart(evCtx, {
       type: 'bar',
       data: {
         labels: eventLabels,
@@ -99,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
+        indexAxis: 'y'
       }
     });
   }
-});
+}, 100);
 </script>
 {% endblock %}
