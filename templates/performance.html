@@ -56,23 +56,31 @@
 </section>
 
 <script>
-new Chart(document.getElementById('f1Chart'), {
-  type: 'bar',
-  data: {
-    labels: {{ chart_labels | tojson }},
-    datasets: [{
-      label: 'F1 Score (%)',
-      data: {{ chart_f1 | tojson }},
-      backgroundColor: '#3f8f7f'
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: { beginAtZero: true, max: 100 }
-    },
-    plugins: { legend: { position: 'bottom' } }
+document.addEventListener('DOMContentLoaded', function() {
+  const chartLabels = {{ chart_labels | tojson }};
+  const chartF1 = {{ chart_f1 | tojson }};
+
+  const f1Ctx = document.getElementById('f1Chart');
+  if (f1Ctx && chartLabels.length > 0) {
+    new Chart(f1Ctx, {
+      type: 'bar',
+      data: {
+        labels: chartLabels,
+        datasets: [{
+          label: 'F1 Score (%)',
+          data: chartF1,
+          backgroundColor: '#3f8f7f'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { beginAtZero: true, max: 100 }
+        },
+        plugins: { legend: { position: 'bottom' } }
+      }
+    });
   }
 });
 </script>

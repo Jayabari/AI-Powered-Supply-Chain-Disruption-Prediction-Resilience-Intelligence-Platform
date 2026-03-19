@@ -57,43 +57,51 @@
 </section>
 
 <script>
-const severityLabels = {{ severity_labels | tojson }};
-const severityValues = {{ severity_values | tojson }};
-const eventLabels = {{ event_labels | tojson }};
-const eventValues = {{ event_values | tojson }};
+document.addEventListener('DOMContentLoaded', function() {
+  const severityLabels = {{ severity_labels | tojson }};
+  const severityValues = {{ severity_values | tojson }};
+  const eventLabels = {{ event_labels | tojson }};
+  const eventValues = {{ event_values | tojson }};
 
-new Chart(document.getElementById('severityChart'), {
-  type: 'pie',
-  data: {
-    labels: severityLabels,
-    datasets: [{
-      data: severityValues,
-      backgroundColor: ['#8dd3c7', '#ffffb3', '#fb8072', '#80b1d3']
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { position: 'bottom' }
-    }
+  const severityCtx = document.getElementById('severityChart');
+  if (severityCtx && severityLabels.length > 0) {
+    new Chart(severityCtx, {
+      type: 'pie',
+      data: {
+        labels: severityLabels,
+        datasets: [{
+          data: severityValues,
+          backgroundColor: ['#8dd3c7', '#ffffb3', '#fb8072', '#80b1d3']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
   }
-});
 
-new Chart(document.getElementById('eventChart'), {
-  type: 'bar',
-  data: {
-    labels: eventLabels,
-    datasets: [{
-      label: 'Count',
-      data: eventValues,
-      backgroundColor: '#2f6d8f'
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { position: 'bottom' } }
+  const eventCtx = document.getElementById('eventChart');
+  if (eventCtx && eventLabels.length > 0) {
+    new Chart(eventCtx, {
+      type: 'bar',
+      data: {
+        labels: eventLabels,
+        datasets: [{
+          label: 'Count',
+          data: eventValues,
+          backgroundColor: '#2f6d8f'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom' } }
+      }
+    });
   }
 });
 </script>
