@@ -215,7 +215,8 @@ pre {
 
 canvas {
   max-width: 100%;
-  height: auto;
+  height: auto !important;
+  min-height: 300px;
 }
 
 .chart-container {
@@ -223,6 +224,13 @@ canvas {
   width: 100%;
   height: 300px;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-2 .chart-container {
+  height: 280px;
 }
 
 @media (max-width: 900px) {
