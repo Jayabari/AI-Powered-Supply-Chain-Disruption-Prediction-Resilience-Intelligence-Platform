@@ -70,10 +70,6 @@ def create_app(config_name: str | None = None) -> Flask:
         app.logger.exception("Unhandled server error: %s", error)
         return jsonify({"error": "Internal server error"}), 500
 
-    with app.app_context():
-        # Keep setup friction low for MVP deployments.
-        db.create_all()
-
     logging.basicConfig(level=logging.INFO)
 
     return app
