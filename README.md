@@ -4,6 +4,7 @@ A Flask-based AI platform that predicts supply chain disruption risk, visualizes
 - Structured app package (`app/`)
 - Persistent prediction logging with SQLAlchemy
 - Versioned REST API (`/api/v1`)
+- User authentication (register/login/logout with hashed passwords)
 - Security hardening (CSRF, headers, rate limiting, validation)
 - Automated tests with `pytest`
 - CI workflow via GitHub Actions
@@ -28,11 +29,13 @@ app.py (entrypoint)
 - Analytics trend visualizations
 - API endpoints for integration
 - Persistent logs of all prediction requests
+- Login-protected analytics, performance, and prediction workflows
 
 ## Security Controls Implemented
 
 - Input validation for web + API prediction payloads
 - CSRF protection for server-rendered forms
+- Password hashing with Werkzeug
 - Security headers with `Flask-Talisman`
 - Rate limiting on prediction API
 - Request size limit (`MAX_CONTENT_LENGTH`)
@@ -74,14 +77,21 @@ The app is available at `http://127.0.0.1:5000`.
 - `FLASK_DEBUG`: `true` or `false`
 - `PORT`: App port (default `5000`)
 - `SECRET_KEY`: Flask secret key (set strongly in production)
-- `DATABASE_URL`: SQLAlchemy DB URL (defaults to local SQLite)
+- `DATABASE_URL`: SQLAlchemy DB URL (preferred for Supabase/Postgres)
+- `SUPABASE_DB_HOST`: Supabase Postgres host
+- `SUPABASE_DB_PORT`: Supabase Postgres port (usually `5432`)
+- `SUPABASE_DB_NAME`: Supabase database name
+- `SUPABASE_DB_USER`: Supabase database user
+- `SUPABASE_DB_PASSWORD`: Supabase database password
 - `TALISMAN_FORCE_HTTPS`: `true`/`false`
 - `CORS_ORIGINS`: comma-separated API origins
 - `RATELIMIT_STORAGE_URI`: limiter backend URI (default `memory://`)
 
+`DATABASE_URL` takes precedence. If it is not set, the app can build a Postgres URI from the `SUPABASE_DB_*` variables.
+
 ## Database
 
-The app auto-creates required tables at startup for MVP convenience.
+Schema is managed via migrations (Alembic/Flask-Migrate).
 
 ### Migration-ready setup
 `Flask-Migrate` is integrated and an initial migration is included in `migrations/versions/`.
@@ -92,7 +102,7 @@ export FLASK_APP=app.py
 flask db upgrade
 ```
 
-If your local DB was already auto-created before migrations were initialized, align it once with:
+If your local DB already had tables before migrations were initialized, align it once with:
 ```bash
 export FLASK_APP=app.py
 flask db stamp head
@@ -107,6 +117,8 @@ Health and setup status.
 
 ### `POST /api/v1/predict`
 Predict disruption risk.
+
+Note: This endpoint requires login (session auth).
 
 Request JSON example:
 ```json
@@ -136,8 +148,12 @@ Response shape:
 ### `GET /api/v1/metrics`
 Returns model metrics and best-model summary.
 
+Note: This endpoint requires login.
+
 ### `GET /api/v1/analytics/trends`
 Returns monthly disruptions, total events, and disruption rate.
+
+Note: This endpoint requires login.
 
 ## Testing
 
@@ -147,7 +163,8 @@ pytest -q
 ```
 
 Current automated tests cover:
-- Core page availability
+- Authentication flow (register/login)
+- Protected route/API access controls
 - API health
 - API input validation
 - Prediction endpoint response contract
