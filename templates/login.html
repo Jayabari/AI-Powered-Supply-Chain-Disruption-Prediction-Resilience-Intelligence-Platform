@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel">
+  <h2>Login</h2>
+  <form method="post" class="form-grid">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Password
+      <input type="password" name="password" required>
+    </label>
+
+    <div class="form-action">
+      <button type="submit">Sign In</button>
+    </div>
+  </form>
+  <p>New here? <a href="{{ url_for('register') }}">Create an account</a></p>
+</section>
+{% endblock %}

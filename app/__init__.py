@@ -5,9 +5,11 @@ import os
 
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask_login import current_user
 
 from app.config import CONFIG_BY_NAME
-from app.extensions import csrf, db, limiter, migrate, talisman
+from app.extensions import csrf, db, limiter, login_manager, migrate, talisman
+from app.models import User
 from app.routes.api import api_bp
 from app.routes.web import register_web_routes
 
@@ -22,6 +24,18 @@ def create_app(config_name: str | None = None) -> Flask:
     migrate.init_app(app, db)
     csrf.init_app(app)
     limiter.init_app(app)
+    login_manager.init_app(app)
+    login_manager.login_view = "login"
+
+    @login_manager.user_loader
+    def load_user(user_id: str):
+        return db.session.get(User, int(user_id))
+
+    @login_manager.unauthorized_handler
+    def unauthorized_handler():
+        if app.config.get("TESTING"):
+            return jsonify({"error": "Unauthorized"}), 401
+        return jsonify({"error": "Unauthorized"}), 401
 
     csp = {
         "default-src": ["'self'"],
@@ -46,6 +60,10 @@ def create_app(config_name: str | None = None) -> Flask:
     @app.errorhandler(429)
     def handle_rate_limit(error):
         return jsonify({"error": "Rate limit exceeded"}), 429
+
+    @app.errorhandler(403)
+    def handle_forbidden(error):
+        return jsonify({"error": "Forbidden"}), 403
 
     @app.errorhandler(500)
     def handle_server_error(error):
