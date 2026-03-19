@@ -24,75 +24,94 @@
 </section>
 
 <script>
-new Chart(document.getElementById('trendChart'), {
-  type: 'line',
-  data: {
-    labels: {{ monthly_labels | tojson }},
-    datasets: [
-      {
-        label: 'Total Events',
-        data: {{ monthly_total | tojson }},
-        borderColor: '#2f6d8f',
-        backgroundColor: 'rgba(47,109,143,0.15)',
-        tension: 0.2,
-        fill: true
+document.addEventListener('DOMContentLoaded', function() {
+  const monthlyLabels = {{ monthly_labels | tojson }};
+  const monthlyTotal = {{ monthly_total | tojson }};
+  const monthlyDisruptions = {{ monthly_disruptions | tojson }};
+  const countryLabels = {{ country_labels | tojson }};
+  const countryValues = {{ country_values | tojson }};
+  const causeLabels = {{ cause_labels | tojson }};
+  const causeValues = {{ cause_values | tojson }};
+
+  const trendCtx = document.getElementById('trendChart');
+  if (trendCtx && monthlyLabels.length > 0) {
+    new Chart(trendCtx, {
+      type: 'line',
+      data: {
+        labels: monthlyLabels,
+        datasets: [
+          {
+            label: 'Total Events',
+            data: monthlyTotal,
+            borderColor: '#2f6d8f',
+            backgroundColor: 'rgba(47,109,143,0.15)',
+            tension: 0.2,
+            fill: true
+          },
+          {
+            label: 'Disruptions',
+            data: monthlyDisruptions,
+            borderColor: '#d64933',
+            backgroundColor: 'rgba(214,73,51,0.15)',
+            tension: 0.2,
+            fill: true
+          }
+        ]
       },
-      {
-        label: 'Disruptions',
-        data: {{ monthly_disruptions | tojson }},
-        borderColor: '#d64933',
-        backgroundColor: 'rgba(214,73,51,0.15)',
-        tension: 0.2,
-        fill: true
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom' } }
       }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { position: 'bottom' } }
+    });
   }
-});
 
-new Chart(document.getElementById('countryChart'), {
-  type: 'bar',
-  data: {
-    labels: {{ country_labels | tojson }},
-    datasets: [{
-      label: 'Disruption Rate (%)',
-      data: {{ country_values | tojson }},
-      backgroundColor: '#d64933'
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { position: 'bottom' } }
-  }
-});
-
-new Chart(document.getElementById('causeChart'), {
-  type: 'bar',
-  data: {
-    labels: {{ cause_labels | tojson }},
-    datasets: [{
-      label: 'Financial Impact (USD)',
-      data: {{ cause_values | tojson }},
-      backgroundColor: '#edae49'
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        ticks: {
-          maxRotation: 45,
-          minRotation: 45
-        }
+  const countryCtx = document.getElementById('countryChart');
+  if (countryCtx && countryLabels.length > 0) {
+    new Chart(countryCtx, {
+      type: 'bar',
+      data: {
+        labels: countryLabels,
+        datasets: [{
+          label: 'Disruption Rate (%)',
+          data: countryValues,
+          backgroundColor: '#d64933'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom' } }
       }
-    },
-    plugins: { legend: { position: 'bottom' } }
+    });
+  }
+
+  const causeCtx = document.getElementById('causeChart');
+  if (causeCtx && causeLabels.length > 0) {
+    new Chart(causeCtx, {
+      type: 'bar',
+      data: {
+        labels: causeLabels,
+        datasets: [{
+          label: 'Financial Impact (USD)',
+          data: causeValues,
+          backgroundColor: '#edae49'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: {
+              maxRotation: 45,
+              minRotation: 45
+            }
+          }
+        },
+        plugins: { legend: { position: 'bottom' } }
+      }
+    });
   }
 });
 </script>
