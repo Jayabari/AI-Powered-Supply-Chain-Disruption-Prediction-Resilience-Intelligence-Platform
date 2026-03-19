@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import pandas as pd
-from flask import flash, render_template, request
+from flask import flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 
 from app.artifacts import get_data, load_model_artifacts, setup_ready
+from app.extensions import db
 from app.models import User
 from app.services.prediction_service import log_prediction, run_prediction
 from app.validators import ValidationError, build_options, parse_prediction_input
@@ -70,7 +71,7 @@ def register_web_routes(app):
     @app.route("/register", methods=["GET", "POST"])
     def register():
         if current_user.is_authenticated:
-            return render_template("dashboard.html")
+            return redirect(url_for("dashboard"))
 
         if request.method == "POST":
             name = request.form.get("name", "").strip()
@@ -94,21 +95,18 @@ def register_web_routes(app):
 
             user = User(name=name, email=email)
             user.set_password(password)
-
-            from app.extensions import db
-
             db.session.add(user)
             db.session.commit()
 
             flash("Account created successfully. Please login.", "success")
-            return render_template("login.html")
+            return redirect(url_for("login"))
 
         return render_template("register.html")
 
     @app.route("/login", methods=["GET", "POST"])
     def login():
         if current_user.is_authenticated:
-            return render_template("dashboard.html")
+            return redirect(url_for("dashboard"))
 
         if request.method == "POST":
             email = request.form.get("email", "").strip().lower()
@@ -121,7 +119,7 @@ def register_web_routes(app):
 
             login_user(user)
             flash("Welcome back.", "success")
-            return render_template("dashboard.html")
+            return redirect(url_for("dashboard"))
 
         return render_template("login.html")
 
@@ -130,9 +128,10 @@ def register_web_routes(app):
     def logout():
         logout_user()
         flash("You have been logged out.", "success")
-        return render_template("login.html")
+        return redirect(url_for("login"))
 
     @app.route("/predict", methods=["GET", "POST"])
+    @login_required
     def predict():
         if not setup_ready():
             return render_template("setup_required.html")

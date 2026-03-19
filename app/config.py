@@ -7,12 +7,25 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+def _build_db_uri() -> str:
+    database_url = os.environ.get("DATABASE_URL")
+    if database_url:
+        return database_url.replace("postgres://", "postgresql://", 1)
+
+    host = os.environ.get("SUPABASE_DB_HOST")
+    port = os.environ.get("SUPABASE_DB_PORT", "5432")
+    name = os.environ.get("SUPABASE_DB_NAME")
+    user = os.environ.get("SUPABASE_DB_USER")
+    password = os.environ.get("SUPABASE_DB_PASSWORD")
+    if all([host, port, name, user, password]):
+        return f"postgresql+psycopg://{user}:{password}@{host}:{port}/{name}"
+
+    return f"sqlite:///{BASE_DIR / 'data' / 'app.db'}"
+
+
 class BaseConfig:
     SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-change-in-production")
-    SQLALCHEMY_DATABASE_URI = os.environ.get(
-        "DATABASE_URL",
-        f"sqlite:///{BASE_DIR / 'data' / 'app.db'}",
-    ).replace("postgres://", "postgresql://", 1)
+    SQLALCHEMY_DATABASE_URI = _build_db_uri()
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JSON_SORT_KEYS = False
     MAX_CONTENT_LENGTH = 1024 * 1024  # 1MB request cap

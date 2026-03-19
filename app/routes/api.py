@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 from flask import Blueprint, jsonify, request
+from flask_login import login_required
 
 from app.artifacts import get_data, load_model_artifacts, setup_ready
 from app.extensions import limiter
@@ -19,6 +20,7 @@ def health():
 
 @api_bp.post("/predict")
 @limiter.limit("30 per minute")
+@login_required
 def predict_api():
     if not setup_ready():
         return jsonify({"error": "Model setup is incomplete."}), 503
@@ -47,6 +49,7 @@ def predict_api():
 
 
 @api_bp.get("/metrics")
+@login_required
 def metrics_api():
     if not setup_ready():
         return jsonify({"error": "Model setup is incomplete."}), 503
@@ -72,6 +75,7 @@ def metrics_api():
 
 
 @api_bp.get("/analytics/trends")
+@login_required
 def analytics_trends_api():
     if not setup_ready():
         return jsonify({"error": "Model setup is incomplete."}), 503

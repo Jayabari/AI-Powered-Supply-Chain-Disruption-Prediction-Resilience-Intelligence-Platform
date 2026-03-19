@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 import os
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect, request, url_for
 from flask_cors import CORS
 from flask_login import current_user
 
@@ -33,9 +33,9 @@ def create_app(config_name: str | None = None) -> Flask:
 
     @login_manager.unauthorized_handler
     def unauthorized_handler():
-        if app.config.get("TESTING"):
+        if request.path.startswith("/api/"):
             return jsonify({"error": "Unauthorized"}), 401
-        return jsonify({"error": "Unauthorized"}), 401
+        return redirect(url_for("login"))
 
     csp = {
         "default-src": ["'self'"],
