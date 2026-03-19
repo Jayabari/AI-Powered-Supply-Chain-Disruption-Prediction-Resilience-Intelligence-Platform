@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import pandas as pd
 from flask import flash, render_template, request
+from flask_login import current_user, login_required, login_user, logout_user
 
 from app.artifacts import get_data, load_model_artifacts, setup_ready
+from app.models import User
 from app.services.prediction_service import log_prediction, run_prediction
 from app.validators import ValidationError, build_options, parse_prediction_input
 
@@ -65,6 +67,71 @@ def register_web_routes(app):
             top_disruptions=top_disruptions,
         )
 
+    @app.route("/register", methods=["GET", "POST"])
+    def register():
+        if current_user.is_authenticated:
+            return render_template("dashboard.html")
+
+        if request.method == "POST":
+            name = request.form.get("name", "").strip()
+            email = request.form.get("email", "").strip().lower()
+            password = request.form.get("password", "")
+
+            if not name:
+                flash("Name is required.", "error")
+                return render_template("register.html")
+            if "@" not in email:
+                flash("A valid email is required.", "error")
+                return render_template("register.html")
+            if len(password) < 8:
+                flash("Password must be at least 8 characters.", "error")
+                return render_template("register.html")
+
+            existing = User.query.filter_by(email=email).first()
+            if existing:
+                flash("Email already registered. Please login.", "error")
+                return render_template("register.html")
+
+            user = User(name=name, email=email)
+            user.set_password(password)
+
+            from app.extensions import db
+
+            db.session.add(user)
+            db.session.commit()
+
+            flash("Account created successfully. Please login.", "success")
+            return render_template("login.html")
+
+        return render_template("register.html")
+
+    @app.route("/login", methods=["GET", "POST"])
+    def login():
+        if current_user.is_authenticated:
+            return render_template("dashboard.html")
+
+        if request.method == "POST":
+            email = request.form.get("email", "").strip().lower()
+            password = request.form.get("password", "")
+
+            user = User.query.filter_by(email=email).first()
+            if user is None or not user.check_password(password):
+                flash("Invalid email or password.", "error")
+                return render_template("login.html")
+
+            login_user(user)
+            flash("Welcome back.", "success")
+            return render_template("dashboard.html")
+
+        return render_template("login.html")
+
+    @app.route("/logout")
+    @login_required
+    def logout():
+        logout_user()
+        flash("You have been logged out.", "success")
+        return render_template("login.html")
+
     @app.route("/predict", methods=["GET", "POST"])
     def predict():
         if not setup_ready():
@@ -101,6 +168,7 @@ def register_web_routes(app):
         )
 
     @app.route("/performance")
+    @login_required
     def performance():
         if not setup_ready():
             return render_template("setup_required.html")
@@ -132,6 +200,7 @@ def register_web_routes(app):
         )
 
     @app.route("/analytics")
+    @login_required
     def analytics():
         if not setup_ready():
             return render_template("setup_required.html")
