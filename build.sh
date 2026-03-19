@@ -4,3 +4,4 @@ set -e
 pip install -r requirements.txt
 python generate_data.py
 python train_model.py
+FLASK_APP=app.py flask db upgrade

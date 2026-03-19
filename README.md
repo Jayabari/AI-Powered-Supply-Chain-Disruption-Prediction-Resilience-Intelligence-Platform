@@ -84,12 +84,18 @@ The app is available at `http://127.0.0.1:5000`.
 The app auto-creates required tables at startup for MVP convenience.
 
 ### Migration-ready setup
-`Flask-Migrate` is integrated. To create migration history:
+`Flask-Migrate` is integrated and an initial migration is included in `migrations/versions/`.
+
+To apply migrations on a fresh database:
 ```bash
 export FLASK_APP=app.py
-flask db init
-flask db migrate -m "create prediction_logs table"
 flask db upgrade
+```
+
+If your local DB was already auto-created before migrations were initialized, align it once with:
+```bash
+export FLASK_APP=app.py
+flask db stamp head
 ```
 
 ## REST API
