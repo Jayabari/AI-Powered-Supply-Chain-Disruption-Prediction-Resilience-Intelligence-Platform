@@ -21,6 +21,16 @@
   </header>
 
   <main class="container main-content">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <section class="panel">
+        {% for category, message in messages %}
+        <p class="status {% if category == 'error' %}bad{% else %}good{% endif %}">{{ message }}</p>
+        {% endfor %}
+      </section>
+      {% endif %}
+    {% endwith %}
+
     {% if global_model_info %}
     <section class="panel model-strip">
       <div><strong>Best Model:</strong> {{ global_model_info.best_model }}</div>

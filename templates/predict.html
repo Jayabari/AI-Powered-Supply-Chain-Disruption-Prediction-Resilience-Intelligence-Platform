@@ -4,6 +4,7 @@
 <section class="panel">
   <h2>Predict Disruption Risk</h2>
   <form method="post" class="form-grid">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <label>
       Event Type
       <select name="event_type" required>
