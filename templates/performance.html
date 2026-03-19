@@ -41,7 +41,9 @@
 <section class="panel grid-2">
   <div>
     <h3>F1 Comparison</h3>
-    <canvas id="f1Chart"></canvas>
+    <div class="chart-container">
+      <canvas id="f1Chart"></canvas>
+    </div>
   </div>
   <div>
     <h3>Confusion Matrix (Best Model)</h3>
@@ -63,6 +65,14 @@ new Chart(document.getElementById('f1Chart'), {
       data: {{ chart_f1 | tojson }},
       backgroundColor: '#3f8f7f'
     }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: { beginAtZero: true, max: 100 }
+    },
+    plugins: { legend: { position: 'bottom' } }
   }
 });
 </script>

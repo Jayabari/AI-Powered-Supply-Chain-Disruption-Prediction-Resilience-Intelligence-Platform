@@ -4,17 +4,23 @@
 <section class="panel grid-2">
   <div>
     <h2>Monthly Event Trends</h2>
-    <canvas id="trendChart"></canvas>
+    <div class="chart-container">
+      <canvas id="trendChart"></canvas>
+    </div>
   </div>
   <div>
     <h2>Country Disruption Rate</h2>
-    <canvas id="countryChart"></canvas>
+    <div class="chart-container">
+      <canvas id="countryChart"></canvas>
+    </div>
   </div>
 </section>
 
 <section class="panel">
   <h2>Financial Impact by Cause</h2>
-  <canvas id="causeChart"></canvas>
+  <div class="chart-container" style="height: 350px;">
+    <canvas id="causeChart"></canvas>
+  </div>
 </section>
 
 <script>
@@ -40,6 +46,11 @@ new Chart(document.getElementById('trendChart'), {
         fill: true
       }
     ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom' } }
   }
 });
 
@@ -52,6 +63,11 @@ new Chart(document.getElementById('countryChart'), {
       data: {{ country_values | tojson }},
       backgroundColor: '#d64933'
     }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom' } }
   }
 });
 
@@ -66,6 +82,8 @@ new Chart(document.getElementById('causeChart'), {
     }]
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         ticks: {
@@ -73,7 +91,8 @@ new Chart(document.getElementById('causeChart'), {
           minRotation: 45
         }
       }
-    }
+    },
+    plugins: { legend: { position: 'bottom' } }
   }
 });
 </script>

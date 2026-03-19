@@ -14,11 +14,15 @@
 <section class="panel grid-2">
   <div>
     <h3>Events by Severity</h3>
-    <canvas id="severityChart"></canvas>
+    <div class="chart-container">
+      <canvas id="severityChart"></canvas>
+    </div>
   </div>
   <div>
     <h3>Top Event Types</h3>
-    <canvas id="eventChart"></canvas>
+    <div class="chart-container">
+      <canvas id="eventChart"></canvas>
+    </div>
   </div>
 </section>
 
@@ -66,6 +70,13 @@ new Chart(document.getElementById('severityChart'), {
       data: severityValues,
       backgroundColor: ['#8dd3c7', '#ffffb3', '#fb8072', '#80b1d3']
     }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom' }
+    }
   }
 });
 
@@ -79,7 +90,11 @@ new Chart(document.getElementById('eventChart'), {
       backgroundColor: '#2f6d8f'
     }]
   },
-  options: { responsive: true }
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom' } }
+  }
 });
 </script>
 {% endblock %}
