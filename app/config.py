@@ -13,7 +13,10 @@ load_dotenv(BASE_DIR / ".env")
 def _build_db_uri() -> str:
     database_url = os.environ.get("DATABASE_URL")
     if database_url:
-        return database_url.replace("postgres://", "postgresql://", 1)
+        normalized = database_url.replace("postgres://", "postgresql://", 1)
+        if normalized.startswith("postgresql://") and not normalized.startswith("postgresql+psycopg://"):
+            normalized = normalized.replace("postgresql://", "postgresql+psycopg://", 1)
+        return normalized
 
     host = os.environ.get("SUPABASE_DB_HOST")
     port = os.environ.get("SUPABASE_DB_PORT", "5432")

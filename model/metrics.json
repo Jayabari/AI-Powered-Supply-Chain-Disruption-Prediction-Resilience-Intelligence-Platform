@@ -1,6 +1,6 @@
 {
   "best_model": "Random Forest",
-  "training_date": "2026-03-10T22:08:15.634745",
+  "training_date": "2026-03-19T14:01:35.557923",
   "dataset_size": 650,
   "num_features": 5,
   "models_performance": {
