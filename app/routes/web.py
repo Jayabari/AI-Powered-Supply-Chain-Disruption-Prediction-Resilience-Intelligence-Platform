@@ -123,12 +123,7 @@ def register_web_routes(app):
 
         return render_template("login.html")
 
-    @app.route("/logout")
-    @login_required
-    def logout():
-        logout_user()
-        flash("You have been logged out.", "success")
-        return redirect(url_for("login"))
+   
 
     @app.route("/predict", methods=["GET", "POST"])
     @login_required
