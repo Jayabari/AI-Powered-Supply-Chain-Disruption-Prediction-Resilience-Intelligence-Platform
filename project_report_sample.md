@@ -10,11 +10,16 @@
 
 **AI-Powered Supply Chain Disruption Prediction & Resilience Intelligence Platform**
 
-**Team Name:** Team (Supply Chain Disruption Prediction)
+**Team Name:** Team 32 (Supply Chain Disruption Prediction)
+
 **Repository:** [Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform](https://github.com/Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform)
+
 **Lead Developer:** Rishabh Barnwal
+
 **Version:** v1.0
+
 **Date:** March 20, 2026
+
 **Status:** Production Ready & Fully Tested
 
 ### 1.1 Revision History
