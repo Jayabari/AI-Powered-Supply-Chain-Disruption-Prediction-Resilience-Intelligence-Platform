@@ -7,27 +7,26 @@
 ## Page 1: Title Page & Revision History
 
 ### Title
+
 **AI-Powered Supply Chain Disruption Prediction & Resilience Intelligence Platform**
 
-**Team Name:** Team 32 (Supply Chain Disruption Prediction)  
-**Repository:** [Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform](https://github.com/Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform)  
-**Lead Developer:** Rishabh Barnwal  
-**Version:** v1.0  
-**Date:** March 20, 2026  
-**Status:** Production Ready & Fully Tested  
+**Team Name:** Team (Supply Chain Disruption Prediction)
+**Repository:** [Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform](https://github.com/Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform)
+**Lead Developer:** Rishabh Barnwal
+**Version:** v1.0
+**Date:** March 20, 2026
+**Status:** Production Ready & Fully Tested
 
-### Revision History
+### 1.1 Revision History
 
-| Version | Date       | Author | Change |
-|--------:|------------|--------|--------|
-| v0.1    | 2026-03-08 | Team   | Initial project draft + core requirements |
-| v0.5    | 2026-03-10 | Team   | Auth system implemented, API endpoints defined |
-| v0.9    | 2026-03-18 | Team   | Chart.js integration completed, test suite passing |
-| v1.0    | 2026-03-20 | Team   | Production-ready, comprehensive documentation (34 pages) |
+| Version | Date       | Author | Change                                                        |
+|--------:|------------|--------|---------------------------------------------------------------|
+| v0.1    | 2026-03-08 | Team   | Initial project draft + core requirements                     |
+| v0.5    | 2026-03-10 | Team   | Auth system implemented, API endpoints defined                |
+| v0.9    | 2026-03-18 | Team   | Chart.js integration completed, test suite passing            |
+| v1.0    | 2026-03-20 | Team   | Production-ready, comprehensive documentation (34 pages)      |
 
----
-
-### Executive Summary
+### 1.2 Executive Summary
 
 The **Supply Chain Disruption Prediction Platform** is a web application built to predict and help mitigate supply chain disruptions using machine learning. Real-world supply chains face frequent disruptions from shipping delays, port congestion, labor strikes, natural disasters, and geopolitical events. This platform uses ML to predict disruption probability with high accuracy, tracking over 30 features. Here's what it does:
 
@@ -45,7 +44,7 @@ The **Supply Chain Disruption Prediction Platform** is a web application built t
 - ✅ Rate limiting to prevent abuse (120 requests/hour default, 30/minute on predictions)
 - ✅ Database schema versioning with Alembic/Flask-Migrate
 - ✅ CSP headers and CSRF protection against common web attacks
-- ✅ Full test suite (9/9 tests passing - auth, protected routes, API validation all work)
+- ✅ Full test suite (9/9 tests passing — auth, protected routes, API validation all work)
 - ✅ Ready to deploy on Render/Heroku with SQLite for development or Supabase PostgreSQL for production
 
 ---
@@ -61,24 +60,24 @@ The **Supply Chain Disruption Prediction Platform** is a web application built t
 
 ### 2.2 RACI Matrix
 
-| Activity | Responsible (R) | Accountable (A) | Consulted (C) | Informed (I) |
-|---------|------------------|-----------------|---------------|--------------|
-| ML pipeline (data + train + metrics) | Rishabh | Rishabh | Ananshi | Team |
-| Deployment pipeline (Render/Gunicorn) | Rishabh | Rishabh | Team | Team |
-| Integration (UI ↔ backend ↔ models) | Rishabh | Rishabh | Jaya, Ananshi | Team |
-| System architecture & setup | Rishabh | Rishabh | Ananshi | Team |
-| Backend (Flask routes + logic) | Ananshi | Ananshi | Rishabh | Team |
-| Requirements & scope | Rishabh, Jaya | Rishabh | Ananshi | Team |
-| UI/UX design + templates | Jaya | Jaya | Rishabh | Team |
-| Testing & bugfix | Team | Rishabh | — | Mentor |
+| Activity                              | Responsible (R)  | Accountable (A) | Consulted (C)  | Informed (I) |
+|---------------------------------------|------------------|-----------------|----------------|--------------|
+| ML pipeline (data + train + metrics)  | Rishabh          | Rishabh         | Ananshi        | Team         |
+| Deployment pipeline (Render/Gunicorn) | Rishabh          | Rishabh         | Team           | Team         |
+| Integration (UI ↔ backend ↔ models)   | Rishabh          | Rishabh         | Jaya, Ananshi  | Team         |
+| System architecture & setup           | Rishabh          | Rishabh         | Ananshi        | Team         |
+| Backend (Flask routes + logic)        | Ananshi          | Ananshi         | Rishabh        | Team         |
+| Requirements & scope                  | Rishabh, Jaya    | Rishabh         | Ananshi        | Team         |
+| UI/UX design + templates              | Jaya             | Jaya            | Rishabh        | Team         |
+| Testing & bugfix                      | Team             | Rishabh         | —              | Mentor       |
 
 ### 2.3 Team and Roles
 
-| Member | Role | Responsibilities |
-|--------|------|------------------|
-| **Rishabh** | ML Engineer & Tech Lead | Designed and built entire ML pipeline (`generate_data.py`, `train_model.py`), managed model artifacts and experiment tracking, handled all deployment setup (`render.yaml`, `build.sh`, database migrations), coordinated system integration across frontend, backend, and models, led testing strategy and production readiness |
-| **Jaya** | Frontend & UX Designer | Designed UI layout and styling (`templates/`, `static/`), created user experience flows for Dashboard/Predict/Performance/Analytics pages, handled form usability and responsive design (cards/tables/charts), ensured accessibility standards |
-| **Ananshi** | Backend Developer | Built Flask application structure and routes in `app.py`, handled server-side business logic and data processing, ensured model inference correctness, implemented validation and error handling, focused on code maintainability |
+| Member      | Role                        | Responsibilities                                                                                                                                                                                                                              |
+|-------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Rishabh** | ML Engineer & Tech Lead     | Designed and built entire ML pipeline (`generate_data.py`, `train_model.py`), managed model artifacts and experiment tracking, handled all deployment setup (`render.yaml`, `build.sh`, database migrations), coordinated system integration, led testing strategy and production readiness |
+| **Jaya**    | Frontend & UX Designer      | Designed UI layout and styling (`templates/`, `static/`), created user experience flows for Dashboard/Predict/Performance/Analytics pages, handled form usability and responsive design (cards/tables/charts), ensured accessibility standards   |
+| **Ananshi** | Backend Developer           | Built Flask application structure and routes in `app.py`, handled server-side business logic and data processing, ensured model inference correctness, implemented validation and error handling, focused on code maintainability               |
 
 ---
 
@@ -86,48 +85,48 @@ The **Supply Chain Disruption Prediction Platform** is a web application built t
 
 ### 3.1 8-Week Development Schedule
 
-| Week | Milestones | Rishabh (ML & Arch) | Jaya (UI/UX) | Ananshi (Backend) | Deliverables |
-|------|------------|------|----------|-------|-------------|
-| **1** | Requirements + KPIs | Architecture scope and ML KPI definition | UX wireframes | Route architecture plan | Scope doc + KPI list |
-| **2** | Data & infrastructure | Data generator design + schema planning | UI skeleton pages | Setup-ready screen logic | Dataset (650 events) |
-| **3** | Model training v1 | Train pipeline (`train_model.py`) + baseline evaluation | Dashboard layout | CSV loader integration | Model artifacts in `model/` |
-| **4** | Prediction flow | Artifact integration and prediction calibration | Predict form UX | Predict endpoint logic | `/predict` working end-to-end |
-| **5** | Performance view | Metrics.json validation and model comparison logic | Metrics tables + charts | Performance metrics route | `/performance` with model comparison |
-| **6** | Analytics view | Trend aggregation optimization | Analytics UI | Aggregation logic | `/analytics` rendering complete |
-| **7** | Hardening & testing | Deployment checks, integration tests, release prep | UI polish + responsiveness | Error handling & refactor | Bug fixes + test report |
-| **8** | Release & documentation | Final integration, deployment notes, documentation | Final UI pass | Final backend pass | v1.0 demo + complete report |
+| Week    | Milestones               | Rishabh (ML & Arch)                          | Jaya (UI/UX)               | Ananshi (Backend)          | Deliverables                        |
+|---------|--------------------------|----------------------------------------------|----------------------------|----------------------------|-------------------------------------|
+| **1**   | Requirements + KPIs      | Architecture scope and ML KPI definition     | UX wireframes              | Route architecture plan    | Scope doc + KPI list                |
+| **2**   | Data & infrastructure    | Data generator design + schema planning      | UI skeleton pages          | Setup-ready screen logic   | Dataset (650 events)                |
+| **3**   | Model training v1        | Train pipeline (`train_model.py`) + baseline | Dashboard layout           | CSV loader integration     | Model artifacts in `model/`         |
+| **4**   | Prediction flow          | Artifact integration and prediction calib.   | Predict form UX            | Predict endpoint logic     | `/predict` working end-to-end       |
+| **5**   | Performance view         | Metrics.json validation and model comparison | Metrics tables + charts    | Performance metrics route  | `/performance` with model comparison|
+| **6**   | Analytics view           | Trend aggregation optimization               | Analytics UI               | Aggregation logic          | `/analytics` rendering complete     |
+| **7**   | Hardening & testing      | Deployment checks, integration tests         | UI polish + responsiveness | Error handling & refactor  | Bug fixes + test report             |
+| **8**   | Release & documentation  | Final integration, deployment notes          | Final UI pass              | Final backend pass         | v1.0 demo + complete report         |
 
 ### 3.2 Critical Path
 
 ```
-Week 1-2: Setup & data generation
+Week 1–2: Setup & data generation
     ↓
-Week 3-4: Model training & API integration
+Week 3–4: Model training & API integration
     ↓
-Week 5-6: UI implementation & analytics
+Week 5–6: UI implementation & analytics
     ↓
-Week 7-8: Testing, hardening, deployment
+Week 7–8: Testing, hardening, deployment
 ```
 
 ---
 
 ## Page 4: Project Scope & Objectives
 
-### 2.1 Problem Statement
+### 4.1 Problem Statement
 
 **What's the Problem?**
 - Supply chain disruptions cost organizations billions every year
-- Most companies only react after disruptions happen - they're not predictive
+- Most companies only react after disruptions happen — they're not predictive
 - Data is scattered everywhere (suppliers, logistics, ports, weather, news) with no connection
 - Decision makers don't have advance warning to prepare and prevent issues
 
 **Real Impact:**
 - A production delay cascades and stops the entire pipeline
 - Customer orders get delayed and reputation takes hits
-- Revenue gets cut and we scramble to find backup suppliers
+- Revenue gets cut and companies scramble to find backup suppliers
 - Companies waste money on excess safety stock "just in case"
 
-### 2.2 Objectives
+### 4.2 Objectives
 
 **Primary:**
 1. Build ML models to predict disruption probability for supply chain events
@@ -141,7 +140,7 @@ Week 7-8: Testing, hardening, deployment
 3. Log predictions for audit and continuous improvement
 4. Provide REST API for integration with other systems
 
-### 2.3 In-Scope Features
+### 4.3 In-Scope Features
 
 - Synthetic dataset generation (650 events, 30+ features)
 - Multi-algorithm training (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, SVM)
@@ -155,7 +154,7 @@ Week 7-8: Testing, hardening, deployment
 - Comprehensive test suite
 - SQLite for development, PostgreSQL (Supabase) for production
 
-### 2.4 Out-of-Scope (v1)
+### 4.4 Out-of-Scope (v1)
 
 - Real-time ERP data ingestion
 - Streaming event pipeline
@@ -174,7 +173,7 @@ Week 7-8: Testing, hardening, deployment
 - **Goal:** Needs quick visibility into disruption trends and top risk drivers
 - **Pain Point:** Currently relies on manual spreadsheets and lag in reporting
 - **Behavior:** Uses platform daily to monitor disruption patterns and alert management
-- **Success Metric:** Identifies trends 2-3 weeks earlier than before
+- **Success Metric:** Identifies trends 2–3 weeks earlier than before
 
 **Persona 2: Manager Mohan (Operations/Procurement Manager)**
 - **Role:** Operations or procurement manager making tactical decisions
@@ -194,26 +193,26 @@ Week 7-8: Testing, hardening, deployment
 
 **Journey 1: Risk Monitoring Dashboard**
 ```
-Home (/) → View disruption rate → Analyze severity breakdown → 
+Home (/) → View disruption rate → Analyze severity breakdown →
 Review top disruptions → Export trends → Escalate if needed
 ```
 
 **Journey 2: New Event Prediction**
 ```
-/predict → Select event type → Set severity/cause/country → 
-Enter financial impact → Submit → View probability & risk level → 
+/predict → Select event type → Set severity/cause/country →
+Enter financial impact → Submit → View probability & risk level →
 Read recommendations → Take action → Log outcome
 ```
 
 **Journey 3: Model Performance Review**
 ```
-/performance → Compare model metrics → Review F1 scores → 
+/performance → Compare model metrics → Review F1 scores →
 Check ROC-AUC values → Examine confusion matrix → Approve model → Document findings
 ```
 
 **Journey 4: Trend Analytics**
 ```
-/analytics → View monthly trends → Analyze by country → 
+/analytics → View monthly trends → Analyze by country →
 Identify top risk causes → Export data → Present to leadership
 ```
 
@@ -245,75 +244,65 @@ Identify top risk causes → Export data → Present to leadership
 **Supply Chain Visibility Problem:**
 - Global supply chain disruptions cost organizations **$330 billion annually** (2024 estimate)
 - 85% of organizations experienced supply chain disruptions in 2025
-- Average disruption duration: 7-14 days
-- Average recovery cost: $100K-$500K per incident
+- Average disruption duration: 7–14 days
+- Average recovery cost: $100K–$500K per incident
 
 **Current Solutions Gap:**
-- Manual monitoring: reactive, 2-3 week lag
+- Manual monitoring: reactive, 2–3 week lag
 - Enterprise ERP suites: costly ($500K+), complex, overkill for SMEs
 - Generic ML: flexible but not productized, no web interface
 - **Our Platform:** Bridges gap with lightweight, fast, deployable solution
 
 ### 6.2 Competitive Analysis
 
-| Competitor/Approach | Category | Strengths | Weaknesses | Our Differentiator |
-|---|---|---|---|---|
-| **Manual Excel/BI Tracking** | Traditional | Easy to start, low cost | Reactive, slow, error-prone, no predictions | **ML-based proactive risk prediction** |
-| **Enterprise SCM Suites** (SAP, Oracle) | Commercial | Integrations, scalability, support | Costly ($500K+), complex, long implementation | **Lightweight, educational, fast deployment** |
-| **Generic ML Notebooks** | Technical | Flexible, customizable | Not productized, no UI, not deployable | **Web platform + dashboards + API** |
-| **Third-party Risk APIs** | SaaS | Real-time data, external sources | Expensive per request, black-box models | **Transparent, trainable on custom data** |
+| Competitor/Approach                        | Category    | Strengths                                      | Weaknesses                                          | Our Differentiator                               |
+|--------------------------------------------|-------------|------------------------------------------------|-----------------------------------------------------|--------------------------------------------------|
+| **Manual Excel/BI Tracking**               | Traditional | Easy to start, low cost                        | Reactive, slow, error-prone, no predictions         | ML-based proactive risk prediction               |
+| **Enterprise SCM Suites** (SAP, Oracle)    | Commercial  | Integrations, scalability, support             | Costly ($500K+), complex, long implementation       | Lightweight, educational, fast deployment        |
+| **Generic ML Notebooks**                   | Technical   | Flexible, customizable                         | Not productized, no UI, not deployable              | Web platform + dashboards + API                  |
+| **Third-party Risk APIs**                  | SaaS        | Real-time data, external sources               | Expensive per request, black-box models             | Transparent, trainable on custom data            |
 
 ### 6.3 Our Value Proposition
 
 **Unique Selling Points:**
-1. **Proactive:** Predict disruptions 2-3 weeks before impact
+1. **Proactive:** Predict disruptions 2–3 weeks before impact
 2. **Transparent:** Explain which factors drive risk (not a black box)
 3. **Deployable:** On Render/Heroku in <30 minutes
 4. **Affordable:** No per-request fees, just hosting cost (~$7/month)
 5. **Customizable:** Retrain on proprietary supply chain data
-6. **Educational:** Learn ML in production environment
-### 6.3 Why Our Solution is Different
+6. **Educational:** Learn ML in a production environment
 
-**What Makes It Stand Out:**
-1. **See the Future:** Get 2-3 weeks advance warning instead of reacting after disruptions happen
-2. **Know Why:** Understand which factors caused the risk (not some black box you can't trust)
-3. **Deploy in Minutes:** Get it running on Render or Heroku in under 30 minutes, not months
-4. **Affordable:** Pay for hosting (~$7/month), not per-request fees that add up
-5. **Yours to Train:** Retrain the model on your exact supply chain data
-6. **Learn Something:** Hands-on ML in a real production app, not just theory
 ---
 
 ## Page 7: Objectives, Success Metrics & Key Features
 
 ### 7.1 Strategic Objectives
 
-Here's what we wanted to accomplish:
-
-- **O1 - Models That Work:** Build ML models with solid predictive performance  
-  - **Success Measure:** F1-score ≥ 85% (what we use to pick the best model), ROC-AUC ≥ 0.90
-- **O2 - Fast Enough:** Users get predictions without waiting forever  
+- **O1 – Models That Work:** Build ML models with solid predictive performance
+  - **Success Measure:** F1-score ≥ 85%, ROC-AUC ≥ 0.90
+- **O2 – Fast Enough:** Users get predictions without waiting forever
   - **Success Measure:** Full prediction workflow ≤ 60 seconds
-- **O3 - Doesn't Crash:** Pages load correctly, handle missing data gracefully  
+- **O3 – Doesn't Crash:** Pages load correctly, handle missing data gracefully
   - **Success Measure:** 0 unhandled crashes; show helpful "setup required" screen if needed
-- **O4 - Deploy Successfully:** Get the app running on cloud platforms  
+- **O4 – Deploy Successfully:** Get the app running on cloud platforms
   - **Success Measure:** `gunicorn app:create_app()` starts reliably, no downtime
-- **O5 - Keep Data Safe:** Protect users from attacks and data breaches  
+- **O5 – Keep Data Safe:** Protect users from attacks and data breaches
   - **Success Measure:** All passwords encrypted, CSRF tokens on every form, rate limiting active
 
 ### 7.2 Key Features (Prioritized)
 
-| Feature | Description | Priority | Dependencies | Acceptance Criteria |
-|---|---|---:|---|---|
-| **Dataset Generator** | Generates 650 synthetic supply chain events | Must-Have | numpy/pandas | CSV created in `data/` with 650 rows |
-| **Training Pipeline** | Trains 5 models, selects best by F1 | Must-Have | scikit-learn | Artifacts saved in `model/` directory |
-| **Dashboard** | Summary metrics + disruption charts | Must-Have | model artifacts | `/` renders without errors, charts visible |
-| **Prediction + Recommendations** | Form → probability → risk level → actions | Must-Have | model artifacts | `/predict` works end-to-end (tested) |
-| **Model Performance View** | Compare 5 models, show confusion matrix | Should-Have | metrics.json | `/performance` loads metrics accurately |
-| **Analytics View** | Monthly trends, country risk, impact analysis | Should-Have | training CSV | `/analytics` renders 3+ charts correctly |
-| **User Authentication** | Secure registration & login | Must-Have | Werkzeug, SQLAlchemy | Passwords hashed, unique emails enforced |
-| **API Endpoints** | `/api/v1/predict`, `/metrics`, `/analytics/trends` | Should-Have | Flask-CORS, limiter | API returns valid JSON, rate limits work |
-| **Database Migrations** | Alembic/Flask-Migrate schema versioning | Should-Have | Alembic | Migrations apply cleanly, support rollback |
-| **Deployment Config** | Render/Heroku ready configurations | Must-Have | build.sh, Procfile | Deployment succeeds without manual steps |
+| Feature                          | Description                                              | Priority    | Dependencies       | Acceptance Criteria                                     |
+|----------------------------------|----------------------------------------------------------|-------------|--------------------|---------------------------------------------------------|
+| **Dataset Generator**            | Generates 650 synthetic supply chain events              | Must-Have   | numpy/pandas       | CSV created in `data/` with 650 rows                    |
+| **Training Pipeline**            | Trains 5 models, selects best by F1                      | Must-Have   | scikit-learn       | Artifacts saved in `model/` directory                   |
+| **Dashboard**                    | Summary metrics + disruption charts                      | Must-Have   | model artifacts    | `/` renders without errors, charts visible              |
+| **Prediction + Recommendations** | Form → probability → risk level → actions                | Must-Have   | model artifacts    | `/predict` works end-to-end (tested)                    |
+| **Model Performance View**       | Compare 5 models, show confusion matrix                  | Should-Have | metrics.json       | `/performance` loads metrics accurately                 |
+| **Analytics View**               | Monthly trends, country risk, impact analysis            | Should-Have | training CSV       | `/analytics` renders 3+ charts correctly                |
+| **User Authentication**          | Secure registration & login                              | Must-Have   | Werkzeug, SQLAlchemy | Passwords hashed, unique emails enforced              |
+| **API Endpoints**                | `/api/v1/predict`, `/metrics`, `/analytics/trends`       | Should-Have | Flask-CORS, limiter| API returns valid JSON, rate limits work                |
+| **Database Migrations**          | Alembic/Flask-Migrate schema versioning                  | Should-Have | Alembic            | Migrations apply cleanly, support rollback              |
+| **Deployment Config**            | Render/Heroku ready configurations                       | Must-Have   | build.sh, Procfile | Deployment succeeds without manual steps                |
 
 ---
 
@@ -352,6 +341,7 @@ Here's what we wanted to accomplish:
 ## Page 9: Technical Architecture Overview
 
 *Coordinated and built by Rishabh with contributions from Jaya (UI) and Ananshi (backend)*
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      Users/Clients                          │
@@ -390,85 +380,85 @@ Here's what we wanted to accomplish:
     ┌──────────────────▼─────────────────┐
     │    Database Layer                  │
     │  ┌──────────────────────────────┐  │
-    │  │SQLite (Dev) | PostgreSQL(Prod)
+    │  │ SQLite (Dev) | PostgreSQL(Prod) │
     │  └──────────────────────────────┘  │
     │  Tables: users, prediction_logs    │
     └────────────────────────────────────┘
 ```
 
-### 3.2 Application Layers
+### 9.1 Application Layers
 
-| Layer | Component | Responsibility |
-|-------|-----------|-----------------|
-| **Presentation** | Jinja2 HTML + CSS + Chart.js | UI rendering, charting |
-| **Routing** | Flask blueprints (web, api) | HTTP request routing |
-| **Business Logic** | Services, validators | Prediction, logging, analytics |
-| **Data Access** | SQLAlchemy ORM | Database CRUD operations |
-| **Security** | CSRF, Login Manager, Limiter, Talisman | Auth, rate limiting, CSP |
-| **Storage** | SQLite / PostgreSQL | Persistent data |
-| **ML Models** | Sklearn artifacts (.pkl) | Prediction engine |
+| Layer            | Component                        | Responsibility              |
+|------------------|----------------------------------|-----------------------------|
+| **Presentation** | Jinja2 HTML + CSS + Chart.js     | UI rendering, charting      |
+| **Routing**      | Flask blueprints (web, api)      | HTTP request routing        |
+| **Business Logic** | Services, validators           | Prediction, logging, analytics |
+| **Data Access**  | SQLAlchemy ORM                   | Database CRUD operations    |
+| **Security**     | CSRF, Login Manager, Limiter, Talisman | Auth, rate limiting, CSP |
+| **Storage**      | SQLite / PostgreSQL              | Persistent data             |
+| **ML Models**    | Sklearn artifacts (.pkl)         | Prediction engine           |
 
 ---
 
 ## Page 10: Technology Stack
 
-### 4.1 Backend Technologies
+### 10.1 Backend Technologies
 
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| **Framework** | Flask | 3.0.0+ | Web microframework |
-| **ORM** | SQLAlchemy | 2.0+ | Database abstraction |
-| **Migrations** | Alembic (Flask-Migrate) | 1.13+ | Schema versioning |
-| **Session Auth** | Flask-Login | 0.6.3+ | User session management |
-| **CSRF Protection** | Flask-WTF | 1.2+ | Form token validation |
-| **Rate Limiting** | Flask-Limiter | 3.5+ | Request throttling |
-| **Security Headers** | Flask-Talisman | 1.1+ | CSP, HSTS, X-Frame-Options |
-| **CORS** | Flask-CORS | 4.0+ | Cross-origin requests |
-| **Password Hashing** | Werkzeug | 2.3+ | Bcrypt hashing |
-| **Env Config** | python-dotenv | 1.0.1+ | .env file loading |
+| Component           | Technology        | Version  | Purpose                      |
+|---------------------|-------------------|----------|------------------------------|
+| **Framework**       | Flask             | 3.0.0+   | Web microframework           |
+| **ORM**             | SQLAlchemy        | 2.0+     | Database abstraction         |
+| **Migrations**      | Alembic (Flask-Migrate) | 1.13+ | Schema versioning          |
+| **Session Auth**    | Flask-Login       | 0.6.3+   | User session management      |
+| **CSRF Protection** | Flask-WTF         | 1.2+     | Form token validation        |
+| **Rate Limiting**   | Flask-Limiter     | 3.5+     | Request throttling           |
+| **Security Headers**| Flask-Talisman    | 1.1+     | CSP, HSTS, X-Frame-Options   |
+| **CORS**            | Flask-CORS        | 4.0+     | Cross-origin requests        |
+| **Password Hashing**| Werkzeug          | 2.3+     | Bcrypt hashing               |
+| **Env Config**      | python-dotenv     | 1.0.1+   | .env file loading            |
 
-### 4.2 Database Layer
+### 10.2 Database Layer
 
-| Environment | Technology | Location | Features |
-|-------------|-----------|----------|----------|
-| **Development** | SQLite 3 | `instance/app.db` | File-based, zero-setup |
-| **Production** | PostgreSQL | Supabase managed | Scalable, cloud-hosted |
-| **Driver** | psycopg3 | 3.1+ | Python PostgreSQL adapter |
+| Environment       | Technology   | Location            | Features                        |
+|-------------------|--------------|---------------------|---------------------------------|
+| **Development**   | SQLite 3     | `instance/app.db`   | File-based, zero-setup          |
+| **Production**    | PostgreSQL   | Supabase managed    | Scalable, cloud-hosted          |
+| **Driver**        | psycopg3     | 3.1+                | Python PostgreSQL adapter       |
 
-### 4.3 Machine Learning Stack
+### 10.3 Machine Learning Stack
 
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| **ML Framework** | scikit-learn | 1.4+ | Algorithms & preprocessing |
-| **Data Processing** | pandas | 2.1+ | DataFrame operations |
-| **Serialization** | joblib | 1.3+ | Model artifact persistence |
-| **Encoding** | LabelEncoder | sklearn | Categorical encoding |
-| **Scaling** | StandardScaler | sklearn | Feature normalization |
+| Component       | Technology        | Version  | Purpose                        |
+|-----------------|-------------------|----------|--------------------------------|
+| **ML Framework**| scikit-learn      | 1.4+     | Algorithms & preprocessing     |
+| **Data Processing** | pandas        | 2.1+     | DataFrame operations           |
+| **Serialization** | joblib          | 1.3+     | Model artifact persistence     |
+| **Encoding**    | LabelEncoder      | sklearn  | Categorical encoding           |
+| **Scaling**     | StandardScaler    | sklearn  | Feature normalization          |
 
-### 4.4 Frontend Stack
+### 10.4 Frontend Stack
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| **Templating** | Jinja2 | Dynamic HTML rendering |
-| **Charting** | Chart.js 4.x | Interactive visualizations |
-| **Styling** | Custom CSS | Responsive design |
-| **CDN** | jsDelivr | Chart.js CDN (cdn.jsdelivr.net) |
+| Component      | Technology    | Purpose                        |
+|----------------|---------------|--------------------------------|
+| **Templating** | Jinja2        | Dynamic HTML rendering         |
+| **Charting**   | Chart.js 4.x  | Interactive visualizations     |
+| **Styling**    | Custom CSS    | Responsive design              |
+| **CDN**        | jsDelivr      | Chart.js CDN (cdn.jsdelivr.net)|
 
-### 4.5 Testing & Development
+### 10.5 Testing & Development
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| **Testing Framework** | pytest 8.3+ | Unit & integration tests |
-| **Test Database** | SQLite (in-memory) | Isolated test data |
+| Component              | Technology    | Purpose                        |
+|------------------------|---------------|--------------------------------|
+| **Testing Framework**  | pytest 8.3+   | Unit & integration tests       |
+| **Test Database**      | SQLite (in-memory) | Isolated test data        |
 
-### 4.6 Runtime & Deployment
+### 10.6 Runtime & Deployment
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| **WSGI Server** | Gunicorn 4.x | Production HTTP server |
-| **Python Runtime** | 3.11 through 3.13 | Execution environment |
-| **Package Manager** | pip | Dependency management |
-| **PaaS Platforms** | Render / Heroku | Cloud hosting |
+| Component          | Technology        | Purpose                  |
+|--------------------|-------------------|--------------------------|
+| **WSGI Server**    | Gunicorn 4.x      | Production HTTP server   |
+| **Python Runtime** | 3.11 through 3.13 | Execution environment    |
+| **Package Manager**| pip               | Dependency management    |
+| **PaaS Platforms** | Render / Heroku   | Cloud hosting            |
 
 ---
 
@@ -492,18 +482,18 @@ project-root/
 │   └── static/
 │       └── styles.css               # CSS styling
 ├── templates/
-│   ├── base.html        # Layout template
-│   ├── dashboard.html   # Overview
-│   ├── performance.html # Model metrics
-│   ├── analytics.html   # Trends
-│   ├── predict.html     # Prediction form
-│   ├── login.html       # Login
-│   ├── register.html    # Registration
-│   └── setup_required.html # Setup error
+│   ├── base.html                    # Layout template
+│   ├── dashboard.html               # Overview
+│   ├── performance.html             # Model metrics
+│   ├── analytics.html               # Trends
+│   ├── predict.html                 # Prediction form
+│   ├── login.html                   # Login
+│   ├── register.html                # Registration
+│   └── setup_required.html          # Setup error
 ├── migrations/
 │   ├── env.py
 │   ├── script.py.mako
-│   └── versions/        # Migration scripts
+│   └── versions/                    # Migration scripts
 ├── tests/
 │   ├── conftest.py
 │   └── test_web_and_api.py
@@ -516,43 +506,30 @@ project-root/
 ├── data/
 │   └── supply_chain_events.csv
 ├── static/
-├── generate_data.py     # Data generation
-├── build.sh             # Render build script
-├── Procfile             # Render app manifest
+├── generate_data.py                 # Data generation
+├── build.sh                         # Render build script
+├── Procfile                         # Render app manifest
+├── render.yaml                      # Render deployment config
+└── requirements.txt                 # Python dependencies
+```
+
 ---
 
 ## Page 12: Authentication & Security
-### 8.1 Functional Acceptance Criteria
-4. Hash password: `werkzeug.security.generate_password_hash()`
-Here's how we know it works:
-5. Store User record in database
-- Data generation → Training runs → Model files saved in `model/` folder (pickle + JSON)
-- Model artifacts exist → User opens `/predict` → Gets disruption probability + risk level
-- Model artifacts exist → User opens `/performance` → All 5 model metrics display correctly
-- Model artifacts exist → User opens `/analytics` → Trend charts and country risk maps show up
-- User registers → Logs in → Session stays active when navigating around
-- Unauthenticated user tries `/predict` → Gets redirected to login page
-- User predicts too many times → Gets HTTP 429 (rate limit hit) with "try again in X seconds"
-6. Redirect to login
-### 8.2 Operational Acceptance Criteria
 
-Real-world requirements:
-**User Login:**
-- App starts up cleanly with `gunicorn app:create_app()`
-- If model files are missing, shows a helpful "setup required" screen (doesn't crash)
-- Pages load and respond in under 2 seconds (even 99% of the time)
-- Database updates apply cleanly without losing data
-- Deploying to Render works automatically without manual fixing
+### 12.1 User Registration Flow
+
+1. User visits `/register`
+2. Submits: name, email, password
+3. Server validates inputs
+4. Hash password: `werkzeug.security.generate_password_hash()`
+5. Store User record in database
+6. Redirect to login
+
+### 12.2 User Login Flow
+
 1. User submits: email, password
-### 8.3 Non-Functional Requirements (What Users Expect)
 2. Query User by email
-- **Uptime:** Stay up 99% of the time (hosted on Render)
-- **Speed:** Get a prediction back in less than 1 second (p95)
-- **Stability:** Never crash with unhandled errors (setup checks catch problems early)
-- **Growth:** Handle 100+ simultaneous users without slowdown
-- **Maintenance:** Code is clear and organized for future changes
-- **Accessibility:** Readable text color contrast, keyboard navigation works
-- **Security:** Block SQL injection, XSS, CSRF, and fake logins
 3. Verify password: `check_password_hash()`
 4. Create session: `login_user(user)`
 5. Redirect to dashboard
@@ -563,7 +540,7 @@ Real-world requirements:
 - Protected routes: `@login_required` decorator
 - Logout: Clear session with `logout_user()`
 
-### 6.2 Password Hashing (Werkzeug/Bcrypt)
+### 12.3 Password Hashing (Werkzeug/Bcrypt)
 
 ```python
 # At registration:
@@ -582,7 +559,7 @@ user.check_password(submitted_password)
 - ✅ PBKDF2 with SHA256 (industry standard)
 - ✅ 600,000 iterations (CPU-expensive to brute-force)
 
-### 6.3 CSRF Protection
+### 12.4 CSRF Protection
 
 ```python
 from flask_wtf.csrf import CSRFProtect
@@ -591,16 +568,16 @@ csrf = CSRFProtect()
 csrf.init_app(app)  # Protects POST/PUT/DELETE forms
 
 # In HTML forms:
-<form method="POST">
-  {{ csrf_token() }}
-  ...
-</form>
+# <form method="POST">
+#   {{ csrf_token() }}
+#   ...
+# </form>
 
 # API exempt:
 csrf.exempt(api_bp)  # REST API uses session, not tokens
 ```
 
-### 6.4 Rate Limiting
+### 12.5 Rate Limiting
 
 **Configuration:**
 ```python
@@ -617,31 +594,28 @@ X-RateLimit-Remaining: 29
 X-RateLimit-Reset: 1710900660
 ```
 
-### 6.5 Content Security Policy (CSP)
+### 12.6 Content Security Policy (CSP)
 
 **Headers:**
 ```python
 csp = {
     "default-src": ["'self'"],
     "script-src": ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
-    "style-src": ["'self'", "'unsafe-inline'"],
-    "img-src": ["'self'", "data:"],
+    "style-src":  ["'self'", "'unsafe-inline'"],
+    "img-src":    ["'self'", "data:"],
 }
 ```
 
-**Protection Against:**
-- XSS (Cross-Site Scripting)
-- Inline attacks
-- Clickjacking
+**Protection Against:** XSS, inline attacks, Clickjacking
 
-### 6.6 Input Validation
+### 12.7 Input Validation
 
 **Prediction Form:**
 - Event type: Must exist in training data
 - Severity: One of [Low, Medium, High, Critical]
 - Cause: Must exist in training data
 - Country: Must exist in training data
-- Financial impact: $10K - $10M (range validation)
+- Financial impact: $10K–$10M (range validation)
 
 **Registration:**
 - Name: Required, non-empty
@@ -653,7 +627,7 @@ csp = {
 
 ## Page 13: Database Design & Schema
 
-### 7.1 Entity-Relationship Diagram
+### 13.1 Entity-Relationship Diagram
 
 ```
 ┌──────────────────┐
@@ -677,14 +651,14 @@ csp = {
 │ country                      │
 │ financial_impact             │
 │ prediction (0/1)             │
-│ probability (0.0-1.0)        │
+│ probability (0.0–1.0)        │
 │ risk_level                   │
 │ source ('web'/'api')         │
 │ created_at                   │
 └──────────────────────────────┘
 ```
 
-### 7.2 Users Table Schema
+### 13.2 Users Table Schema
 
 ```sql
 CREATE TABLE users (
@@ -699,14 +673,12 @@ CREATE TABLE users (
 CREATE INDEX ix_users_email ON users(email);
 ```
 
-**Purpose:** Authentication and session management
-
 **Constraints:**
 - `email` is UNIQUE (prevents duplicate accounts)
 - `password_hash` never stores plain passwords
 - `role` supports future RBAC (admin, analyst, auditor)
 
-### 7.3 Prediction_Logs Table Schema
+### 13.3 Prediction_Logs Table Schema
 
 ```sql
 CREATE TABLE prediction_logs (
@@ -724,19 +696,12 @@ CREATE TABLE prediction_logs (
 );
 ```
 
-**Purpose:** Audit trail for all predictions (web + API)
-
 **Data Captured:**
 - **Inputs:** event_type, severity_level, cause, country, financial_impact
 - **Outputs:** prediction (0/1), probability, risk_level
 - **Metadata:** source (web/api), timestamp
 
-**Use Cases:**
-- Model performance monitoring
-- Audit trail (compliance)
-- Retraining dataset (feedback loop)
-
-### 7.4 Migrations & Versioning
+### 13.4 Migrations & Versioning
 
 **Alembic Migration System:**
 ```
@@ -760,62 +725,52 @@ flask db current           # Show current version
 
 ## Page 14: Feature Implementation – User Interface
 
-### 8.1 Web Routes & Pages
+### 14.1 Web Routes & Pages
 
-| Route | Method | Auth | Template | Purpose |
-|-------|--------|------|----------|---------|
-| `/register` | GET/POST | None | `register.html` | User registration form |
-| `/login` | GET/POST | None | `login.html` | User login form |
-| `/logout` | GET | Required | N/A | Clear session, redirect |
-| `/` | GET | Required | `dashboard.html` | Main dashboard (cards + charts) |
-| `/predict` | GET/POST | Required | `predict.html` | Prediction form interface |
-| `/performance` | GET | Required | `performance.html` | Model metrics & F1 chart |
-| `/analytics` | GET | Required | `analytics.html` | Trends, country risk, impact charts |
+| Route         | Method   | Auth     | Template              | Purpose                             |
+|---------------|----------|----------|-----------------------|-------------------------------------|
+| `/register`   | GET/POST | None     | `register.html`       | User registration form              |
+| `/login`      | GET/POST | None     | `login.html`          | User login form                     |
+| `/logout`     | GET      | Required | N/A                   | Clear session, redirect             |
+| `/`           | GET      | Required | `dashboard.html`      | Main dashboard (cards + charts)     |
+| `/predict`    | GET/POST | Required | `predict.html`        | Prediction form interface           |
+| `/performance`| GET      | Required | `performance.html`    | Model metrics & F1 chart            |
+| `/analytics`  | GET      | Required | `analytics.html`      | Trends, country risk, impact charts |
 
-### 8.2 Dashboard Page
+### 14.2 Dashboard Page
 
 **Displays:**
-- 4 metric cards:
-  - Total Events: 650
-  - Disruptions: 483 (74.3%)
-  - Non-Disruptions: 167
-  - Average Impact: $272,441
+- 4 metric cards: Total Events (650), Disruptions (483 / 74.3%), Non-Disruptions (167), Average Impact ($272,441)
 - Severity distribution (pie chart): High/Medium/Low/Critical
 - Top 8 event types (bar chart): Port Congestion, Labor Strike, etc.
 - Table: Top 10 costly disruptions (sortable by impact)
 
-**Tech Stack:**
-- Jinja2 templating
-- Chart.js v4 (pie + bar)
-- CSS grid (responsive)
+**Tech Stack:** Jinja2 templating, Chart.js v4 (pie + bar), CSS grid (responsive)
 
-### 8.3 Prediction Page
+### 14.3 Prediction Page
 
 **Form Inputs:**
 - Event Type (dropdown): From training vocabulary
 - Severity Level (dropdown): Low/Medium/High/Critical
 - Cause (dropdown): From training vocabulary
 - Country (dropdown): 50+ countries
-- Financial Impact (slider + input): $10K - $10M
+- Financial Impact (slider + input): $10K–$10M
 
 **Output:**
 - Prediction: "Disruption Risk" or "Manageable"
-- Probability: 0-100% (e.g., 87.5%)
+- Probability: 0–100% (e.g., 87.5%)
 - Risk Level: Low/Medium/High/Critical
 - Recommendations: Contextual suggestions
 
-### 8.4 Performance Page
+### 14.4 Performance Page
 
 **Displays:**
-- 3 metric cards:
-  - Best Model: RandomForest (example)
-  - Dataset Size: 650 events
-  - Features: 30
+- 3 metric cards: Best Model (RandomForest), Dataset Size (650 events), Features (30)
 - Performance metrics table (models vs. metrics)
 - F1 Score comparison chart (bar)
-- Confusion matrix (2x2 table)
+- Confusion matrix (2×2 table)
 
-### 8.5 Analytics Page
+### 14.5 Analytics Page
 
 **Displays:**
 - Monthly trends (line chart): Total events vs. disruptions
@@ -826,14 +781,14 @@ flask db current           # Show current version
 
 ## Page 15: REST API Specification
 
-### 9.1 API Overview
+### 15.1 API Overview
 
-**Base URL:** `http://localhost:5001/api/v1`  
-**Authentication:** Flask-Login session (cookie-based)  
-**Rate Limit:** 120/hour default, 30/minute on `/predict`  
+**Base URL:** `http://localhost:5001/api/v1`
+**Authentication:** Flask-Login session (cookie-based)
+**Rate Limit:** 120/hour default, 30/minute on `/predict`
 **Response Format:** JSON
 
-### 9.2 Endpoints
+### 15.2 Endpoints
 
 **Health Check (Public):**
 ```
@@ -885,7 +840,7 @@ Response: {
 
 ## Page 16: Machine Learning Model Details
 
-### 10.1 Training Pipeline
+### 16.1 Training Pipeline
 
 ```
 generate_data.py (650 samples)
@@ -917,74 +872,71 @@ Save artifacts:
 - metrics.json
 ```
 
-### 10.2 Feature Engineering
+### 16.2 Feature Engineering
 
 **Input Features (30+):**
 - `event_type`, `severity_level`, `cause`, `country` (categorical)
-- `financial_impact` (numeric: $10K-$10M)
+- `financial_impact` (numeric: $10K–$10M)
 - Temporal: year, month, day, quarter
 
 **Transformations:**
-- LabelEncoder: categorical → numeric (0, 1, 2, ...)
+- LabelEncoder: categorical → numeric (0, 1, 2, …)
 - StandardScaler: numeric → mean=0, std=1
 - One-hot encoding: severity_level → binary columns
 
-### 10.3 Model Selection
+### 16.3 Model Selection
 
 **Criterion:** Highest F1 Score
 
-**Why We Use F1:**
-- F1 is a balanced metric - it cares about both precision (avoiding false alerts) and recall (catching real disruptions)
-- We also track ROC-AUC (goes from 0 to 1, higher is better)
+F1 is a balanced metric — it cares about both precision (avoiding false alerts) and recall (catching real disruptions). ROC-AUC (0 to 1, higher is better) is also tracked.
 
-### 10.4 Model Artifacts (Created by Rishabh)
+### 16.4 Model Artifacts
 
-**Output Files Created:**
+**Output Files Created in `model/`:**
 ```
 model/
-├── disruption_model.pkl      # The best trained model (RandomForest)
-├── scaler.pkl                # Scaling tool for input features
-├── encoders.pkl              # Converters for text fields
-├── features.pkl              # Column names & feature order
-└── metrics.json              # Full performance report
+├── disruption_model.pkl      # Best trained model (RandomForest) ~5MB
+├── scaler.pkl                # StandardScaler for feature normalization ~50KB
+├── encoders.pkl              # Dict of LabelEncoders for categorical features ~100KB
+├── features.pkl              # Feature column names & order ~2KB
+└── metrics.json              # Full performance report ~20KB
 ```
 
-### 10.5 Performance Results
+### 16.5 Performance Results
 
-**We Tested All 5 Models (Test set: 130 samples):**
+**5 Models Evaluated (Test set: 130 samples):**
 
-| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
-|-------|----------|-----------|--------|----------|---------|
-| LogisticRegression | 88% | 85% | 91% | 88% | 0.94 |
-| DecisionTree | 85% | 82% | 88% | 85% | 0.91 |
-| RandomForest ⭐ | 92% | 90% | 94% | 92% | 0.97 |
-| GradientBoosting | 90% | 88% | 92% | 90% | 0.96 |
-| SVM | 86% | 83% | 89% | 86% | 0.92 |
+| Model                   | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|-------------------------|----------|-----------|--------|----------|---------|
+| LogisticRegression      | 88%      | 85%       | 91%    | 88%      | 0.94    |
+| DecisionTree            | 85%      | 82%       | 88%    | 85%      | 0.91    |
+| RandomForest ⭐          | **92%**  | **90%**   | **94%**| **92%**  | **0.97**|
+| GradientBoosting        | 90%      | 88%       | 92%    | 90%      | 0.96    |
+| SVM                     | 86%      | 83%       | 89%    | 86%      | 0.92    |
 
-**Selected:** RandomForest (92% F1 - best balance of catching disruptions without over-alerting)
+**Selected:** RandomForest (92% F1 — best balance of catching disruptions without over-alerting)
 
-### 10.6 Confusion Matrix (RandomForest on Test Data)
+### 16.6 Confusion Matrix (RandomForest on Test Data)
 
 ```
-                            Predicted: Manageable    Predicted: Disruption
-Actual: Manageable                 28                       4
-Actual: Disruption                  4                      94
+                        Predicted: Manageable    Predicted: Disruption
+Actual: Manageable              28                       4
+Actual: Disruption               4                      94
 ```
 
-**What This Means:**
-- Correctly identified manageable events: 28 ✓
+- Correctly identified manageable events: **28** ✓
 - False alerts (thought disruption, was ok): 4
 - Missed disruptions (thought ok, was disruption): 4
-- Correctly caught disruptions: 94 ✓
-- Overall gets it right: 92.3% of the time
+- Correctly caught disruptions: **94** ✓
+- Overall accuracy: **92.3%**
 
 ---
 
 ## Page 17: Data Pipeline & Dataset
 
-### 11.1 Data Generation Process
+### 17.1 Data Generation Process
 
-**Script:** `generate_data.py` (written by Rishabh)  
+**Script:** `generate_data.py`
 **Output:** `data/supply_chain_events.csv` (650 rows × 30 columns)
 
 **What It Does:**
@@ -993,46 +945,44 @@ Actual: Disruption                  4                      94
 3. Assigns disruption labels based on weighted feature combinations
 4. Saves everything to a clean CSV file ready for training
 
-### 11.2 Dataset Statistics
+### 17.2 Dataset Statistics
 
-**What We Built:**
 - 650 events total
-- 483 actual disruptions (74.3% - realistic disruption rate)
-- 167 non-disruptions (25.7% - normal operations)
-- Covers 2 years of data (2024-2025)
-- Includes 50+ different countries  
+- 483 actual disruptions (74.3%)
+- 167 non-disruptions (25.7%)
+- Covers 2 years of data (2024–2025)
+- Includes 50+ different countries
 
-### 11.3 Feature Breakdown
+### 17.3 Feature Breakdown
 
-| Category | What's Tracked | Type |
-|----------|----------------|------|
-| Event Info | event_type, cause, date | Text + Time |
-| Severity | severity_level | Text (Low/Medium/High/Critical) |
-| Location | country, city | Geographic |
-| Financial | financial_impact | Cost ($10K-$10M range) |
-| Logistics | supplier_id, carrier, mode | Categorical |
-| Time Series | year, month, day, quarter | Numeric (calculated) |
+| Category    | What's Tracked                         | Type                           |
+|-------------|----------------------------------------|--------------------------------|
+| Event Info  | event_type, cause, date                | Text + Time                    |
+| Severity    | severity_level                         | Text (Low/Medium/High/Critical)|
+| Location    | country, city                          | Geographic                     |
+| Financial   | financial_impact                       | Cost ($10K–$10M range)         |
+| Logistics   | supplier_id, carrier, mode             | Categorical                    |
+| Time Series | year, month, day, quarter              | Numeric (calculated)           |
 
-### 11.4 Data Quality Checks
+### 17.4 Data Quality Checks
 
-**We Validated:**
 - ✅ No gaps or missing data
 - ✅ Financial costs in realistic range
 - ✅ Event types come from defined list
-- ✅ Dates stay within our 2-year range
+- ✅ Dates stay within the 2-year range
 - ✅ Country codes match real countries
 
 ---
 
 ## Page 18: Testing & Quality Assurance
 
-### 12.1 Test Suite Setup (Led by Rishabh)
+### 18.1 Test Suite Setup
 
-**What We Use:** pytest 8.3+
+**Framework:** pytest 8.3+
 **Database:** SQLite in-memory (isolated per test run)
 **Primary Command:** `pytest -v tests/test_web_and_api.py`
 
-### 12.2 Test Cases (All Passing)
+### 18.2 Test Cases (All Passing)
 
 ```
 test_dashboard_page_loads
@@ -1046,7 +996,7 @@ test_invalid_prediction_input_rejected
 test_model_metrics_endpoint
 ```
 
-### 12.3 Coverage Areas
+### 18.3 Coverage Areas
 
 - Authentication and session handling
 - Authorization on protected routes
@@ -1054,22 +1004,22 @@ test_model_metrics_endpoint
 - Database writes and read consistency
 - End-to-end model prediction flow
 
-**Coverage:** 90%+ across core modules
+**Overall Coverage:** ~90% across core modules
 
-### 12.4 How To Run Tests
+### 18.4 How To Run Tests
 
 ```bash
 pytest tests/                           # Run all tests
 pytest -v tests/                        # Verbose output
-pytest tests/test_web_and_api.py       # Targeted test file
+pytest tests/test_web_and_api.py        # Targeted test file
 pytest --cov=app tests/                 # With coverage summary
 ```
 
 ---
 
-## Page 19: Deployment & DevOps (Setup by Rishabh)
+## Page 19: Deployment & DevOps
 
-### 13.1 Deployment Platforms
+### 19.1 Deployment Platforms
 
 **Render.com (Recommended):**
 1. Connect the GitHub repository
@@ -1082,7 +1032,7 @@ pytest --cov=app tests/                 # With coverage summary
 - Uses `Procfile`: `web: gunicorn app:create_app()`
 - Deploy using `git push heroku main`
 
-### 13.2 Docker Setup (Optional Alternative)
+### 19.2 Docker Setup (Optional)
 
 ```dockerfile
 FROM python:3.13-slim
@@ -1097,25 +1047,22 @@ CMD ["gunicorn", "-w 4", "-b 0.0.0.0:5000", "app:create_app()"]
 
 Build & Run: `docker build -t supply-chain-app . && docker run -p 5000:5000 supply-chain-app`
 
-### 13.3 Running with Gunicorn (Production Server)
+### 19.3 Running with Gunicorn (Production)
 
 ```bash
 gunicorn -w 4 -b 0.0.0.0:5000 app:create_app()
 ```
 
-**What Each Flag Does:**
 - `-w 4`: Spin up 4 worker processes
 - `-b 0.0.0.0:5000`: Listen on all interfaces at port 5000
-- `<app>`: Point to Flask app factory
 
-### 13.4 Database Migrations (Before Going Live)
+### 19.4 Database Migrations (Before First Deploy)
 
-**Run This Before First Deploy:**
 ```bash
 flask db upgrade  # Applies all pending database changes
 ```
 
-### 13.5 Environment Configuration
+### 19.5 Environment Configuration
 
 **Development (.env):**
 ```
@@ -1137,7 +1084,7 @@ TALISMAN_FORCE_HTTPS=true
 
 ## Page 20: Monitoring & Logging
 
-### 14.1 Application Logging
+### 20.1 Application Logging
 
 ```python
 import logging
@@ -1156,7 +1103,7 @@ logger = logging.getLogger(__name__)
 - `ERROR`: Error occurred (DB connection failed)
 - `CRITICAL`: System may fail (out of disk)
 
-### 14.2 Logged Events
+### 20.2 Logged Events
 
 **User Activity:**
 ```
@@ -1175,7 +1122,7 @@ WARNING: Prediction rate limit hit: IP=192.168.1.1
 
 ## Page 21: Security Audit & Compliance
 
-### 15.1 Security Checklist
+### 21.1 Security Checklist
 
 - ✅ **Password Hashing**: Bcrypt via Werkzeug
 - ✅ **Session Security**: Flask-Login secure cookies
@@ -1190,19 +1137,19 @@ WARNING: Prediction rate limit hit: IP=192.168.1.1
 - ✅ **Secrets Management**: .env (git-ignored)
 - ✅ **Logging**: Audit trail for predictions
 
-### 15.2 Known Vulnerabilities & Mitigations
+### 21.2 Known Vulnerabilities & Mitigations
 
-| Vulnerability | Mitigation | Status |
-|---------------|-----------|--------|
-| Weak passwords | 8+ char enforced | ✅ |
-| Session hijacking | Secure httpOnly cookies | ✅ |
-| Brute force login | Future: CAPTCHA + lockout | ⏳ |
-| SQL injection | SQLAlchemy ORM | ✅ |
-| XSS attacks | Jinja2 auto-escape | ✅ |
-| CSRF attacks | Flask-WTF tokens | ✅ |
-| DDoS | Rate limiting | Partial |
+| Vulnerability        | Mitigation                     | Status  |
+|----------------------|--------------------------------|---------|
+| Weak passwords       | 8+ char enforced               | ✅      |
+| Session hijacking    | Secure httpOnly cookies        | ✅      |
+| Brute force login    | Future: CAPTCHA + lockout      | ⏳      |
+| SQL injection        | SQLAlchemy ORM                 | ✅      |
+| XSS attacks          | Jinja2 auto-escape             | ✅      |
+| CSRF attacks         | Flask-WTF tokens               | ✅      |
+| DDoS                 | Rate limiting                  | Partial |
 
-### 15.3 Compliance
+### 21.3 Compliance
 
 **GDPR (EU users):**
 - ✅ User can register/request data deletion (future)
@@ -1213,39 +1160,39 @@ WARNING: Prediction rate limit hit: IP=192.168.1.1
 
 ## Page 22: User Workflows
 
-### 16.1 Registration Flow
+### 22.1 Registration Flow
 
 ```
-1. User visits /register
-2. Submits: name, email, password
-3. Server validates inputs
-4. Hashes password (Bcrypt)
-5. Stores User in DB
-6. Redirects to login
-7. User logs in with email/password
-8. Session cookie created
-9. Redirected to dashboard
+1.  User visits /register
+2.  Submits: name, email, password
+3.  Server validates inputs
+4.  Hashes password (Bcrypt)
+5.  Stores User in DB
+6.  Redirects to login
+7.  User logs in with email/password
+8.  Session cookie created
+9.  Redirected to dashboard
 ```
 
-### 16.2 Prediction Workflow (Web)
+### 22.2 Prediction Workflow (Web)
 
 ```
-1. Navigate to /predict
-2. Select from dropdowns (event type, severity, cause, country)
-3. Set financial impact (slider $10K-$10M)
-4. Click "Predict"
-5. Server validates inputs
-6. Encodes categorical features
-7. Scales numerical features
-8. Runs model.predict()
-9. Gets probability
+1.  Navigate to /predict
+2.  Select from dropdowns (event type, severity, cause, country)
+3.  Set financial impact (slider $10K–$10M)
+4.  Click "Predict"
+5.  Server validates inputs
+6.  Encodes categorical features
+7.  Scales numerical features
+8.  Runs model.predict()
+9.  Gets probability
 10. Maps to risk level
 11. Generates recommendations
 12. Logs to DB (audit)
 13. Displays results
 ```
 
-### 16.3 Analytics Workflow
+### 22.3 Analytics Workflow
 
 ```
 1. Navigate to /analytics
@@ -1261,18 +1208,18 @@ WARNING: Prediction rate limit hit: IP=192.168.1.1
 
 ## Page 23: Configuration & Environment Variables
 
-### 17.1 Environment Variables
+### 23.1 Environment Variables
 
-| Variable | Default | Production | Purpose |
-|----------|---------|-----------|---------|
-| `FLASK_ENV` | development | production | Environment mode |
-| `FLASK_DEBUG` | true | false | Debug mode |
-| `SECRET_KEY` | dev-key | <random> | Session signing |
-| `DATABASE_URL` | sqlite:/// | postgresql+psycopg:// | DB connection |
-| `TALISMAN_FORCE_HTTPS` | false | true | Enforce HTTPS |
-| `CORS_ORIGINS` | "" | https://your-domain | CORS allowed |
+| Variable                | Default         | Production             | Purpose               |
+|-------------------------|-----------------|------------------------|-----------------------|
+| `FLASK_ENV`             | development     | production             | Environment mode      |
+| `FLASK_DEBUG`           | true            | false                  | Debug mode            |
+| `SECRET_KEY`            | dev-key         | \<random\>             | Session signing       |
+| `DATABASE_URL`          | sqlite:///      | postgresql+psycopg://  | DB connection         |
+| `TALISMAN_FORCE_HTTPS`  | false           | true                   | Enforce HTTPS         |
+| `CORS_ORIGINS`          | ""              | https://your-domain    | CORS allowed origins  |
 
-### 17.2 Setting Variables
+### 23.2 Setting Variables
 
 **Local (.env):**
 ```
@@ -1291,7 +1238,7 @@ SECRET_KEY=<128-char-random>
 DATABASE_URL=postgresql://...
 ```
 
-### 17.3 Generating Secure SECRET_KEY
+### 23.3 Generating a Secure SECRET_KEY
 
 ```python
 import secrets
@@ -1303,26 +1250,16 @@ print(secret_key)
 
 ## Page 24: Troubleshooting & Common Issues
 
-### 18.1 Charts Not Visible
+### 24.1 Charts Not Visible
 
 **Symptom:** Blank chart areas on dashboard/performance/analytics
 
-**Root Causes:**
-1. **CSP Headers blocking scripts:**
-   - Check: DevTools → Network → Response Headers
-   - Fix: Ensure `'unsafe-inline'` in script-src
+**Root Causes & Fixes:**
 
-2. **Chart.js CDN not loading:**
-   - Check: Network tab → cdn.jsdelivr.net
-   - Fix: Retry or use local copy
-
-3. **JavaScript errors:**
-   - Check: Browser Console (F12)
-   - Fix: Ensure Chart.js loads before template scripts
-
-4. **Empty data:**
-   - Check: Network request returns data
-   - Fix: Run `python generate_data.py` manually
+1. **CSP Headers blocking scripts:** Check DevTools → Network → Response Headers. Ensure `'unsafe-inline'` is in script-src.
+2. **Chart.js CDN not loading:** Check Network tab → cdn.jsdelivr.net. Retry or use a local copy.
+3. **JavaScript errors:** Check Browser Console (F12). Ensure Chart.js loads before template scripts.
+4. **Empty data:** Run `python generate_data.py` manually.
 
 **Debug Steps:**
 ```bash
@@ -1335,7 +1272,7 @@ curl http://localhost:5001/api/v1/metrics
 # 3. Check browser console (F12 → Console)
 ```
 
-### 18.2 Database Connection Errors
+### 24.2 Database Connection Errors
 
 **Symptom:** `psycopg.OperationalError: failed to resolve host`
 
@@ -1344,20 +1281,18 @@ curl http://localhost:5001/api/v1/metrics
 2. Check network firewall (port 5432)
 3. Use SQLite fallback: leave `DATABASE_URL` empty
 
-### 18.3 Port Already in Use
+### 24.3 Port Already in Use
 
 **Symptom:** `Address already in use` when starting app
 
-**Solution:**
 ```bash
-lsof -i :5001       # Find PID
-kill -9 <PID>       # Kill it
+lsof -i :5001            # Find PID
+kill -9 <PID>            # Kill it
 PORT=5002 python app.py  # Use different port
 ```
 
-### 18.4 Migrations Failing
+### 24.4 Migrations Failing
 
-**Solutions:**
 ```bash
 flask db current            # Check status
 flask db downgrade          # Rollback
@@ -1370,19 +1305,19 @@ rm -rf migrations/          # Reset (dev only)
 
 ## Page 25: Future Enhancements
 
-### Phase 2 (Q2 2026)
+### 25.1 Phase 2 (Q2 2026)
 
 - **Admin Dashboard:** User management, system health, audit logs
 - **Advanced Analytics:** Date filtering, PDF/Excel export, scheduled reports
 - **Model Improvements:** Auto-retraining, A/B testing, feature importance
 
-### Phase 3 (Q3 2026)
+### 25.2 Phase 3 (Q3 2026)
 
 - **Real-Time Data:** Webhook endpoints, streaming pipeline
 - **Integrations:** OAuth 2.0, ERP connectors, Slack notifications
 - **Predictive Features:** Supplier risk forecast, Monte Carlo simulations
 
-### Phase 4 (Q4 2026)
+### 25.3 Phase 4 (Q4 2026)
 
 - **Mobile App:** React Native client, push notifications
 - **AI Enhancements:** LLM explanations, deep learning, federated learning
@@ -1392,14 +1327,14 @@ rm -rf migrations/          # Reset (dev only)
 
 ## Page 26: Installation & Setup Guide
 
-### 20.1 Prerequisites
+### 26.1 Prerequisites
 
 - Python 3.11+ (tested on 3.13.3)
 - pip
 - Git
 - ~500MB disk space
 
-### 20.2 Local Setup
+### 26.2 Local Setup
 
 **Step 1: Clone**
 ```bash
@@ -1410,9 +1345,9 @@ cd AI-Powered-Supply-Chain-...
 **Step 2: Virtual Environment**
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate  # macOS/Linux
+source .venv/bin/activate       # macOS/Linux
 # or
-.venv\Scripts\Activate.ps1  # Windows
+.venv\Scripts\Activate.ps1      # Windows
 ```
 
 **Step 3: Install Dependencies**
@@ -1456,7 +1391,7 @@ Register → Log in → Dashboard
 
 ## Page 27: API User Guide
 
-### 21.1 Authentication (Session-Based)
+### 27.1 Authentication (Session-Based)
 
 ```python
 import requests
@@ -1474,7 +1409,7 @@ response = session.get('http://localhost:5001/api/v1/metrics')
 print(response.json())
 ```
 
-### 21.2 curl Examples
+### 27.2 curl Examples
 
 ```bash
 # Health check (public)
@@ -1498,15 +1433,13 @@ curl http://localhost:5001/api/v1/metrics
 curl http://localhost:5001/api/v1/analytics/trends?months=12
 ```
 
-### 21.3 JavaScript/Fetch Example
+### 27.3 JavaScript/Fetch Example
 
 ```javascript
 async function predictDisruption(eventData) {
   const response = await fetch('/api/v1/predict', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(eventData)
   });
 
@@ -1533,20 +1466,20 @@ predictDisruption({
 
 ## Page 28: Quick Reference & Appendices
 
-### Glossary
+### 28.1 Glossary
 
-| Term | Definition |
-|------|-----------|
-| **Disruption** | Supply chain event causing delay/cancellation (label=1) |
-| **Manageable** | Event handled within normal operations (label=0) |
-| **F1 Score** | Harmonic mean of precision & recall (0-1) |
-| **ROC-AUC** | Receiver Operating Characteristic; Area Under Curve (0-1) |
-| **CSP** | Content Security Policy; browser security directive |
-| **ORM** | Object-Relational Mapping; SQLAlchemy |
-| **WSGI** | Web Server Gateway Interface; Gunicorn |
-| **PaaS** | Platform-as-a-Service; Render, Heroku |
+| Term            | Definition                                                            |
+|-----------------|-----------------------------------------------------------------------|
+| **Disruption**  | Supply chain event causing delay/cancellation (label=1)               |
+| **Manageable**  | Event handled within normal operations (label=0)                      |
+| **F1 Score**    | Harmonic mean of precision & recall (0–1)                             |
+| **ROC-AUC**     | Receiver Operating Characteristic; Area Under Curve (0–1)             |
+| **CSP**         | Content Security Policy; browser security directive                   |
+| **ORM**         | Object-Relational Mapping; SQLAlchemy                                 |
+| **WSGI**        | Web Server Gateway Interface; Gunicorn                                |
+| **PaaS**        | Platform-as-a-Service; Render, Heroku                                 |
 
-### Quick Start Checklist
+### 28.2 Quick Start Checklist
 
 ```
 □ Clone repository
@@ -1562,7 +1495,7 @@ predictDisruption({
 □ Run tests: pytest tests/
 ```
 
-### File Dependencies
+### 28.3 File Dependencies
 
 ```
 app.py
@@ -1585,7 +1518,7 @@ generate_data.py
 └── data/supply_chain_events.csv (generated)
 ```
 
-### Database Schema SQL
+### 28.4 Database Schema SQL
 
 ```sql
 CREATE TABLE users (
@@ -1616,7 +1549,7 @@ CREATE TABLE prediction_logs (
 
 ## Page 29: Conclusion & References
 
-### Performance Summary
+### 29.1 Performance Summary
 
 - **Model Accuracy:** 92% (RandomForest)
 - **Prediction Latency:** <200ms average
@@ -1625,18 +1558,18 @@ CREATE TABLE prediction_logs (
 - **API Rate Limit:** 120/hour, 30/min on predict
 - **Uptime SLA:** 99.5% (production)
 
-### Key Achievements
+### 29.2 Key Achievements
 
-✅ 650 synthetic supply chain events  
-✅ 483 disruption cases (74.3%)  
-✅ 5 trained ML models  
-✅ 92% model accuracy  
-✅ Bcrypt password hashing  
-✅ 9/9 tests passing  
-✅ Production-ready deployment  
-✅ 34-page comprehensive documentation  
+- ✅ 650 synthetic supply chain events
+- ✅ 483 disruption cases (74.3%)
+- ✅ 5 trained ML models
+- ✅ 92% model accuracy
+- ✅ Bcrypt password hashing
+- ✅ 9/9 tests passing
+- ✅ Production-ready deployment
+- ✅ 34-page comprehensive documentation
 
-### References & Documentation
+### 29.3 References & Documentation
 
 - **Flask:** https://flask.palletsprojects.com/
 - **SQLAlchemy:** https://docs.sqlalchemy.org/
@@ -1645,44 +1578,45 @@ CREATE TABLE prediction_logs (
 - **Render:** https://render.com/docs
 - **OWASP Top 10:** https://owasp.org/www-project-top-ten/
 
-### Support & Next Steps
+### 29.4 Support & Next Steps
 
-**Project Owner:** Rishabh Barnwal  
-**Repository:** https://github.com/Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform  
-**License:** MIT  
-**Support:** Open issues on GitHub  
+**Project Owner:** Rishabh Barnwal
+**Repository:** https://github.com/Jayabari/AI-Powered-Supply-Chain-Disruption-Prediction-Resilience-Intelligence-Platform
+**License:** MIT
+**Support:** Open issues on GitHub
 
 ---
 
 ## Page 30: Data Design & Dictionary
 
-### 26.1 Data Dictionary (CSV Format)
+### 30.1 Data Dictionary (CSV Format)
 
-| Entity (CSV Row) | Field | Type | Sample Values | Notes |
-|---|---|---|---|---|
-| Event | `event_id` | string | EVT-0001, EVT-0650 | Unique event identifier |
-| Event | `event_date` | date | 2024-01-15, 2025-12-31 | Date when event occurred |
-| Event | `event_type` | category | Port Congestion, Labor Strike | 25+ types from vocabulary |
-| Event | `severity_level` | category | Low, Medium, High, Critical | Subjective assessment |
-| Event | `cause` | category | Supplier Delay, Weather, System Failure | 30+ cause types |
-| Event | `country` | category | United States, India, China | 50+ countries (ISO 3166) |
-| Event | `city` | string | Shanghai, Los Angeles, Mumbai | City or port name |
-| Event | `financial_impact` | float | 10000, 500000, 9999999 | USD value ($10K-$10M range) |
-| Event | `supplier_id` | integer | 1000-9999 | Supplier identifier |
-| Event | `carrier` | category | DHL, FedEx, UPS, Maersk | Logistics provider |
-| Event | `shipment_mode` | category | Air, Sea, Land, Multi-modal | Transportation method |
-| Target | `disruption` | 0/1 | 0 (manageable), 1 (disruption) | Binary classification label |
+| Entity (CSV Row) | Field              | Type     | Sample Values                    | Notes                          |
+|------------------|--------------------|----------|----------------------------------|--------------------------------|
+| Event            | `event_id`         | string   | EVT-0001, EVT-0650               | Unique event identifier        |
+| Event            | `event_date`       | date     | 2024-01-15, 2025-12-31           | Date when event occurred       |
+| Event            | `event_type`       | category | Port Congestion, Labor Strike    | 25+ types from vocabulary      |
+| Event            | `severity_level`   | category | Low, Medium, High, Critical      | Subjective assessment          |
+| Event            | `cause`            | category | Supplier Delay, Weather          | 30+ cause types                |
+| Event            | `country`          | category | United States, India, China      | 50+ countries (ISO 3166)       |
+| Event            | `city`             | string   | Shanghai, Los Angeles, Mumbai    | City or port name              |
+| Event            | `financial_impact` | float    | 10000, 500000, 9999999           | USD value ($10K–$10M range)    |
+| Event            | `supplier_id`      | integer  | 1000–9999                        | Supplier identifier            |
+| Event            | `carrier`          | category | DHL, FedEx, UPS, Maersk          | Logistics provider             |
+| Event            | `shipment_mode`    | category | Air, Sea, Land, Multi-modal      | Transportation method          |
+| Target           | `disruption`       | 0/1      | 0 (manageable), 1 (disruption)   | Binary classification label    |
 
-### 26.2 Artifacts Produced by Training
+### 30.2 Artifacts Produced by Training
 
-**Files Generated in `model/` directory:**
-- `disruption_model.pkl` ~ 5MB (best trained model object)
-- `scaler.pkl` ~ 50KB (StandardScaler for feature normalization)
-- `encoders.pkl` ~ 100KB (Dict of LabelEncoders for categorical features)
-- `features.pkl` ~ 2KB (List of feature column names in order)
-- `metrics.json` ~ 20KB (Performance metrics and model comparison)
+| File                      | Size    | Description                                     |
+|---------------------------|---------|-------------------------------------------------|
+| `disruption_model.pkl`    | ~5MB    | Best trained model object (RandomForest)        |
+| `scaler.pkl`              | ~50KB   | StandardScaler for feature normalization        |
+| `encoders.pkl`            | ~100KB  | Dict of LabelEncoders for categorical features  |
+| `features.pkl`            | ~2KB    | List of feature column names in order           |
+| `metrics.json`            | ~20KB   | Performance metrics and model comparison        |
 
-### 26.3 Dataset Statistics
+### 30.3 Dataset Statistics
 
 - **Total Events:** 650
 - **Disruption Cases:** 483 (74.3%)
@@ -1695,38 +1629,38 @@ CREATE TABLE prediction_logs (
 
 ## Page 31: Quality, Testing & Non-Functional Requirements
 
-### 27.1 Test Coverage Report
+### 31.1 Test Coverage Report
 
-**Test Suite:** 9/9 Tests Passing ✅
+**Test Suite: 9/9 Tests Passing ✅**
 
-| Test Category | Test Case | Status | Coverage |
-|---|---|---|---|
-| **Authentication** | test_register_creates_user | ✅ | User creation, email validation |
-| **Authentication** | test_login_flow | ✅ | Session creation, credential validation |
-| **Authorization** | test_protected_web_routes_require_login | ✅ | @login_required decorator enforcement |
-| **Authorization** | test_protected_api_requires_login | ✅ | API endpoint authentication |
-| **API Validation** | test_api_predict_returns_valid_structure | ✅ | Response format (JSON schema) |
-| **Database** | test_api_predict_logs_prediction | ✅ | Prediction logging to DB |
-| **Input Validation** | test_invalid_prediction_input_rejected | ✅ | Form validation rules |
-| **Model** | test_dashboard_page_loads | ✅ | Dashboard rendering without errors |
-| **Model** | test_model_metrics_endpoint | ✅ | Performance metrics API endpoint |
+| Test Category      | Test Case                                   | Status | Coverage                                  |
+|--------------------|---------------------------------------------|--------|-------------------------------------------|
+| **Authentication** | test_register_creates_user                  | ✅     | User creation, email validation           |
+| **Authentication** | test_login_flow                             | ✅     | Session creation, credential validation   |
+| **Authorization**  | test_protected_web_routes_require_login     | ✅     | @login_required decorator enforcement     |
+| **Authorization**  | test_protected_api_requires_login           | ✅     | API endpoint authentication               |
+| **API Validation** | test_api_predict_returns_valid_structure    | ✅     | Response format (JSON schema)             |
+| **Database**       | test_api_predict_logs_prediction            | ✅     | Prediction logging to DB                  |
+| **Input Validation** | test_invalid_prediction_input_rejected    | ✅     | Form validation rules                     |
+| **Model**          | test_dashboard_page_loads                   | ✅     | Dashboard rendering without errors        |
+| **Model**          | test_model_metrics_endpoint                 | ✅     | Performance metrics API endpoint          |
 
 **Overall Coverage:** ~90% of core application code
 
-### 27.2 Non-Functional Requirements (NFRs)
+### 31.2 Non-Functional Requirements (NFRs)
 
-| NFR | Target | Current | Status |
-|---|---|---|---|
-| **Availability** | ≥ 99% | 99.5% (Render SLA) | ✅ Achieved |
-| **Response Latency (p95)** | < 1 second | 0.35s average | ✅ Achieved |
-| **Prediction Latency** | < 1 second | 0.2s average | ✅ Achieved |
-| **Reliability** | Zero unhandled crashes | Zero exceptions logged | ✅ Achieved |
-| **Scalability** | 100+ concurrent users | Tested @ 50 concurrent | ⚠️ Verified at scale |
-| **Security** | No OWASP Top 10 vulns | Passed security audit | ✅ Achieved |
-| **Maintainability** | Code documented | 100+ inline comments | ✅ Achieved |
-| **Accessibility** | WCAG 2.1 Level AA | Color contrast ≥4.5:1 | ✅ Verified |
+| NFR                          | Target              | Current                    | Status          |
+|------------------------------|---------------------|----------------------------|-----------------|
+| **Availability**             | ≥ 99%               | 99.5% (Render SLA)         | ✅ Achieved     |
+| **Response Latency (p95)**   | < 1 second          | 0.35s average              | ✅ Achieved     |
+| **Prediction Latency**       | < 1 second          | 0.2s average               | ✅ Achieved     |
+| **Reliability**              | Zero unhandled crashes | Zero exceptions logged  | ✅ Achieved     |
+| **Scalability**              | 100+ concurrent users | Tested @ 50 concurrent   | ⚠️ Partial      |
+| **Security**                 | No OWASP Top 10 vulns | Passed security audit    | ✅ Achieved     |
+| **Maintainability**          | Code documented     | 100+ inline comments       | ✅ Achieved     |
+| **Accessibility**            | WCAG 2.1 Level AA   | Color contrast ≥ 4.5:1     | ✅ Verified     |
 
-### 27.3 Test Execution Commands
+### 31.3 Test Execution Commands
 
 ```bash
 # Run all tests
@@ -1746,88 +1680,55 @@ pytest --cov=app --cov-report=html tests/
 
 ## Page 32: Delivery, Operations & Risks
 
-### 28.1 Delivery & Release Plan
+### 32.1 Delivery & Release Plan
 
 **Phase-wise Release:**
-- **v0.1 (Week 1-2):** Core requirements + project structure
-- **v0.5 (Week 3-4):** Auth system + API endpoints
-- **v0.9 (Week 5-6):** UI complete + test suite
-- **v1.0 (Week 7-8):** Production-ready + documentation
+- **v0.1 (Week 1–2):** Core requirements + project structure
+- **v0.5 (Week 3–4):** Auth system + API endpoints
+- **v0.9 (Week 5–6):** UI complete + test suite
+- **v1.0 (Week 7–8):** Production-ready + documentation
 
 **Deployment Checklist:**
 - ✅ Git repository initialized
 - ✅ Dependencies documented (requirements.txt)
 - ✅ Environment variables configured (.env.example)
-- ✅ Database migrations tested (.flask db upgrade)
+- ✅ Database migrations tested (`flask db upgrade`)
 - ✅ Build script verified (./build.sh)
 - ✅ CI/CD ready (Render deployment)
 - ✅ Monitoring configured (Render logs)
 
-### 28.2 Risks & Mitigations
+### 32.2 Risks & Mitigations
 
-| Risk | Probability | Impact | Mitigation | Owner | Status |
-|---|---:|---:|---|---|---|
-| **Artifacts missing in deployment** | Medium | High | Prebuild step in build.sh; graceful setup_required page | Rishabh | ✅ Mitigated |
-| **Model performance unstable** | Medium | Medium | Tune hyperparameters; report metrics transparently | Rishabh | ✅ Mitigated |
-| **UI pages inconsistent** | Medium | Medium | CSS component kit + Jinja2 template inheritance | Jaya | ✅ Mitigated |
-| **Backend encoding bugs** | Medium | High | Validation + comprehensive testing; integration tests | Ananshi | ✅ Mitigated |
-| **Database connection errors** | Low | High | Connection pooling; fallback to SQLite | Rishabh | ✅ Mitigated |
-| **Rate limiter misconfiguration** | Low | Medium | Document limits; provide debugging headers | Ananshi | ✅ Mitigated |
-| **CSP headers too restrictive** | Low | High | Allow Chart.js CDN; use 'unsafe-inline' carefully | Jaya | ✅ Mitigated |
-| **Password hashing overhead** | Very Low | Low | Werkzeug's PBKDF2 is optimized; < 100ms per hash | Rishabh | ✅ Monitored |
+| Risk                              | Probability | Impact | Mitigation                                                   | Owner   | Status        |
+|-----------------------------------|-------------|--------|--------------------------------------------------------------|---------|---------------|
+| Artifacts missing in deployment   | Medium      | High   | Prebuild step in build.sh; graceful setup_required page      | Rishabh | ✅ Mitigated  |
+| Model performance unstable        | Medium      | Medium | Tune hyperparameters; report metrics transparently           | Rishabh | ✅ Mitigated  |
+| UI pages inconsistent             | Medium      | Medium | CSS component kit + Jinja2 template inheritance              | Jaya    | ✅ Mitigated  |
+| Backend encoding bugs             | Medium      | High   | Validation + comprehensive testing; integration tests        | Ananshi | ✅ Mitigated  |
+| Database connection errors        | Low         | High   | Connection pooling; fallback to SQLite                       | Rishabh | ✅ Mitigated  |
+| Rate limiter misconfiguration     | Low         | Medium | Document limits; provide debugging headers                   | Ananshi | ✅ Mitigated  |
+| CSP headers too restrictive       | Low         | High   | Allow Chart.js CDN; use 'unsafe-inline' carefully            | Jaya    | ✅ Mitigated  |
+| Password hashing overhead         | Very Low    | Low    | Werkzeug's PBKDF2 is optimized; < 100ms per hash             | Rishabh | ✅ Monitored  |
 
-### 28.3 Operational Decisions
+### 32.3 Operational Decisions
 
-**Database Choice:**
-- Development: SQLite (file-based, zero config)
-- Production: PostgreSQL (Supabase managed, scalable)
-
-**Deployment Platform:**
-- Choice: Render.com (simplicity, free tier, built-in deployment)
-- Alternative: Heroku (if Render unavailable)
-
-**Model Selection:**
-- Criterion: Highest F1-score on test set
-- Rationale: Balances precision (false positives cost $) and recall (false negatives risky)
-
-**Authentication Type:**
-- Session-based (cookie) for web
-- Future: Token-based (JWT) for mobile apps
+- **Database:** SQLite (development) → PostgreSQL/Supabase (production)
+- **Deployment:** Render.com (primary), Heroku (fallback)
+- **Model Selection:** Highest F1-score on test set
+- **Authentication:** Session-based (cookie) for web; JWT planned for mobile apps
 
 ---
 
 ## Page 33: Research, Evaluation & Future Work
 
-### 29.1 Research & Evaluation
+### 33.1 Model Selection Process
 
-**Model Selection Process:**
+1. **Data Preparation:** 650 synthetic events; 80/20 train/test split; 30 engineered features
+2. **Algorithm Evaluation:** Trained 5 models in parallel (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, SVM)
+3. **Metrics Tracked:** Accuracy, Precision, Recall, F1-score, ROC-AUC, Confusion Matrix
+4. **Selection Decision:** **RandomForest** (F1: 92%, ROC-AUC: 0.97) — best balance; high recall (94%) catches disruptions
 
-1. **Data Preparation:**
-   - Generated 650 synthetic events
-   - Split: 80% train (520), 20% test (130)
-   - Features: 30 engineered from 12 base fields
-
-2. **Algorithm Evaluation:**
-   - Trained 5 models in parallel:
-     - Logistic Regression (baseline)
-     - Decision Tree (overfitting check)
-     - Random Forest (ensemble)
-     - Gradient Boosting (complex)
-     - SVM (non-linear)
-
-3. **Metrics Tracked:**
-   - Accuracy (overall correctness)
-   - Precision (minimize false alarms)
-   - Recall (minimize missed disruptions)
-   - F1-score (harmonic mean)
-   - ROC-AUC (ranking quality)
-   - Confusion Matrix (detailed breakdown)
-
-4. **Selection Decision:**
-   - **Winner:** RandomForest (F1:92%, ROC:0.97)
-   - **Rationale:** Best balance; high recall (94%) catches disruptions
-
-### 29.2 Future Enhancements (Roadmap)
+### 33.2 Future Enhancements Roadmap
 
 **Phase 2 (Q2 2026): Advanced Features**
 - Admin dashboard for user management
@@ -1850,7 +1751,7 @@ pytest --cov=app --cov-report=html tests/
 - A/B testing framework
 - Model drift monitoring
 
-### 29.3 Success Metrics (Long-term)
+### 33.3 Long-Term Success Metrics
 
 - Users at 1,000+ organizations
 - Predicted disruptions avoided: $50M+ annually
@@ -1862,141 +1763,108 @@ pytest --cov=app --cov-report=html tests/
 
 ## Page 34: Appendices & Glossary
 
-### 30.1 Glossary of Key Terms
+### 34.1 Glossary of Key Terms
 
-| Term | Definition | Context |
-|---|---|---|
-| **Disruption** | Supply chain event causing delay/cancellation (label=1) | ML classification |
-| **Manageable** | Event handled within normal operations (label=0) | ML classification |
-| **F1-Score** | Harmonic mean of precision & recall (0-1) | Model evaluation |
-| **ROC-AUC** | Area Under Receiver Operating Characteristic Curve (0-1) | Model ranking quality |
-| **Precision** | % of predicted disruptions that are actually correct | Minimize false alarms |
-| **Recall** | % of actual disruptions that were predicted correctly | Minimize missed disruptions |
-| **CSP** | Content Security Policy; browser security directive | Security headers |
-| **CSRF** | Cross-Site Request Forgery; token-based protection | Web security |
-| **ORM** | Object-Relational Mapping; database abstraction layer | Flask-SQLAlchemy |
-| **WSGI** | Web Server Gateway Interface; server spec | Gunicorn, Flask |
-| **PaaS** | Platform-as-a-Service; cloud hosting model | Render, Heroku |
-| **Artifact** | Saved ML model + preprocessing objects used for inference | Model persistence |
-| **Migration** | Database schema version change in Alembic | Database management |
-| **LabelEncoder** | Scikit-learn's categorical variable encoder | Feature engineering |
+| Term              | Definition                                                       | Context               |
+|-------------------|------------------------------------------------------------------|-----------------------|
+| **Disruption**    | Supply chain event causing delay/cancellation (label=1)          | ML classification     |
+| **Manageable**    | Event handled within normal operations (label=0)                 | ML classification     |
+| **F1-Score**      | Harmonic mean of precision & recall (0–1)                        | Model evaluation      |
+| **ROC-AUC**       | Area Under Receiver Operating Characteristic Curve (0–1)         | Model ranking quality |
+| **Precision**     | % of predicted disruptions that are actually correct             | Minimize false alarms |
+| **Recall**        | % of actual disruptions that were predicted correctly            | Minimize misses       |
+| **CSP**           | Content Security Policy; browser security directive              | Security headers      |
+| **CSRF**          | Cross-Site Request Forgery; token-based protection               | Web security          |
+| **ORM**           | Object-Relational Mapping; database abstraction layer            | Flask-SQLAlchemy      |
+| **WSGI**          | Web Server Gateway Interface; server spec                        | Gunicorn, Flask       |
+| **PaaS**          | Platform-as-a-Service; cloud hosting model                       | Render, Heroku        |
+| **Artifact**      | Saved ML model + preprocessing objects used for inference        | Model persistence     |
+| **Migration**     | Database schema version change in Alembic                        | Database management   |
+| **LabelEncoder**  | Scikit-learn's categorical variable encoder                      | Feature engineering   |
 
-### 30.2 Quick Start Checklist
+### 34.2 Full Deployment Checklist
 
 ```
-✅ Checklist for Deployment
-
-□ Prerequisites
+✅ Prerequisites
   □ Python 3.11+ installed
   □ Git configured
   □ Virtual environment tool available
-  
-□ Setup Phase
+
+✅ Setup Phase
   □ Clone repository
   □ Create virtual environment
   □ Activate virtual environment
   □ Install dependencies: pip install -r requirements.txt
-  
-□ Configuration
+
+✅ Configuration
   □ Copy .env.example → .env
   □ Update environment variables (if needed)
-  
-□ Data & Model
+
+✅ Data & Model
   □ Generate data: python generate_data.py
   □ Train model: python train_model.py
   □ Verify artifacts in model/ directory
-  
-□ Database
+
+✅ Database
   □ Initialize database: flask db upgrade
   □ Verify migrations applied
-  
-□ Testing
+
+✅ Testing
   □ Run tests: pytest tests/
   □ Verify 9/9 tests passing
   □ Check test coverage: pytest --cov=app tests/
-  
-□ Local Deployment
+
+✅ Local Deployment
   □ Start app: PORT=5001 python app.py
   □ Open http://localhost:5001 in browser
   □ Register test account
   □ Test prediction workflow
-  
-□ Production Deployment
+
+✅ Production Deployment
   □ Push to GitHub: git push origin main
   □ Create Render Web Service
   □ Set environment variables in Render
   □ Click "Deploy"
   □ Verify deployment at provided URL
-  
-□ Post-Deployment
+
+✅ Post-Deployment
   □ Test all pages (Dashboard, Predict, Performance, Analytics)
   □ Verify API endpoints (/api/v1/predict, /metrics)
   □ Check logs for errors
   □ Setup monitoring (optional)
 ```
 
-### 30.3 Important Files & Locations
+### 34.3 Important Files & Locations
 
-| File/Folder | Purpose | Key Content |
-|---|---|---|
-| `app.py` | Flask app entry point | Create app, run server |
-| `app/models.py` | SQLAlchemy models | User, PredictionLog schema |
-| `app/routes/web.py` | Web page routes | Dashboard, predict, analytics |
-| `app/routes/api.py` | REST API routes | /api/v1/predict, /metrics |
-| `generate_data.py` | Data generation script | Create supply_chain_events.csv |
-| `train_model.py` | Model training script | Create model artifacts |
-| `requirements.txt` | Python dependencies | 16 packages listed |
-| `data/supply_chain_events.csv` | Training dataset | 650 events × 30 columns |
-| `model/disruption_model.pkl` | Trained model | RandomForest classifier |
-| `model/metrics.json` | Model performance | F1 scores, ROC-AUC, confusion matrix |
-| `migrations/` | Database versioning | Alembic migration scripts |
-| `templates/` | HTML pages | Dashboard, form, analytics UI |
-| `.env` | Environment variables | Secrets, database URL, debug flag |
-| `render.yaml` | Render deployment config | Build & start commands |
-| `build.sh` | Build script | Installation & setup steps |
-| `Procfile` | Heroku deployment config | Start command |
+| File/Folder                       | Purpose                   | Key Content                           |
+|-----------------------------------|---------------------------|---------------------------------------|
+| `app.py`                          | Flask app entry point     | Create app, run server                |
+| `app/models.py`                   | SQLAlchemy models         | User, PredictionLog schema            |
+| `app/routes/web.py`               | Web page routes           | Dashboard, predict, analytics         |
+| `app/routes/api.py`               | REST API routes           | /api/v1/predict, /metrics             |
+| `generate_data.py`                | Data generation script    | Create supply_chain_events.csv        |
+| `train_model.py`                  | Model training script     | Create model artifacts                |
+| `requirements.txt`                | Python dependencies       | 16 packages listed                    |
+| `data/supply_chain_events.csv`    | Training dataset          | 650 events × 30 columns              |
+| `model/disruption_model.pkl`      | Trained model             | RandomForest classifier               |
+| `model/metrics.json`              | Model performance         | F1 scores, ROC-AUC, confusion matrix  |
+| `migrations/`                     | Database versioning       | Alembic migration scripts             |
+| `templates/`                      | HTML pages                | Dashboard, form, analytics UI         |
+| `.env`                            | Environment variables     | Secrets, database URL, debug flag     |
+| `render.yaml`                     | Render deployment config  | Build & start commands                |
+| `build.sh`                        | Build script              | Installation & setup steps            |
+| `Procfile`                        | Heroku deployment config  | Start command                         |
 
-### 30.4 Network & Port Reference
+### 34.4 Network & Port Reference
 
-| Service | Port | Protocol | Purpose |
-|---|---|---|---|
-| **Flask dev server** | 5001 | HTTP | Web UI + API local testing |
-| **PostgreSQL** | 5432 | TCP | Database (remote only) |
-| **Redis** (optional) | 6379 | TCP | Caching layer (future) |
-| **SMTP** (optional) | 587 | TCP | Email notifications (future) |
+| Service             | Port | Protocol | Purpose                             |
+|---------------------|------|----------|-------------------------------------|
+| **Flask dev server**| 5001 | HTTP     | Web UI + API local testing          |
+| **PostgreSQL**      | 5432 | TCP      | Database (remote only)              |
+| **Redis** (future)  | 6379 | TCP      | Caching layer                       |
+| **SMTP** (future)   | 587  | TCP      | Email notifications                 |
 
-### 30.5 Database Schema Quick Reference
-
-```sql
--- Users table
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(120) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    role VARCHAR(20) DEFAULT 'user',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Predictions audit log
-CREATE TABLE prediction_logs (
-    id SERIAL PRIMARY KEY,
-    event_type VARCHAR(100),
-    severity_level VARCHAR(20),
-    cause VARCHAR(120),
-    country VARCHAR(120),
-    financial_impact FLOAT,
-    prediction INTEGER,
-    probability FLOAT,
-    risk_level VARCHAR(20),
-    source VARCHAR(20) DEFAULT 'web',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
----
-
-### Recommended Next Actions
+### 34.5 Recommended Next Actions
 
 1. Deploy to Render with PostgreSQL
 2. Implement admin dashboard
@@ -2010,12 +1878,7 @@ CREATE TABLE prediction_logs (
 
 **End of Report (34 Pages)**
 
-**Generated:** March 20, 2026  
-**Total Word Count:** ~20,000 words  
-**Document Version:** 1.0  
-**Status:** Production Ready  
-**All Sections:** Preserved from original + Expanded with technical depth
-
----
-
-*This comprehensive project report preserves all key sections from the original synopsis (Revision History, Team, Stakeholders, RACI, Weekwise Plan, Personas, Market Analysis, Risks, Data Design, Quality, Operations) while expanding with 34 pages of detailed technical documentation. All code components, configuration, and deployment procedures are production-ready and tested.*
+**Generated:** March 20, 2026
+**Total Word Count:** ~20,000 words
+**Document Version:** 1.0
+**Status:** Production Ready
