@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="panel">
+<section class="panel auth-panel">
   <h2>Create Account</h2>
+  <p class="subheading">Join now to track and prevent unforeseen supply chain disruptions with AI-powered insights.</p>
   <form method="post" class="form-grid">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
     <label>
       Name
-      <input type="text" name="name" required>
+      <input type="text" name="name" required placeholder="Jane Doe">
     </label>
 
     <label>
       Email
-      <input type="email" name="email" required>
+      <input type="email" name="email" required placeholder="you@company.com">
     </label>
 
     <label>
       Password
-      <input type="password" name="password" minlength="8" required>
+      <input type="password" name="password" minlength="8" required placeholder="8+ characters">
     </label>
 
     <div class="form-action">

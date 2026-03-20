@@ -67,6 +67,73 @@ nav a:hover {
   margin-bottom: 18px;
 }
 
+.auth-panel {
+  max-width: 460px;
+  margin: 36px auto;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(46, 115, 148, 0.2);
+  box-shadow: 0 14px 30px rgba(30, 64, 95, 0.1);
+  background: linear-gradient(140deg, #ffffff 0%, #f5faff 100%);
+}
+
+.auth-panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  letter-spacing: 0.02em;
+  color: var(--brand);
+}
+
+.auth-panel .subheading {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.auth-panel .form-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.auth-panel label input,
+.auth-panel label select {
+  border: 1px solid rgba(47, 106, 132, 0.28);
+  background: #fbfdff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-panel label input:focus,
+.auth-panel label select:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(47, 106, 132, 0.18);
+}
+
+.auth-panel .form-action {
+  grid-column: span 1;
+}
+
+.auth-panel .form-action button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.auth-panel p {
+  color: var(--muted);
+  text-align: center;
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+}
+
+.auth-panel p a {
+  color: var(--brand);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .model-strip {
   display: flex;
   gap: 20px;

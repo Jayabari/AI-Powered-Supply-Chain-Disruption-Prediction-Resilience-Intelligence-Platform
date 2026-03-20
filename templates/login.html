@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="panel">
-  <h2>Login</h2>
+<section class="panel auth-panel">
+  <h2>Welcome Back</h2>
+  <p class="subheading">Sign in to continue monitoring and predicting disruptions in your supply chain.</p>
   <form method="post" class="form-grid">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
     <label>
       Email
-      <input type="email" name="email" required>
+      <input type="email" name="email" required placeholder="you@company.com">
     </label>
 
     <label>
       Password
-      <input type="password" name="password" required>
+      <input type="password" name="password" required placeholder="••••••••">
     </label>
 
     <div class="form-action">
