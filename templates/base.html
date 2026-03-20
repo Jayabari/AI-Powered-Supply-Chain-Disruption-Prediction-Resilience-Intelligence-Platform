@@ -6,6 +6,11 @@
   <title>Supply Chain Disruption Predictor</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    if (!window.Chart) {
+      document.write('<script src="https://unpkg.com/chart.js@4.4.1/dist/chart.umd.js"><\\/script>');
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">

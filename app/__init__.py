@@ -40,7 +40,7 @@ def create_app(config_name: str | None = None) -> Flask:
     csp = {
         "default-src": ["'self'"],
         # Inline scripts are used by dashboard/performance/analytics templates for chart setup.
-        "script-src": ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+        "script-src": ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net", "https://unpkg.com"],
         "style-src": ["'self'", "'unsafe-inline'"],
         "img-src": ["'self'", "data:"],
     }
