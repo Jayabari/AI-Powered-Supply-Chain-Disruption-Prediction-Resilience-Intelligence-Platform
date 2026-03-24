@@ -67,15 +67,7 @@ nav a:hover {
   margin-bottom: 18px;
 }
 
-.auth-panel {
-  max-width: 460px;
-  margin: 36px auto;
-  padding: 30px;
-  border-radius: 14px;
-  border: 1px solid rgba(46, 115, 148, 0.2);
-  box-shadow: 0 14px 30px rgba(30, 64, 95, 0.1);
-  background: linear-gradient(140deg, #ffffff 0%, #f5faff 100%);
-}
+
 
 .auth-panel h2 {
   margin: 0 0 12px;
