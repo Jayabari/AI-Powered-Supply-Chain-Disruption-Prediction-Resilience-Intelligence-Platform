@@ -217,4 +217,13 @@ def register_web_routes(app):
         country_risk = data.groupby("country")["disruption"].mean().sort_values(ascending=False).head(10)
         cause_impact = data.groupby("cause")["financial_impact"].sum().sort_values(ascending=False).head(10)
 
-       
+        return render_template(
+            "analytics.html",
+            monthly_labels=monthly["event_date"].tolist(),
+            monthly_total=[int(v) for v in monthly["total"].tolist()],
+            monthly_disruptions=[int(v) for v in monthly["disruptions"].tolist()],
+            country_labels=country_risk.index.tolist(),
+            country_values=[round(v * 100, 1) for v in country_risk.values.tolist()],
+            cause_labels=cause_impact.index.tolist(),
+            cause_values=[int(v) for v in cause_impact.values.tolist()],
+        )
