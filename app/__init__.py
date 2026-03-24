@@ -54,7 +54,22 @@ def create_app(config_name: str | None = None) -> Flask:
     if cors_origins:
         CORS(app, resources={r"/api/*": {"origins": cors_origins}})
 
-   
+    @app.errorhandler(400)
+    def handle_bad_request(error):
+        return jsonify({"error": "Bad request"}), 400
+
+    @app.errorhandler(429)
+    def handle_rate_limit(error):
+        return jsonify({"error": "Rate limit exceeded"}), 429
+
+    @app.errorhandler(403)
+    def handle_forbidden(error):
+        return jsonify({"error": "Forbidden"}), 403
+
+    @app.errorhandler(500)
+    def handle_server_error(error):
+        app.logger.exception("Unhandled server error: %s", error)
+        return jsonify({"error": "Internal server error"}), 500
 
     logging.basicConfig(level=logging.INFO)
 
