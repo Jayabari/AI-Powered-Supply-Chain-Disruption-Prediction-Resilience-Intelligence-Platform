@@ -141,6 +141,18 @@ nav a:hover {
   background: #f3f9ff;
 }
 
+.card {
+  background: #f9fcff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
 .card p {
   margin: 0;
