@@ -25,10 +25,15 @@ def _register_and_login(client):
     assert login_response.status_code == 200
 
 
-def test_dashboard_page_loads(client):
+def test_landing_page_loads(client):
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Dashboard Overview" in response.data
+    assert b"AI-Powered Supply Chain Disruption Prediction Platform" in response.data
+
+
+def test_dashboard_requires_login(client):
+    response = client.get("/dashboard")
+    assert response.status_code == 302
 
 
 def test_predict_page_loads(client):

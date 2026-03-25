@@ -17,11 +17,12 @@
     <div class="container nav-wrap">
       <h1 class="brand">Supply Chain Disruption Predictor</h1>
       <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        {% if current_user.is_authenticated %}
         <a href="{{ url_for('dashboard') }}">Dashboard</a>
         <a href="{{ url_for('predict') }}">Prediction</a>
         <a href="{{ url_for('performance') }}">Performance</a>
         <a href="{{ url_for('analytics') }}">Analytics</a>
-        {% if current_user.is_authenticated %}
         <a href="{{ url_for('logout') }}">Logout</a>
         {% else %}
         <a href="{{ url_for('login') }}">Login</a>

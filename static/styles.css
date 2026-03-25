@@ -134,6 +134,44 @@ nav a:hover {
   font-weight: 600;
 }
 
+.landing-hero h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.landing-hero p {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+.landing-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: #fff;
+}
+
 .model-strip {
   display: flex;
   gap: 20px;
