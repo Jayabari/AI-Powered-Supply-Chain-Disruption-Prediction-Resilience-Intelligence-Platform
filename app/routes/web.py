@@ -32,6 +32,11 @@ def register_web_routes(app):
             return {"global_model_info": None}
 
     @app.route("/")
+    def home():
+        return render_template("landing.html")
+
+    @app.route("/dashboard")
+    @login_required
     def dashboard():
         if not setup_ready():
             return render_template("setup_required.html")

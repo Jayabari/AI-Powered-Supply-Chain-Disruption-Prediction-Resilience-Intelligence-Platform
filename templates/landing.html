@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="panel landing-hero">
+  <h2>AI-Powered Supply Chain Disruption Prediction Platform</h2>
+  <p>
+    Welcome! This platform helps teams predict disruption risk before it causes major losses.
+    You can monitor trends, run event-level predictions, review model performance, and analyze
+    country-wise and cause-wise risk insights.
+  </p>
+  <div class="landing-actions">
+    <a class="btn-primary" href="{{ url_for('login') }}">Login</a>
+    <a class="btn-secondary" href="{{ url_for('register') }}">Register</a>
+  </div>
+</section>
+
+<section class="panel">
+  <h3>What You Can Access After Login</h3>
+  <div class="grid-2">
+    <article class="card">
+      <h3>Dashboard</h3>
+      <p>See total events, disruption rate, high-impact cases, and top disruption drivers.</p>
+    </article>
+    <article class="card">
+      <h3>Prediction</h3>
+      <p>Submit event details and get disruption probability, risk level, and recommendations.</p>
+    </article>
+    <article class="card">
+      <h3>Performance</h3>
+      <p>Compare trained models on accuracy, precision, recall, F1 score, and ROC-AUC.</p>
+    </article>
+    <article class="card">
+      <h3>Analytics</h3>
+      <p>Explore monthly trends, country risk distribution, and financial impact by cause.</p>
+    </article>
+  </div>
+</section>
+{% endblock %}
