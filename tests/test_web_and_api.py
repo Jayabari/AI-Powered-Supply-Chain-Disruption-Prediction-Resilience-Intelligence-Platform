@@ -41,11 +41,32 @@ def test_predict_page_loads(client):
     assert response.status_code == 302
 
 
+def test_forgot_password_page_loads(client):
+    response = client.get("/forgot-password")
+    assert response.status_code == 200
+    assert b"Reset Password" in response.data
+
+
+def test_forgot_password_post_has_neutral_message(client):
+    response = client.post(
+        "/forgot-password",
+        data={"email": "unknown@example.com"},
+        follow_redirects=True,
+    )
+    assert response.status_code == 200
+    assert b"If an account exists for this email" in response.data
+
+
 def test_api_health(client):
     response = client.get("/api/v1/health")
     assert response.status_code == 200
     payload = response.get_json()
     assert payload["status"] == "ok"
+
+
+def test_api_docs_available(client):
+    response = client.get("/apidocs/")
+    assert response.status_code == 200
 
 
 def test_api_predict_rejects_invalid_payload(client):
@@ -64,6 +85,7 @@ def test_api_predict_rejects_invalid_payload(client):
     assert response.status_code == 400
     payload = response.get_json()
     assert "error" in payload
+    assert "event_type" in payload["error"]
 
 
 def test_api_predict_logs_prediction(client, app_instance):

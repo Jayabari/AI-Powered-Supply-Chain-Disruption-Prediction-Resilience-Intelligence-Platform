@@ -11,7 +11,9 @@ class ValidationError(ValueError):
 
 def _validate_value(raw_value: str, allowed: list[str], field: str) -> str:
     if raw_value not in allowed:
-        raise ValidationError(f"Invalid value for {field}.")
+        preview = ", ".join(allowed[:5])
+        suffix = "..." if len(allowed) > 5 else ""
+        raise ValidationError(f"Invalid value for {field}. Allowed values include: {preview}{suffix}")
     return raw_value
 
 
@@ -37,7 +39,7 @@ def parse_prediction_input(payload: dict[str, Any], data: pd.DataFrame) -> dict[
         raise ValidationError("financial_impact must be a number.") from exc
 
     if financial_impact < 1000 or financial_impact > 5000000:
-        raise ValidationError("financial_impact must be between 1,000 and 5,000,000.")
+        raise ValidationError("financial_impact must be between 1,000 and 5,000,000 USD.")
 
     return {
         "event_type": event_type,

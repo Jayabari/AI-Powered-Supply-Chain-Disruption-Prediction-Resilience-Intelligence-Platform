@@ -30,6 +30,7 @@ app.py (entrypoint)
 - API endpoints for integration
 - Persistent logs of all prediction requests
 - Login-protected analytics, performance, and prediction workflows
+- Password reset request flow (safe neutral response)
 
 ## Security Controls Implemented
 
@@ -89,6 +90,9 @@ The app is available at `http://127.0.0.1:5000`.
 
 `DATABASE_URL` takes precedence. If it is not set, the app can build a Postgres URI from the `SUPABASE_DB_*` variables.
 
+Production security note:
+- `SECRET_KEY` is required in production. The app will fail fast if it is missing.
+
 ## Database
 
 Schema is managed via migrations (Alembic/Flask-Migrate).
@@ -111,6 +115,8 @@ flask db stamp head
 ## REST API
 
 Base URL: `/api/v1`
+
+Interactive API docs (Swagger UI): `/apidocs/`
 
 ### `GET /api/v1/health`
 Health and setup status.
@@ -154,6 +160,32 @@ Note: This endpoint requires login.
 Returns monthly disruptions, total events, and disruption rate.
 
 Note: This endpoint requires login.
+
+## API Documentation (Swagger)
+
+This project includes OpenAPI-backed Swagger docs using Flasgger.
+
+- Local URL: `http://127.0.0.1:5000/apidocs/`
+- Includes request/response schemas for:
+  - `GET /api/v1/health`
+  - `POST /api/v1/predict`
+  - `GET /api/v1/metrics`
+  - `GET /api/v1/analytics/trends`
+
+If you run on another port, replace `5000` accordingly.
+
+## Current Readiness Status
+
+Implemented and verifiable in code:
+
+- Authentication and protected routes (`Flask-Login`, `@login_required`)
+- Authorization helper (`role_required` in `app/auth.py`)
+- Input validation (`app/validators.py`)
+- CSRF protection (`Flask-WTF`)
+- Rate limiting (`Flask-Limiter`)
+- Security headers (`Flask-Talisman`)
+- Optional CORS restriction (`CORS_ORIGINS`)
+- Password hashing (`User.set_password` / `check_password`)
 
 ## Testing
 

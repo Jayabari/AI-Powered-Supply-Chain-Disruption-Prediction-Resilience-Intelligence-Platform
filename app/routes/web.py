@@ -128,6 +128,21 @@ def register_web_routes(app):
 
         return render_template("login.html")
 
+    @app.route("/forgot-password", methods=["GET", "POST"])
+    def forgot_password():
+        if current_user.is_authenticated:
+            return redirect(url_for("dashboard"))
+
+        if request.method == "POST":
+            # Neutral response avoids account enumeration attacks.
+            flash(
+                "If an account exists for this email, reset instructions will be sent.",
+                "success",
+            )
+            return redirect(url_for("login"))
+
+        return render_template("forgot_password.html")
+
     @app.route("/logout")
     @login_required
     def logout():

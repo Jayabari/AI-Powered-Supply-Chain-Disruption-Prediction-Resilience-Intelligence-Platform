@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from secrets import token_urlsafe
 
 from dotenv import load_dotenv
 
@@ -29,8 +30,21 @@ def _build_db_uri() -> str:
     return f"sqlite:///{BASE_DIR / 'data' / 'app.db'}"
 
 
+def _build_secret_key() -> str:
+    # Never use a fixed fallback secret key. In production, require explicit configuration.
+    configured = os.environ.get("SECRET_KEY")
+    if configured:
+        return configured
+
+    if os.environ.get("FLASK_ENV", "development") == "production":
+        raise RuntimeError("SECRET_KEY environment variable is required in production.")
+
+    # Dev/test convenience only.
+    return token_urlsafe(32)
+
+
 class BaseConfig:
-    SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-change-in-production")
+    SECRET_KEY = _build_secret_key()
     SQLALCHEMY_DATABASE_URI = _build_db_uri()
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JSON_SORT_KEYS = False

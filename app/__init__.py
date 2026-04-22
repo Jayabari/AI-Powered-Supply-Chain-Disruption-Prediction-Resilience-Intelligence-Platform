@@ -5,7 +5,7 @@ import os
 
 from flask import Flask, jsonify, redirect, request, url_for
 from flask_cors import CORS
-from flask_login import current_user
+from flasgger import Swagger
 
 from app.config import CONFIG_BY_NAME
 from app.extensions import csrf, db, limiter, login_manager, migrate, talisman
@@ -49,6 +49,23 @@ def create_app(config_name: str | None = None) -> Flask:
     register_web_routes(app)
     app.register_blueprint(api_bp)
     csrf.exempt(api_bp)
+
+    swagger_template = {
+        "swagger": "2.0",
+        "info": {
+            "title": "Supply Chain Disruption Prediction API",
+            "version": "1.0.0",
+            "description": "Session-authenticated API for disruption prediction, model metrics, and analytics trends.",
+        },
+        "basePath": "/",
+        "tags": [
+            {"name": "health", "description": "Health and setup checks"},
+            {"name": "prediction", "description": "Disruption prediction endpoint"},
+            {"name": "metrics", "description": "Model performance metrics"},
+            {"name": "analytics", "description": "Trend analytics"},
+        ],
+    }
+    Swagger(app, template=swagger_template)
 
     cors_origins = [origin.strip() for origin in app.config["CORS_ORIGINS"].split(",") if origin.strip()]
     if cors_origins:
